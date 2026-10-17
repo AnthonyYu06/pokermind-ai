@@ -1,0 +1,12 @@
+{
+  "ready_to_submit": false,
+  "cloud_enabled": false,
+  "plan_sha256": "cef15d2d34c7f2320b3889b283cd127ea3bb195ad77cbea52c4d64cb011b6ef7",
+  "blocking_gates": [
+    "A priced, reviewed cost worksheet is required",
+    "Cloud spending is disabled ($0 authorized).",
+    "The exact plan has no spending approval."
+  ],
+  "no_resources_created": true,
+  "target_runtime": "17.3.x-cpu-ml-scala2.13"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "historical_decision_id": "0271df7aac5f038858c60a44:10",
+  "model": "fdb8cc2d75ceb06a",
+  "reference_retained": true,
+  "source": "local sample workspace",
+  "cloud_enabled": false
+}

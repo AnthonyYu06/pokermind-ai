@@ -1,0 +1,14 @@
+{
+  "version": "local-inference-v1",
+  "scope": "Post-training diagnostic slices and speed/error comparison; no tuning or promotion changes",
+  "declared_before_timing": true,
+  "timing_states": 40,
+  "state_selection": "First unique visible card states by canonical hash from the frozen test split",
+  "warmups": 1,
+  "repetitions": 3,
+  "model_seed": 11,
+  "simulation_seed": 731,
+  "monte_carlo_samples": [100, 1000],
+  "slices": ["river_all", "paired_board", "unpaired_board", "three_plus_same_suit_board", "four_plus_same_suit_board", "hero_straight_or_better"],
+  "cost_usd": 0
+}

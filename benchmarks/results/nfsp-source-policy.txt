@@ -1,0 +1,1 @@
+Source secret-pattern and disabled-cloud policy checks passed. This is a limited local check.

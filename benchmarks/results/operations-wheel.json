@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "wheel": "dist/cloud/pokermind_batch-0.1.0+0a78e9dbbb8b-py3-none-any.whl",
+  "sha256": "ae97e3c321150a93497a6af4783e51f35485efeb7e424bcd1f9a003e16e019b4",
+  "python": "3.12.15",
+  "outside_checkout": true
+}

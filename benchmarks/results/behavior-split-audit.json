@@ -1,0 +1,13 @@
+{
+  "dataset_id": "1ace3e9b4636130fcaaa151ce9ac0636af48779239689a915f4ce2aa1b9226c8",
+  "decision_counts": {
+    "ood": 1079,
+    "test": 401,
+    "train": 3145,
+    "validation": 875
+  },
+  "distinct_families": 1104,
+  "distinct_observations": 4916,
+  "cross_split_family_overlap": 0,
+  "cross_split_exact_feature_overlap": 0
+}

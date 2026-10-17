@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "completed_hands": 16,
+  "sampled_hero_actions": 32,
+  "observed_street_decisions": {
+    "preflop": 20,
+    "flop": 8,
+    "turn": 2,
+    "river": 2
+  },
+  "policy_probabilities_legal": true,
+  "chip_conservation": true,
+  "hidden_opponent_cards": true,
+  "reload_parity": true,
+  "selected_sha256": "e987961d283be14db1173dea32bcbd7ad5d5741f035ac465368c2101445a49c4",
+  "quality_gates": {
+    "holdem_baselines": false,
+    "holdem_exploitability_certified": false,
+    "kuhn": false
+  },
+  "cloud_enabled": false,
+  "hands": [
+    {
+      "game_id": "0bbc3d92ccd346be8babf3cf107639e5",
+      "final_revision": 3,
+      "net_play_chips": 4.0
+    },
+    {
+      "game_id": "6aff45df989c4b89b033862f33f33d8a",
+      "final_revision": 2,
+      "net_play_chips": 1.0
+    },
+    {
+      "game_id": "cc2a545db2234030881b83c03d54419a",
+      "final_revision": 2,
+      "net_play_chips": -1.0
+    },
+    {
+      "game_id": "d96a8318a0a84151a0e7472a60af9157",
+      "final_revision": 1,
+      "net_play_chips": -0.1
+    },
+    {
+      "game_id": "dc2862a27501452f9e0ddaa6212ad1fa",
+      "final_revision": 6,
+      "net_play_chips": -9.6
+    },
+    {
+      "game_id": "ac86801bb9614e77a738f3723f78bbbf",
+      "final_revision": 1,
+      "net_play_chips": 10.0
+    },
+    {
+      "game_id": "e94e8984d635471882d160e9eaba16a4",
+      "final_revision": 3,
+      "net_play_chips": -10.0
+    },
+    {
+      "game_id": "6d4322d8c88e4ffc89aeaff4144c6f59",
+      "final_revision": 4,
+      "net_play_chips": -7.2
+    },
+    {
+      "game_id": "0f5cfbb52dcd4b0ab298416cf706de6f",
+      "final_revision": 2,
+      "net_play_chips": -1.0
+    },
+    {
+      "game_id": "a1c575ad1bb042cb893acdc9901c65d1",
+      "final_revision": 1,
+      "net_play_chips": 0.2
+    },
+    {
+      "game_id": "a4030165eef44cb1ab4af389cd7d0b3f",
+      "final_revision": 0,
+      "net_play_chips": 0.1
+    },
+    {
+      "game_id": "c93e9396c8844d72a6dbb1a969756fb2",
+      "final_revision": 2,
+      "net_play_chips": -0.6
+    },
+    {
+      "game_id": "9dbfa099af0546a1bc1a3537332d48b4",
+      "final_revision": 1,
+      "net_play_chips": 10.0
+    },
+    {
+      "game_id": "d33c7a40974647b0a98211204330e697",
+      "final_revision": 1,
+      "net_play_chips": 10.0
+    },
+    {
+      "game_id": "163f486ed2044c65ad18186f58dbf311",
+      "final_revision": 2,
+      "net_play_chips": 1.0
+    },
+    {
+      "game_id": "13451af3ef114a8092443d7ab3e38230",
+      "final_revision": 1,
+      "net_play_chips": -10.0
+    }
+  ]
+}

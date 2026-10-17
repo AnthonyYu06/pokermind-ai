@@ -1,0 +1,9 @@
+{
+  "status": "installed-and-imported",
+  "wheel": "dist/cloud/pokermind_batch-0.1.0+3aa1d701b51b-py3-none-any.whl",
+  "sha256": "fd67c6adb2181210f2ae0caf53d61f7fcda80f55cc8752353e2cd05fc7270362",
+  "runtime": "3.12.15",
+  "module_path": "/Users/anthony/Documents/poker ai/.runtime/venv312/lib/python3.12/site-packages/pipelines/cloud/job.py",
+  "outside_checkout": true,
+  "cloud_execution": false
+}

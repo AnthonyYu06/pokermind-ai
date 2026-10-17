@@ -1,0 +1,11 @@
+{
+  "configs/local-research-v2.json": "16702b4f26635b1bf1198632ce8fe8f79e7ea92350cb0ea851e32f068f41c0ce",
+  "configs/strategy-evaluation.json": "ca97f95cd355cff507d0f8d82c2d405dfc2be0cfc20c1fc2ec540d8986e4c7a9",
+  "configs/behavior-evaluation.json": "031818c2ab179f3cf3cbb99890c5aec551248aca4a8d74b7c9db18229833316b",
+  "training/strategy.py": "896bb9471b4d0a5314f93c8251b2e447bb4883a0a63ce927610ce8accb3b8edf",
+  "training/behavior.py": "b45dd961e4a886ebeb68ebe4a65f7caa86bd49359efd9d2998608282ff809014",
+  "packages/strategy/deep_cfr.py": "e64f075d13b30e0a9ccaf2914107cf255c10f17456cd0774ab41349e56666284",
+  "packages/models/behavior.py": "f5289224807b9c2fa1944d2efd35971a020e225b1aa61a0708d45fe2b03c12da",
+  "packages/features/behavior.py": "18d130116d2c0aeb22d8c177181e57d1b0677188fc053b7b1fffb817b001de8b",
+  "packages/simulation/behavior_data.py": "acf18489763c1ba1362979f675c859061d741e9311194641ed58ac643a766866"
+}

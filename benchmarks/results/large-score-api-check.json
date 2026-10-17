@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scored_rows": 7395,
+  "sampled_api_records": 3,
+  "frozen_dataset_id": "20c883ac1b636c1a5de68d6912f56b9ba9d7c5a9acda195ce708da96f417319e",
+  "reference_retained": true,
+  "cloud_enabled": false
+}

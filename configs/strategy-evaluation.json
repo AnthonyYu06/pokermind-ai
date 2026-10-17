@@ -1,0 +1,12 @@
+{
+  "version": "small-game-evaluation-v1",
+  "declared_before_neural_runs": true,
+  "seeds": [11, 23, 47],
+  "games": ["kuhn", "leduc"],
+  "tiny": {"iterations": 30, "traversals_per_player": 150, "advantage_steps": 150, "strategy_steps": 600, "capacity": 30000, "width": 64},
+  "tabular_iterations": {"kuhn": 1000, "leduc": 200},
+  "promotion": {"max_exploitability": {"kuhn": 0.01, "leduc": 0.10}, "must_match_or_beat_tabular": true, "all_seeds_must_pass": true},
+  "ablations": ["no_iteration_weighting", "no_network_reset"],
+  "units": "OpenSpiel game chips per hand; exploitability=NashConv/2",
+  "cloud_cost_usd": 0
+}

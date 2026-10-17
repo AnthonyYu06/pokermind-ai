@@ -1,0 +1,41 @@
+{
+  "version": "holdem-nfsp-protocol-v1",
+  "purpose": "Exploratory simulated strategy research; no general-optimality or promotion claim",
+  "seeds": [101, 202, 303],
+  "holdem_episodes": 6000,
+  "kuhn_episodes": 10000,
+  "evaluation_deals": 400,
+  "evaluation_seed": 2870000,
+  "evaluation_opponents": ["uniform", "passive", "cautious", "pressure", "responsive", "unseen_mixed"],
+  "training_seed": 1970000,
+  "evaluation_interval": 2000,
+  "threads": 2,
+  "max_seconds": 1800,
+  "minimum_free_disk_gib": 3,
+  "max_checkpoint_bytes": 536870912,
+  "agent": {
+    "width": 96,
+    "replay_capacity": 8000,
+    "reservoir_capacity": 8000,
+    "anticipatory": 0.1,
+    "rl_learning_rate": 0.001,
+    "sl_learning_rate": 0.001,
+    "epsilon_start": 0.3,
+    "epsilon_end": 0.06,
+    "epsilon_decay_steps": 30000,
+    "batch_size": 64,
+    "minimum_buffer": 128,
+    "learn_every": 8,
+    "target_every": 100
+  },
+  "quality_gates": {
+    "kuhn_max_exploitability": 0.01,
+    "all_seeds_required": true,
+    "holdem_positive_lower_ci_against_each_opponent": true,
+    "holdem_exploitability_certified": false,
+    "default_promotion_allowed": false
+  },
+  "limits": "Two players, 50 BB starting stacks, zero rake, seven action buckets, 64-event visible history; river equity network frozen",
+  "cloud_enabled": false,
+  "cloud_cost_usd": 0
+}

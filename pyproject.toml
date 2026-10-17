@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pokermind"
+version = "0.1.0"
+description = "Offline study of completed poker sessions"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "fastapi==0.143.1", "starlette==1.8.0", "uvicorn==0.34.3", "pydantic==2.11.7",
+  "python-multipart==0.0.32", "treys==0.1.8"
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.3", "hypothesis==6.151.9", "httpx==0.28.1"]
+ml = ["torch==2.13.0", "numpy==2.3.1", "mlflow==3.17.1", "cryptography==50.0.0", "open-spiel==2.0.2"]
+data = ["pyspark==4.0.1", "delta-spark==4.0.0"]
+
+[project.scripts]
+pokermind = "services.api.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["packages*", "services*", "training*", "pipelines*", "evaluation*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

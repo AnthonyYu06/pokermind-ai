@@ -1,0 +1,58 @@
+{
+  "protocol": "local-research-v2",
+  "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "unique_hands": 6000,
+  "execution": "in-process FastAPI on one Mac, warmed filesystem",
+  "results": {
+    "hand_page": {
+      "milliseconds": [
+        11.819583000033163,
+        11.712874998920597,
+        11.735416992451064
+      ],
+      "median_ms": 11.735416992451064,
+      "p95_ms": 11.811166399274953,
+      "target_ms": 250,
+      "passed": true,
+      "response_bytes": 19774
+    },
+    "import_page": {
+      "milliseconds": [
+        2.6744579954538494,
+        2.4558750010328367,
+        2.596874997834675
+      ],
+      "median_ms": 2.596874997834675,
+      "p95_ms": 2.666699695691932,
+      "target_ms": 250,
+      "passed": true,
+      "response_bytes": 13329
+    },
+    "session_page": {
+      "milliseconds": [
+        32.91237499797717,
+        33.51874998770654,
+        34.33837500051595
+      ],
+      "median_ms": 33.51874998770654,
+      "p95_ms": 34.25641249923501,
+      "target_ms": 1000,
+      "passed": true,
+      "response_bytes": 6299
+    },
+    "overview": {
+      "milliseconds": [
+        3001.4793330046814,
+        3015.8554579975316,
+        3002.6203749876004
+      ],
+      "median_ms": 3002.6203749876004,
+      "p95_ms": 3014.5319496965385,
+      "target_ms": 5000,
+      "passed": true,
+      "response_bytes": 20474
+    }
+  },
+  "passed": true,
+  "cost_usd": 0
+}

@@ -1,0 +1,636 @@
+POKERMIND AI - MASTER DEVELOPMENT PROMPT
+Version: 1.0 | Prepared October 15, 2026
+Copy everything in this file into an AI coding agent with repository access.
+
+You are my lead software engineer, poker game-theory researcher, machine learning engineer, data engineer, and cloud architect. Build PokerMind AI: a practical personal platform for OFFLINE poker hand-history import, analysis, replay, simulation, and deliberate practice. Implement working software, not just an architecture proposal or a collection of notebooks.
+
+My priorities are a product I will actually use and substantive experience with PyTorch/deep learning, Apache Spark/PySpark, Databricks, Delta Lake, MLflow, and AWS. Those technologies must perform useful work in an observable end-to-end system. Do not replace the ML with an LLM wrapper, replace distributed processing with pandas inside a notebook, or claim cloud experience from unused infrastructure templates.
+
+Start locally on macOS, including Apple Silicon, with no required paid services. Build the cloud path as a required later milestone, with spending explicitly enabled only after a concrete plan is approved. Work incrementally, keep each milestone runnable, and preserve honest distinctions between implemented, tested, benchmarked, and still unverified capabilities.
+
+======================================================================
+1. PRODUCT GOAL AND NON-NEGOTIABLE BOUNDARIES
+======================================================================
+
+The useful workflow is:
+1. I manually obtain official exports of my completed Ignition sessions.
+2. I select the exported files in PokerMind and receive an import report.
+3. I browse sessions, replay hands, inspect decisions, and identify study topics.
+4. The system creates drills and runs simulations inside its own environment.
+5. Batch data pipelines generate training datasets, train and evaluate models, and publish versioned analysis results that improve this workflow.
+
+"Ignition-compatible" means compatible with verified exported hand-history formats. It does not mean a live connection, an official partnership, an approved third-party tool, or a guarantee of platform permission. Verify current official terms and export instructions before documenting compatibility. Reference sources are provided at the end; their contents and interfaces may change.
+
+Mandatory product boundaries:
+- Accept only user-selected static exports of completed sessions, plus clearly labeled synthetic data produced by our simulator.
+- No live Ignition integration, real-time advice, HUD, overlay, browser extension, screen capture, OCR, accessibility scraping, clipboard polling, packet capture, memory inspection, or watching client logs/directories for ongoing hands.
+- No automated login or hand-history download, credential collection, clicking buttons, automated betting, bot play on third-party platforms, anti-detection behavior, reverse engineering, geolocation bypass, or Terms-of-Service circumvention.
+- Simulator agents may act only inside our simulator. There must be no external-game adapter or actuation interface.
+- No third-party player databases, opponent deanonymization, or linking anonymous seat identifiers across sessions as persistent identities.
+- No freely exposed "recommend an action for this arbitrary current state" endpoint, current-hand form, or low-latency external integration. Review requests reference a previously accepted historical decision ID; trainer requests reference a server-created simulation session and its current state.
+- No production option, hidden flag, development endpoint exposed in production, or API alternate path that bypasses the offline eligibility rules.
+
+Enforce offline eligibility on the backend, in CLI paths, and in batch jobs. Set a product minimum of 24 hours after a documented session end before real-hand analysis; apply a longer delay if current platform guidance requires it. Treat this as our conservative product restriction, not proof of platform compliance. Record source timestamps, their timezone and precision, the session-end evidence, eligibility time, and policy version. If an export cannot establish a session end, import it into quarantine and require a conservative completed-session declaration; eligibility must be no earlier than 24 hours after that declaration. Unknown, future, inconsistent, or insufficiently precise dates must not become automatically eligible. File modification time is not authoritative.
+
+Do not pretend uploaded files or user declarations are tamper-proof. These controls prevent intended live workflows; they cannot certify what a user is doing elsewhere. Do not add invasive monitoring of the user's computer. The interface should plainly say "Offline study of completed sessions" and distinguish historical review from simulator practice.
+
+Unknown game variants or unsupported rules must produce clear unsupported-format results rather than plausible-looking advice. Keep raw source files unchanged. Do not silently discard bad hands or invent missing information.
+
+======================================================================
+2. SCOPE, DEFAULTS, AND WHAT COUNTS AS SUCCESS
+======================================================================
+
+Initial product scope:
+- No-limit Texas Hold'em cash-game history import and replay, prioritizing six-max exports, then heads-up and other table sizes only after fixtures support them.
+- Cash-game statistics and personal study; no tournament ICM, Omaha, multiple boards, straddles, or unusual betting rules until explicitly implemented and tested.
+- Support ordinary blinds, folds, checks, bets, calls, raises, all-ins, uncalled-bet returns, split pots, side pots, and rake for the claimed initial format. Quarantine cases whose required rules are unsupported.
+- Local single-user application with a clean browser interface, useful keyboard navigation, accessible colors, clear empty states, and a one-command sample demo.
+- Cloud compute is for batch data engineering, training, evaluation, and private deployment. "Offline" refers to separation from live poker, not a prohibition on authorized cloud processing of historical data.
+
+Required technical depth by project completion:
+A. A tested poker engine and importer/replayer with real format evidence.
+B. A PyTorch supervised equity model used in historical review or simulator practice, with trustworthy reference labels and baseline comparisons.
+C. A PyTorch action-sequence/behavior model for offline population analysis or simulator opponents, with uncertainty and leakage controls.
+D. A validated Deep CFR implementation in small two-player poker games, plus an explicitly bounded neural-strategy experiment in a larger Hold'em abstraction when feasible. Small-game success alone must not be described as solving six-max no-limit Hold'em.
+E. Real PySpark pipelines doing ingestion, deduplication, event reconstruction, feature engineering, aggregation, dataset creation, and distributed batch scoring.
+F. Actual Databricks job executions against Delta Lake on S3, with MLflow experiment tracking and model governance.
+G. AWS storage, least-privilege IAM, compute, deployment, monitoring, cost controls, and teardown exercised within an approved budget.
+H. Reproducible model and distributed-system benchmarks with recorded results, limitations, and lineage.
+
+Small local smoke runs are required throughout. Cloud executions and statistically meaningful research results are separate completion gates. Missing accounts, exports, or budget may block a gate but must not block unrelated local implementation. Keep a visible status checklist; never relabel a blocked gate as completed.
+
+Prefer a modular monolith and batch jobs over microservice sprawl. Do not add Kubernetes, Kafka, an always-on streaming pipeline, a vector database, or an LLM unless a specific measured need justifies it. Prioritize ML/data work after the first useful replay experience instead of spending the project on visual polish.
+
+======================================================================
+3. CONCRETE ARCHITECTURE
+======================================================================
+
+Use these defaults unless repository constraints justify a documented change:
+- Frontend: TypeScript and React with a lightweight build tool.
+- API and CLI: Python, FastAPI, typed schemas, and a small command-line interface.
+- Core: framework-independent Python packages for parsing, state transitions, observation construction, metrics, simulation, and model interfaces.
+- Local serving: SQLite for app metadata and indexed projections; local files for immutable originals and artifacts. Keep requests independent of a running Spark cluster.
+- Data engineering: PySpark DataFrames/SQL, Delta Lake Bronze/Silver/Gold tables, Parquet training shards, and versioned manifests.
+- ML: PyTorch; simple statistical and classical ML baselines; MLflow tracking locally and in Databricks.
+- Cloud: S3, scoped IAM roles, Databricks jobs, bounded AWS compute, container images in ECR, logs/metrics in CloudWatch, and Terraform infrastructure definitions.
+- Packaging: locked dependencies, pinned compatible runtimes, reproducible containers where useful, local CPU support, optional MPS acceleration, and a separately tested CUDA path.
+
+Data flow:
+
+User-selected completed exports       Seeded simulator / self-play
+              |                                  |
+              v                                  v
+Immutable originals + ingest manifest    Versioned synthetic shards
+              |                                  |
+              +---------> Bronze records <-------+
+                              |
+                     PySpark validation/dedup
+                              |
+                  Silver hands/actions/observations
+                              |
+                 Gold stats/features/label datasets
+                    /                         \
+       Historical review projections    Frozen training manifests
+                    |                         |
+              API and replay             PyTorch training
+                    ^                         |
+                    |               MLflow runs and evaluation
+                    |                         |
+              Versioned batch scores <- Approved model artifacts
+                    |
+             Study queue and trainer
+
+The large-data path must complete this loop: generated or imported data -> S3 -> Databricks/PySpark -> Delta datasets -> PyTorch model -> MLflow evaluation/registration -> distributed batch scores -> app-visible review or practice. Record which data source and model produced each result. Synthetic experiments must remain distinguishable from evidence about my real play.
+
+Proposed repository structure:
+
+  apps/web/
+  services/api/
+  packages/pokermind_core/
+  packages/ignition_import/
+  packages/simulation/
+  packages/features/
+  packages/models/
+  pipelines/spark/
+  training/
+  evaluation/
+  databricks/
+  infra/terraform/
+  configs/
+  tests/unit/
+  tests/property/
+  tests/integration/
+  tests/e2e/
+  tests/fixtures/synthetic/
+  benchmarks/
+  docs/
+
+Runtime data, secrets, raw personal histories, model weights, and large generated datasets stay outside Git. Use thin notebooks for exploration and presentation; production transformations and training logic must live in importable, tested modules.
+
+Pin and verify the Python/Java/Spark/Delta/PyTorch/Databricks Runtime compatibility matrix before selecting versions. Do not blindly combine each project's newest release. Document what works natively on macOS, what uses a container, and what requires cloud hardware. Do not promise a signed/notarized desktop app unless it has actually been built and validated.
+
+======================================================================
+4. HAND-HISTORY IMPORT AND CANONICAL CONTRACTS
+======================================================================
+
+Inspect sanitized real exports supplied by me before claiming real Ignition support. If none are available, build the schema, simulator, synthetic fixtures, UI, and parser framework; label the parser experimental and request a small representative export. Synthetic fixtures demonstrate logic, not compatibility. Avoid obtaining other people's histories without authorization.
+
+Implement a versioned parser with:
+- Explicit format detection and variant capabilities.
+- File-level and hand-level hashes, source provenance, encoding handling, CRLF/LF support, and deterministic IDs.
+- Clear handling of truncated files, malformed records, duplicate imports, differing filenames for the same content, overlapping exports, and revised/corrected records.
+- Streaming or bounded parsing so large exports do not require loading the entire corpus into memory.
+- Source line/byte references and useful diagnostics, including imported, duplicate, unsupported, quarantined, and failed counts.
+- Import preview, transaction-safe commit, safe retry, cancellation, and an audit record.
+- User-controlled hero selection when not explicit; never infer hero from winners or revealed cards.
+
+Use integer currency units for chip accounting, with currency and scale recorded. Convert to big blinds only for normalized reporting. Keep exact source amounts and parsed interpretations; distinguish "raise by" from "raise to". Unknown values remain unknown.
+
+Define versioned data contracts, primary keys, invariants, and migrations for at least:
+
+ingest_files:
+  file_id, content_hash, source_kind, original_name, parser_version,
+  import_time, source_timezone, eligibility_policy_version, status
+
+hands:
+  hand_id, source_hand_id, source_file_id, source_kind, game_variant,
+  session_id, timestamps, table_size, button_seat, blinds, currency,
+  initial_stacks, board, terminal_summary, rake, rules_version, quality_flags
+
+actions:
+  hand_id, action_index, street, actor_seat, action_type, amount_added,
+  amount_to, stack_before_after, pot_before_after, legal_action_context
+
+decision_observations:
+  decision_id, hand_id, action_index, acting_player, visible_cards,
+  public_action_prefix, effective_stacks, position, legal_action_mask,
+  features_version, observation_hash
+
+outcomes_and_revealed_cards:
+  hand_id, reveal_time_or_stage, player_seat, cards, terminal_payoffs,
+  visibility/provenance flags
+
+Other required entities: import_errors, session_summaries, population_stats,
+simulation_runs, dataset_manifests, training_labels, model_runs,
+analysis_results, and practice_attempts.
+
+Hand-history summaries are evidence to reconcile against engine reconstruction, not a license to overwrite inconsistencies. Exact integer accounting should satisfy contributions = awards + rake after handling refunds, and terminal stack changes should reconcile. Retain a reasoned unsupported/quarantine status when they do not.
+
+Decision-time observations are a distinct schema and access boundary from the omniscient simulator state and post-session revealed cards. Ignition's published description says delayed complete histories can expose all players' hole cards [S1]. Those cards may become labels or retrospective display data, but never inputs to a decision model unless they were visible to that acting player then. Future board cards, future actions, winners, final stacks, and later-session aggregates are also prohibited features.
+
+For anonymous tables, scope identity to the documented session or hand context. In Zone or other rotating formats, do not presume seat continuity. Learn population tendencies and contextual behavior; do not pretend to track a recurring named opponent.
+
+======================================================================
+5. POKER ENGINE, REPLAY, AND DECISION ANALYSIS
+======================================================================
+
+Separate the full game state, public state, and each player's information state. A policy receives only its observation and legal actions. The engine owns chance events, turn order, card uniqueness, legal raises, settlement, and termination.
+
+Use a maintained, appropriately licensed hand evaluator where practical and validate it against an independent simple reference on small/exhaustive cases. Verify rank ordering, ace-low straights, ties, board-playing ties, and impossible cards. Document deck and evaluator conventions.
+
+Test blinds and heads-up action order, all-in calls for less, short raises and reopening rules, multiple side pots, dead contributions from folded players, uncalled returns, odd-chip allocation, and rake handling. Never compare incompatible rake or betting rules without labeling the difference. Training toy games should use their standard rules; imported games use the verified export rules.
+
+The replayer must:
+- Step forward/backward and jump by street from deterministic state snapshots.
+- Show seats, hero, board, pot, stacks, bets, legal actions, and the selected action.
+- Offer a decision-time view and a clearly labeled retrospective reveal view.
+- Keep hidden cards hidden in decision-time view and in practice until feedback is due.
+- Bookmark a decision and add it to a study queue.
+- Explain unresolved parser or rule issues before showing analysis.
+
+Provide useful descriptive metrics: hands played, net result, bb/100 with uncertainty when appropriate, VPIP, PFR, three-bet opportunities/frequency, positional summaries, street/action frequencies, and sample counts. Define denominators; opportunity-based statistics must not divide by all hands. Distinguish descriptive tendencies from proven mistakes, and avoid diagnosing leaks from tiny samples.
+
+For analysis:
+- Implement exact enumeration where tractable and seeded Monte Carlo elsewhere.
+- Support legal weighted ranges, card-removal effects, multiple opponents only where supported, ties/split shares, reproducible simulation budgets, and uncertainty estimates.
+- Distinguish showdown equity from the expected value of a betting decision. Equity alone does not supply a correct bet/raise/fold recommendation.
+- Evaluate alternative actions using an explicit continuation policy, opponent range/model, legal action abstraction, rake model, and horizon. Keep those assumptions visible.
+- Define EV consistently as expected net future chip change from the decision, or another explicitly documented convention applied to every action. Do not mix gross pot shares with net payoffs or double-count already committed chips.
+- Label action-value differences as "estimated EV difference under this model" unless a validated exact reference justifies stronger wording. A sample outcome is not an optimal-action label.
+- Show model version, data/snapshot version, sample support, uncertainty, and an unavailable/out-of-distribution state rather than inventing confidence.
+
+======================================================================
+6. DATASET DESIGN AND LEAKAGE PREVENTION
+======================================================================
+
+Create a data card for every real, synthetic, and mixed dataset. Record provenance, rights/permission basis, intended use, variant/rules, coverage, generator version, seeds, exclusions, quality checks, size in hands/decisions/bytes, and known biases.
+
+Required data streams:
+1. My historical exports, used locally by default and uploaded only when authorized.
+2. Seeded synthetic games covering legal states, varied stack depths, positions, bet sizes, and distinct opponent policies.
+3. Small-game CFR/Deep CFR trajectories and reference values.
+4. Equity/reference-label jobs with recorded method, simulation count, variance, and label confidence.
+
+No purchased/scraped opponent corpus, extracted proprietary solver outputs, or unlicensed datasets. Do not assume simulated distributions reproduce the Ignition player population. Keep synthetic and real evaluations separate and explicitly measure any distribution shift.
+
+Split before feature fitting or augmentation. Keep all decisions, copied exports, repeated rollouts, and suit-isomorphic augmentations of the same underlying hand/deal family in one split. Deduplicate and audit split overlap. Use chronological held-out sessions for personal histories, independent seed/deal families for simulation, and unseen opponent policy families for generalization tests. Fit normalization, vocabularies, frequency tables, calibration, and feature selection on training data only. Earlier-context aggregates must respect the decision cutoff; post-session aggregates belong in reports, not decision-time inputs.
+
+Revealed cards can supervise a range model but must be excluded from its input. If labels exist only for shown-down hands in a particular source, model and report that selection bias rather than treating it as an unbiased population sample. Test missing-card and partial-export behavior explicitly.
+
+Training manifests must record exact table versions or immutable shard lists with checksums, schema/features versions, split definitions, label generator version, rules, code commit, and seed policy. Prevent training from silently following a moving "latest" dataset.
+
+======================================================================
+7. SUBSTANTIVE PYTORCH AND MACHINE LEARNING PROGRAM
+======================================================================
+
+ML is a major workstream. Implement the following models with training scripts, usable checkpoints, tests, learning curves, baselines, ablations, and product integration. Do not count importing PyTorch or calling a pretrained chat model as completing this requirement.
+
+A. SUPERVISED EQUITY MODEL
+
+Train a neural model for expected showdown pot share given hero cards, visible board, opponent count, and an explicitly encoded range assumption. Start heads-up under a specified range family; expand only when coverage and evaluation support it. If ranges are not model inputs, state the fixed range assumption in the model contract and UI.
+
+Generate labels using exact enumeration for small tractable subsets and a validated high-sample Monte Carlo reference for larger cases. Keep Monte Carlo label noise estimates. Use card embeddings and a permutation-aware set encoder or a well-justified MLP baseline; handle board padding, masks, suit symmetry, and impossible combinations. A deeper model must justify itself against simpler alternatives.
+
+Compare constant/lookup baselines, a classical regressor, a compact MLP, and the chosen deeper encoder. Report MAE/RMSE, residual bias, reliability by predicted equity, per-street and rare-state errors, inference throughput, memory, model size, and speed/error tradeoffs against direct simulation. Include a held-out exact-label subset. Equity is expected pot share; if a separate win/tie probability model is used, evaluate those probabilities with appropriate calibration/Brier/log-loss metrics.
+
+B. ACTION-SEQUENCE / BEHAVIOR MODEL
+
+Train an autoregressive or decision-level model over the visible public action prefix and acting-player information available in the chosen task. Compare frequency tables and logistic/boosted-tree baselines with a small GRU or Transformer. Use masked legal action categories and documented bet-size buckets, with a deliberate mapping back to legal simulator actions.
+
+The required first target is next-action distribution, useful for offline population summaries and a simulated opponent. A range-posterior head over legal card combinations or documented buckets is a subsequent extension if labels support it. Do not infer individual identities from anonymous sessions. Apply blocker masks and renormalization to any range predictions.
+
+Report held-out negative log-likelihood, Brier score, calibration, class/support breakdowns, sequence-length sensitivity, generalization to unseen policies, and real-versus-synthetic gaps. Behavior cloning estimates what the data policy does; it is not proof of good poker strategy. Keep probability calibration separate from epistemic uncertainty and distribution-shift detection.
+
+C. DEEP CFR / NEURAL STRATEGY
+
+Use the Deep CFR paper as the algorithm reference [S3]. First establish Kuhn and Leduc poker with tabular CFR or external-sampling MCCFR and a trusted independent reference implementation [S4]. Then implement Deep CFR in PyTorch: information-state encodings, player advantage networks, bounded reservoir memories, external-sampling traversals, regret matching with a defined nonpositive-regret fallback, and an average-strategy network with the algorithm's sampling/iteration weights. Specify traversal probabilities, counterfactual weighting, player alternation, network reset/training schedule, and checkpoint state. Test the algorithm against the paper and small-game reference; do not substitute a DQN and call it Deep CFR.
+
+For these tractable games, compute exact best-response metrics where available. State the exact NashConv/exploitability convention and units, including any factor-of-two difference. Plot performance against traversals, wall time, samples, and compute cost, using at least three seeds for research conclusions. Compare random/legal, simple heuristic, tabular CFR, and neural policies. Do not infer equilibrium quality merely from beating weak bots.
+
+Only after this passes, attempt a bounded heads-up Hold'em experiment with explicit stack sizes, action/bet-size abstraction, chance handling, rules, and computational limits. Specify how observed out-of-abstraction actions are handled; unsupported states must abstain. Report approximate best-response/search results as diagnostics, not certified exploitability bounds. Never claim that a small-game convergence result transfers to multiplayer, raked, or unrestricted no-limit games.
+
+Six-max imported hands can receive descriptive analysis, equity, and model-dependent simulation without pretending the heads-up solver is applicable. Route unsupported decisions away from strategic scoring. Provide small-game training modes so the validated neural agent is useful even before larger-game research succeeds.
+
+D. TRAINING AND EVALUATION ENGINEERING
+
+- Use batched loaders over partitioned shards with bounded memory; never load the entire dataset through the Spark driver.
+- Log parameters, code/data versions, optimizer/scheduler, seeds, hardware, losses, validation metrics, checkpoints, elapsed time, and cost attribution to MLflow.
+- Implement deterministic CPU checks, device-aware execution, checkpoint/resume, early stopping, NaN detection, gradient diagnostics, and bounded experiment configurations.
+- Assess mixed precision on supported hardware without making it a requirement on macOS. Explain reproducibility limits across devices/runtime versions [S10].
+- Use fixed held-out evaluation sets and document thresholds before examining final test results. Never tune on the test split.
+- Run at least three seeds for final neural comparisons, show variability/confidence intervals, and report an honest negative result when the neural model loses to a baseline.
+- Include ablations for sequence context, embeddings/encoding, model capacity, data scale, and leakage-sensitive feature exclusions. Prioritize informative experiments within the budget.
+- Demonstrate multi-GPU/distributed training only if data scale and approved hardware justify it. Spark ETL, parallel hyperparameter jobs, and PyTorch distributed gradient training are different capabilities; name each accurately.
+- A model is eligible for promotion only when correctness and calibration gates pass, its intended domain is clear, and measured quality/latency tradeoffs justify deployment. Retain the baseline as a fallback.
+
+An LLM coach is optional and deferred. If later added, it may explain structured computed results with provenance; it must not fabricate solver values, generate ungrounded strategy labels, or receive personal histories through an external API without authorization.
+
+======================================================================
+8. MEANINGFUL SPARK / DELTA LAKE WORKLOADS
+======================================================================
+
+Implement the same core transformations locally and on Databricks, using schema-versioned DataFrames and shared validation logic. Local app convenience paths must reconcile with pipeline outputs on the same fixtures.
+
+Bronze: immutable raw records or references plus source manifests, ingestion metadata, errors, and generator provenance. Use bounded file processing; do not collect raw corpora to the driver or make an entire growing export one unbounded task.
+
+Silver: normalized hands/actions/observations; deterministic deduplication; currency and time normalization; quality flags; validated state reconstruction; and separate retrospective outcomes. If stateful replay needs Python, process bounded ordered hand groups with an explicit partitioning and sort strategy, and benchmark serialization overhead. Do not assume a Spark collect_list has deterministic order without sorting.
+
+Gold: session and population aggregates, position/action statistics with correct denominators, decision-time features, reference labels, frozen training splits/shards, and versioned batch model results. The application consumes published snapshots; request handling must not launch Spark queries.
+
+Required distributed operations:
+- Deduplication and idempotent incremental ingestion of overlapping exports.
+- Multi-table joins of actions, hands, positions, and appropriate metadata.
+- Per-hand/street windows and ordered feature reconstruction with leakage checks.
+- Aggregations over population behavior and personal sessions.
+- Partition-parallel synthetic simulation or label generation using deterministic work IDs and seeds.
+- Training dataset export and batch model inference on partitions, loading a model once per worker/partition as supported rather than once per row.
+- Full and incremental rebuilds with equivalent results.
+
+Delta requirements:
+- Transactional per-table writes, schema enforcement, migrations, deterministic MERGE/upsert keys, and pre-deduplicated merge sources.
+- Safe retry after partial task failure; no duplicate labels or scores caused by Spark task retries/speculation.
+- Snapshot-version tracking and reproducible reads.
+- A publish manifest or equivalent commit protocol for coherent multi-table snapshots; do not claim independent Delta table commits form one atomic multi-table transaction.
+- Sensible partitioning based on size/query patterns; never partition by high-cardinality hand_id. Avoid overpartitioning small personal datasets.
+- File-size/compaction measurements, incremental backfills, and documented retention/VACUUM policies that preserve active training snapshots and privacy requirements.
+- Local open-source Delta behavior separated from Databricks-specific optimization features. Validate reader/writer protocol compatibility before using optional features [S6].
+
+Performance work must use measured query plans and Spark metrics: explain plans, partition counts, task skew, shuffle read/write, spill, executor CPU/memory, and input/output files. Compare appropriate broadcast joins, partition sizing, built-in functions versus UDFs, and adaptive query execution when available [S5]. Do not declare an optimization successful from runtime on one tiny run.
+
+Scale profiles:
+- tiny: hundreds to thousands of hands, for deterministic tests and demo.
+- dev: approximately 100,000 unique hands, scaled down if local hardware needs it.
+- benchmark: initially target 1-10 million unique synthetic hands and report actual decisions, bytes, and distinct states; increase only within approved cost/storage limits.
+
+These are configurable targets, not fabricated completed results or prerequisites to useful local work. Generate varied valid trajectories and opponent policies. Copying rows repeatedly to say "millions of hands" does not count. Include realistic skew, overlapping batches, and controlled malformed input for robustness tests, but keep fault-injected data outside model training unless explicitly intended.
+
+======================================================================
+9. DISTRIBUTED BENCHMARK PROTOCOL
+======================================================================
+
+Write the protocol and machine-readable benchmark schema before collecting final numbers. Use a correct single-machine baseline, such as a streaming Python/DuckDB implementation or an equivalent local pipeline. Match operations, input, outputs, and validation; avoid deliberately inefficient baselines.
+
+Compare:
+1. Single-machine baseline.
+2. Local Spark, clearly labeled as local even with multiple executors.
+3. A controlled one-worker Databricks configuration.
+4. At least two actual worker machines in Databricks for the distributed completion gate.
+5. More workers only if approved budget and workload justify it.
+
+Record distinct worker/executor identities, cluster specification, event logs or equivalent evidence, runtime, partition layout, and worker utilization. Several threads or containers on one laptop do not establish multi-machine scaling. If a chosen serverless mode cannot expose enough evidence to verify the experiment, choose an appropriate classic jobs configuration or state the measurement limitation.
+
+Required benchmarks:
+- Full raw-to-Gold processing.
+- Incremental ingestion with overlaps, duplicates, and corrections.
+- Distributed feature/label materialization and model batch scoring.
+- Fixed-size strong-scaling comparison and, where budget permits, a weak-scaling experiment with proportional input growth.
+- At least one skew/partition or file-layout optimization comparison.
+- Retry/recovery experiment demonstrating output equivalence after interruption.
+
+Record dataset identity, unique hands/decisions, compressed/uncompressed size where measurable, code commit, platform versions, warm/cold state, repeated timings, throughput, memory, shuffle, spill, task skew, compute hours, dollar cost, and output correctness checks. Time cloud startup, data transfer, and steady-state execution separately, plus total end-to-end wall time.
+
+Use at least three measured repetitions for final comparisons where affordable; retain raw runs and explain excluded warmups. If approved spending cannot support repetitions or scale, show exploratory results as such and leave the final benchmark gate open. Measure speedup S(p)=T(1)/T(p) and efficiency S(p)/p only with compatible resource definitions; report total resources as well as worker count. When the baseline or hardware differs, label the comparison rather than implying pure scaling.
+
+Do not guarantee Spark beats local tools for a personal dataset. Identify the size/workload where distribution is useful, or report that no crossover was observed. Report cost per million hands and per million scored decisions, plus model quality at each data scale. The end-to-end result must connect distributed work to a dataset/model/app outcome, not just a word-count exercise.
+
+======================================================================
+10. DATABRICKS / MLFLOW IMPLEMENTATION
+======================================================================
+
+Create a source-controlled Databricks job definition and deployable project configuration using supported tooling verified at implementation time. Jobs must invoke tested modules/wheels, accept explicit parameters, and have bounded retries, timeouts, dependencies, and concurrency [S7].
+
+Required DAG:
+ingest -> validate -> Silver -> Gold/features -> freeze dataset -> train ->
+evaluate -> conditionally register/promote -> batch score -> publish snapshot
+
+Separate datasets and workloads by environment. Use Unity Catalog schemas/tables/external locations and scoped storage credentials where the workspace supports them; document and test the actual supported configuration. Keep credentials out of notebooks. Prefer short-lived identity/federation or scoped roles over embedded access keys.
+
+MLflow must capture comparable experiments and real artifacts, not just a demo run name. Log dataset manifest, signature/input example, feature schema, model card, baseline comparison, evaluation report, checkpoint, and environment. Use the workspace's supported model registry mechanism and explicit version/alias promotion with rollback [S8]. Pin the deployed artifact by immutable version/digest; do not resolve a changing alias on every review request.
+
+Databricks compute and workspace features vary by runtime, account, and compute mode. Free/single-node configurations may help development but do not automatically satisfy the S3, GPU, Unity Catalog, or multi-worker gates. Do not invent enabled capabilities or assume free-tier allowances.
+
+Provide a local tracking/data path that exercises the contracts without a Databricks account. State exactly which cloud behavior remains unverified until a real job run succeeds. Include job run IDs, relevant sanitized logs, dataset versions, and registry evidence in the final report after actual execution.
+
+======================================================================
+11. AWS STORAGE, COMPUTE, AND PRIVATE DEPLOYMENT
+======================================================================
+
+Build a minimal, real AWS deployment through reviewed infrastructure-as-code:
+- S3 storage for originals when authorized, Delta data, training shards, model artifacts, reports, and Spark event logs, with separate prefixes/buckets and retention policies as warranted.
+- Scoped IAM roles for ingestion, Databricks access, training, deployment, and serving; do not give the app permissions to mutate the training lake.
+- ECR images pinned by digest; bounded on-demand compute for app/demo and training jobs. Use GPU compute only for a measured training need.
+- CloudWatch logs, operational metrics, job errors, and cost/resource tags.
+- Remote state with suitable access control/encryption and state locking where supported; never commit credentials or sensitive state to Git.
+
+Default private deployment candidate: one small on-demand EC2 instance running the API/UI and a read-only published analysis snapshot, accessed through an authenticated Systems Manager session/port-forwarding path, with no inbound app port open to the internet. Explicitly design SSM connectivity, egress, image pulls, persistent data, restart behavior, and backup/restore. If the network requires paid endpoints, NAT, or a public IPv4 address for outbound connectivity, price that choice before provisioning; "no inbound rules" does not eliminate networking costs.
+
+If an existing environment makes ECS or another managed service simpler and cheaper, document the choice and use it instead. Do not deploy multiple alternative stacks just to list AWS services. Keep persistent databases/load balancers/NAT gateways out of the default unless their value and ongoing cost are justified.
+
+Training compute can use a bounded EC2 job or AWS Batch, with S3 checkpointing and a deterministic resume path. Databricks may host the main training job when suitable; do not duplicate GPU infrastructure without a purpose. If Spot is chosen, test interruption recovery and use bounded retries/fallbacks rather than silently switching to expensive capacity.
+
+Cloud deployment must preserve every offline gate. There must be no public strategic-inference endpoint. Keep the private app usable from a versioned snapshot without a running Databricks cluster. Document start, access, health check, stop, restore, rollback, and teardown. A valid Terraform plan is not proof of a successfully deployed service.
+
+======================================================================
+12. BUDGET AND RESOURCE CONTROLS
+======================================================================
+
+Default authorized cloud spending is $0 until I approve a concrete costed run/deployment plan. Build all local code and reviewable infrastructure first. Propose a conservative learning envelope, for example $50 total per month and $10 per experiment, explicitly as proposed limits rather than current prices or permission to spend. If a meaningful multi-worker experiment needs more, show the smallest adequate alternative and leave the gate pending until approved.
+
+The plan must state region, instance/compute type, worker/GPU count, duration, data/storage volume, expected and upper-range cost, existing resources, stop conditions, retained resources, and cleanup procedure. Check current official pricing at execution time. Include Databricks charges, AWS compute, disks, S3 storage/requests, transfer, logs, snapshots, public IPv4/networking, and idle time. Account for the actual billing arrangement so compute is neither omitted nor double-counted.
+
+Implement a cost policy/configuration with:
+  cloud_enabled: false by default
+  monthly_budget_usd: user-approved value
+  per_run_budget_usd: user-approved value
+  max_workers / max_gpus / allowed_instance_types
+  max_run_minutes / max_retries / max_concurrent_jobs
+  max_generated_rows / max_storage_bytes
+  resource_expiry / retention / owner / project tags
+
+Use preflight estimates, bounded work units, job timeouts, limited cluster sizes, idle termination where applicable, and a task-level stop mechanism. Require a fresh review only for spending or scope beyond the approved envelope, not every routine run within it. Concurrent jobs must reserve budget centrally or otherwise avoid each spending the same remaining allowance.
+
+Configure AWS Budgets notifications and relevant Databricks budget/usage monitoring as supported. AWS documents a billing/notification delay; budget alerts are not a hard spending cap [S9]. Resource limits and expiry reduce exposure but cannot guarantee an absolute dollar ceiling. Keep a safety margin, and show when spend estimates are stale or unavailable. Halt new paid work if cost tracking fails or the run cannot fit the approved allowance.
+
+Log estimated versus actual cost with attribution to experiment/job/dataset. Provide a clearly scoped emergency-stop command that targets only PokerMind resources. Teardown should stop compute and identify retained S3 data, disks, snapshots, logs, endpoints, and any continuing charges. Do not silently delete personal data to save costs. Test stopping and cleanup on project-owned disposable resources.
+
+======================================================================
+13. SECURITY, PRIVACY, AND RELIABILITY
+======================================================================
+
+- Keep real histories local by default. Ask before the first cloud upload of personal data; synthetic data is sufficient for initial cloud validation. Do not commit or publish private histories, raw screenshots, credentials, account identifiers, or individual-session results without authorization.
+- Use S3 Block Public Access, encryption at rest, TLS, and bucket/IAM policies scoped to the necessary resources [S11]. Choose SSE-S3 or KMS deliberately based on access requirements and cost; secure any KMS policy as carefully as IAM.
+- Prefer temporary credentials, AWS roles/SSO and CI workload federation. Do not request root keys. Use supported secret storage for any unavoidable secret and redact logs.
+- Authenticate private deployments, enforce authorization on every record/action, restrict CORS, defend browser-session writes against CSRF as appropriate, and keep local services bound to loopback by default.
+- Validate file type, size, encoding, path, decompressed size, record counts, and parser time. Defend against path traversal, archive bombs if archives are supported, malformed inputs, HTML/script injection in metadata, and unsafe filenames.
+- Never execute uploaded files or load arbitrary uploaded serialized Python/model objects. Load trusted checksummed artifacts using safe supported serialization paths; treat model registries and datasets as trust boundaries.
+- Avoid exposing raw cards or account/session identifiers in telemetry. Use configurable retention and explicit export/delete controls. Explain that deletion must cover app projections, S3 versions/backups, Delta retention, artifacts, and any models trained on the removed data; do not falsely promise immediate erasure from every learned model.
+- Keep derived outputs traceable and rebuildable. Use checksums, atomic file publication, idempotency keys, bounded retries with backoff, and durable job status.
+- Implement backup/restore for the app index and manifests, and test rollback to a prior known-good model and serving snapshot.
+- Add dependency/license review, secret scanning, and infrastructure policy checks to CI. Keep security controls proportional to a personal application.
+
+Write a concise threat model covering malicious history files, unintended cloud disclosure, credential leakage, unauthorized app access, training leakage, unsafe model loading, runaway spend, and accidental live-assistance pathways. Turn each material mitigation into an implementation or a test.
+
+======================================================================
+14. PERSONAL TRAINING EXPERIENCE
+======================================================================
+
+Build a study queue that ranks well-supported topics by frequency, uncertainty, and estimated effect under the selected analysis model. Do not equate losing a pot with making a mistake or present speculative dollar-loss totals as facts.
+
+Drills should:
+- Use eligible imported decisions or server-generated synthetic situations.
+- Hide future actions/outcomes/revealed cards until the attempt is submitted.
+- Let me choose a legal action and, when relevant, a legal bet size.
+- Show reference distributions or model-dependent estimates with assumptions and confidence, rather than insisting there is always one correct action.
+- Record response, latency, confidence, topic, model version, and review result.
+- Use spaced repetition or a simple transparent scheduler and show progress across repeated topics.
+- Allow play against baseline and neural agents in the internal simulator, with selectable seeds and replayable games.
+
+Provide a useful first-run demo without an Ignition account, cloud credentials, GPU, or downloaded model. Train a tiny model or use labeled baseline results in that demo, clearly stating which. Avoid an interface that falsely appears connected to a real poker table.
+
+======================================================================
+15. TEST STRATEGY AND QUALITY GATES
+======================================================================
+
+Test important behavior and invariants, not implementation trivia. Separate fast deterministic CI tests from statistical research evaluations and paid cloud integration tests.
+
+Unit/golden tests:
+- Verified parser fixtures and independent expected canonical records.
+- Amount/time/position parsing; overlapping export deduplication; unsupported variants.
+- Action legality, card ranking, side pots, refunds, rake, and net-result accounting.
+- Correct denominators for statistics and temporal cutoffs for features.
+
+Property/differential tests:
+- No duplicate cards, negative illegal stacks, illegal actions, or nonterminal dead ends.
+- Conservation of chips accounting for rake; replay state agrees with terminal summaries.
+- Independent evaluator checks; deterministic replay given actions/chance seed.
+- Suit permutation invariance where valid; observation independence from unseen cards and future events.
+- Legal-action probabilities are finite, nonnegative, normalized, and zero for illegal actions.
+- Changing opponent hidden cards without changing a player's information state cannot alter that player's encoded input.
+
+Data/pipeline integration tests:
+- Local and Spark outputs agree on deterministic fixtures.
+- Full rebuild and incremental processing agree, including retries and corrections.
+- Training/test partitions have no disallowed overlap; fitting uses training data only.
+- Delta versions, schema migrations, snapshot publication, and interrupted-job recovery work.
+- Distributed partition retries do not duplicate generated hands, labels, or scores.
+
+ML tests/evaluations:
+- Tiny-batch overfit sanity check, decreasing loss on controlled data, gradient sanity, checkpoint/resume, device compatibility, and artifact load/score parity.
+- Equity versus independent exact/Monte Carlo references with appropriate tolerances.
+- Tabular and neural small-game strategy metrics versus independent references.
+- Calibration, multi-seed comparisons, generalization, ablations, and fallback behavior.
+- Promotion refuses incompatible schemas, failed evaluation, corrupted artifacts, and out-of-domain inputs.
+
+End-to-end and guardrail tests:
+- From a clean setup: import sample -> replay -> batch analysis -> drill -> saved progress.
+- Ineligible/recent/unknown-date real hands cannot be analyzed through UI, API, CLI, background jobs, or direct review identifiers.
+- Altering client-provided state cannot override server-owned trainer state or review provenance.
+- Wrong-user access, oversized/malicious files, traversal, unsafe HTML, and invalid uploads are rejected.
+- No app path connects to Ignition, reads screens/client memory, or places external actions.
+- Local smoke tests do not incur cloud charges; paid jobs require explicit enabled configuration.
+
+Cloud gates after authorized execution:
+- IAM allow/deny checks, private storage/access verification, actual Databricks job, multi-worker workload, registry artifact, private AWS app health check, logs, stop/cleanup, and rollback evidence.
+- Distinguish mocked tests, infrastructure validation, and actual cloud execution in reports.
+
+Set concrete runtime and correctness thresholds after initial calibration, document them before final evaluation, and explain tolerances. Avoid flaky pass/fail tests based on a single neural-training seed. Do not suppress failing tests or redefine success after seeing results.
+
+======================================================================
+16. PHASED, RUNNABLE MILESTONES
+======================================================================
+
+For every milestone deliver: working code; one documented run command; a demo or artifact; relevant automated checks; a short explanation of results; measured limitations; and an updated completion checklist. A design document alone is not a milestone completion.
+
+M0 - REPRODUCIBLE SKELETON AND CONTRACTS
+Inspect the workspace and hardware, establish compatible versions, scaffold packages/API/UI, create canonical schemas and synthetic fixtures, and add CI and a doctor command.
+Acceptance: a clean checkout can run a local demo and fast checks; cloud access is disabled; the architecture, offline boundaries, and assumption log are saved.
+
+M1 - USEFUL IMPORTER, ENGINE, AND REPLAYER
+Implement static import, quarantine/reporting, eligibility, deterministic replay, exact chip accounting, and basic session statistics. Validate against real sanitized formats when available.
+Acceptance: importing overlapping files is idempotent; edge-case hands settle correctly; recent or malformed hands cannot reach review; a user can inspect a historical session. If real exports are missing, mark only real-format verification pending.
+
+M2 - LOCAL DATA PLATFORM AND SUPERVISED ML VERTICAL SLICE
+Implement Bronze/Silver/Gold locally with PySpark/Delta, simulation/label generation, frozen splits, baseline and PyTorch equity training, MLflow tracking, and batch scores consumed by review/practice.
+Acceptance: a single documented workflow goes from generated hands to a trained model to visible app results, with lineage, reference-label validation, leakage tests, and baseline metrics.
+
+M3 - BEHAVIOR MODEL AND NEURAL STRATEGY RESEARCH
+Implement sequence behavior modeling and tabular CFR/Deep CFR in Kuhn/Leduc, with the trainer using their versioned policies. Run multi-seed evaluations and ablations within local limits.
+Acceptance: reproducible model reports, exact small-game evaluation, valid masked policies, checkpoint/resume, and honest quality comparisons. A model that fails promotion stays a research artifact while the trainer retains a validated baseline.
+
+M4 - AWS / DATABRICKS END-TO-END DATA AND MODEL JOB
+Prepare costed infrastructure and job definitions, validate locally, and obtain the required spending/account/data authorization once the plan is reviewable. Execute S3 -> Databricks Delta -> training -> MLflow -> batch scoring -> published app snapshot.
+Acceptance: real cloud run evidence, access controls, data lineage, actual costs, and verified stop/cleanup. If blocked by access or budget, finish all independent preparation and identify the exact unverified gate.
+
+M5 - DISTRIBUTED BENCHMARKS AND BOUNDED HOLD'EM RESEARCH
+Run the approved unique-data workload on one and multiple workers, perform tuning and recovery experiments, publish reproducible results, and attempt the bounded heads-up neural-strategy extension if resources permit.
+Acceptance: actual worker evidence and end-to-end benchmarks, quality/scale/cost curves, documented crossover or negative result, and explicit limits on any larger-game claims. No claim of six-max equilibrium competence.
+
+M6 - PRIVATE DEPLOYMENT AND PERSONAL TRAINING POLISH
+Deploy the app privately on AWS within the approved envelope, validate access/start/stop/restore, improve the study queue and drill experience, and finish practical setup/runbooks.
+Acceptance: a user can run local study without cloud, optionally access the private cloud deployment, recover from a failed job/model release, and stop paid resources. Deliver the final evidence report and remaining limitations.
+
+The full project includes the executed cloud/distributed gates; a local-only prototype is a useful milestone, not a claim of full completion. Research uncertainty may prevent model promotion, but it does not excuse missing experiments, baselines, or honest reporting.
+
+======================================================================
+17. COMMANDS, DELIVERABLES, AND EVIDENCE
+======================================================================
+
+Implement a coherent command surface such as the following; adapt names to the repository and document exact prerequisites. These are commands to build, not claims that they already exist:
+
+  make doctor
+  make setup
+  make demo
+  make test
+  make data-tiny
+  make pipeline-local
+  make train-equity PROFILE=tiny
+  make train-behavior PROFILE=tiny
+  make train-deep-cfr GAME=kuhn PROFILE=tiny
+  make evaluate
+  make benchmark-local
+  make cloud-plan
+  make cloud-run PROFILE=approved
+  make benchmark-cloud PROFILE=approved
+  make deploy-private PROFILE=approved
+  make cloud-stop
+  make cloud-inventory
+
+Keep destructive data cleanup separate from stopping compute, and preview deletion targets. Commands must return useful failure messages, machine-readable status when useful, and nonzero exits on errors. A missing GPU, Java installation, export format, cloud permission, or budget should produce an actionable message instead of an opaque stack trace.
+
+Deliver:
+- README with quick start, offline workflow, supported formats, screenshots, and troubleshooting.
+- Architecture/decision records, data contracts, parser capability matrix, threat model, and offline-policy specification.
+- Simulator/rules documentation and exact versus approximate analysis definitions.
+- Dataset cards, model cards, leakage audit, evaluation protocols, and experiment reports.
+- Databricks job configuration, infrastructure definitions, cost policy, pricing assumptions, and deployment/rollback/teardown runbooks.
+- Raw benchmark JSON/CSV, readable benchmark report, and plots with axes, units, hardware, seeds, and input sizes.
+- A reproducible demo dataset and tiny workflow that run without personal data or cloud credentials.
+- A verification matrix connecting each important claim to a command, test, run ID, metric artifact, or documented limitation.
+
+Benchmark records should include at least:
+  experiment_id, timestamp, git_commit, dataset_manifest_hash,
+  unique_hands, decisions, input_bytes, runtime_versions, hardware,
+  worker_count, executor_count, cpu_gpu_memory, workload_config,
+  repetition, warmup_or_measured, startup_seconds, execution_seconds,
+  total_seconds, throughput, shuffle_bytes, spill_bytes, output_hash,
+  quality_metrics, estimated_cost_usd, actual_cost_usd, cost_status
+
+Prepare resume-ready bullets only after measured evidence exists. Every number must point to a result artifact. Never write "processed millions of hands," "improved accuracy," "distributed training," or "reduced cost" unless that exact claim was demonstrated. Identify simulation as simulation and private cloud deployment as private cloud deployment. Include an interview-oriented explanation of engineering tradeoffs, failures, and what I personally need to understand.
+
+======================================================================
+18. HOW YOU SHOULD WORK WITH ME
+======================================================================
+
+Act as an implementation partner and technical teacher. Explain important design choices in plain language and keep progress reports short: what now works, what was verified, and what the next step resolves.
+
+Start by inspecting the repository/environment and available example files. State assumptions, produce a concise milestone plan, and immediately implement M0 plus the first narrow import/replay slice. Do not stop after giving me this plan. Ask only questions that materially block the next action; choose sensible defaults for reversible local work.
+
+If you need an export sample, cloud account access, or paid execution approval, request the exact missing item and continue independent local work. Never request secrets in chat. Before asking to spend money or upload personal histories, prepare the concrete plan/configuration that I can review. Preserve approved budgets and preferences across turns.
+
+Do not invent results, compatibility, permissions, APIs, benchmark numbers, or source citations. Check current official documentation for unstable platform details. Verify critical research equations against primary sources. Explain when evidence supports only an approximation or a limited game.
+
+Keep the implementation compact enough to maintain, but do not dilute the required ML, Spark, Databricks, or AWS depth into checkbox demos. Favor a small verified end-to-end slice, then scale its real workload and scientific evaluation. When a model or distributed approach performs worse than a simpler baseline, report the result and retain the better product behavior.
+
+At the end of each substantial work session, report the implemented milestone slice, exact run instructions, tests/evaluations actually run, paid resources still running if any, remaining gate status, and the next concrete action. Continue until the authorized work is complete or a specific external dependency prevents further progress.
+
+======================================================================
+19. PRIMARY REFERENCES AND VERIFICATION NOTES
+======================================================================
+
+These references were consulted while preparing this prompt on October 15, 2026. Recheck current instructions, APIs, pricing, availability, and terms during implementation. This source list is not a claim that the proposed application is endorsed or approved by Ignition. The architecture, product restrictions, milestones, and experiment thresholds above are project requirements.
+
+[S1] Ignition - Special Poker Features / Complete Hand Histories.
+The page describes delayed downloads and post-session access to all players' hole cards. Preserve the separation between retrospective knowledge and decision-time inputs.
+https://www.ignitioncasino.eu/poker/features
+
+[S2] Ignition - Terms of Use, including poker rules and software restrictions.
+The published terms restrict robot software and external player assistance and prohibit circumvention. The project independently excludes live assistance and platform automation.
+https://www.ignitioncasino.eu/terms-of-use
+
+[S3] Brown, Lerer, Gross, Sandholm (2019), Deep Counterfactual Regret Minimization, ICML / PMLR 97.
+Primary algorithm reference; verify exact algorithm details in the paper and supplement before implementation.
+https://proceedings.mlr.press/v97/brown19b.html
+
+[S4] OpenSpiel - Available algorithms.
+Useful independent reference for tabular CFR, external-sampling MCCFR, Deep CFR, and best-response/exploitability implementations. Verify game conventions and license when reusing code.
+https://openspiel.readthedocs.io/en/latest/algorithms.html
+
+[S5] Apache Spark - SQL Performance Tuning.
+Reference for query plans, partition tuning, joins, and adaptive execution; use documentation for the pinned Spark version.
+https://spark.apache.org/docs/latest/sql-performance-tuning.html
+
+[S6] Delta Lake - Table deletes, updates, and merges.
+Reference for update/merge behavior and associated table-management documentation; verify compatibility with the selected runtime.
+https://docs.delta.io/delta-update/
+
+[S7] Databricks on AWS - Configure compute for jobs.
+Reference for supported job compute choices and their constraints; verify the actual workspace configuration.
+https://docs.databricks.com/aws/en/jobs/compute
+
+[S8] Databricks on AWS - MLflow on Databricks.
+Reference for experiment tracking, model lifecycle, and registry integration.
+https://docs.databricks.com/aws/en/mlflow/
+
+[S9] AWS - Managing your costs with AWS Budgets.
+AWS explicitly describes delays between resource use, billing, and budget notifications, so alerts cannot substitute for bounded job/resource controls.
+https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html
+
+[S10] PyTorch - Reproducibility.
+Consult the documentation matching the installed release for randomness, determinism, and platform limitations.
+https://docs.pytorch.org/docs/stable/notes/randomness.html
+
+[S11] AWS - Security best practices for Amazon S3.
+Reference for storage access controls, encryption, monitoring, and protection against unintended public access.
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html
+
+END OF MASTER PROMPT

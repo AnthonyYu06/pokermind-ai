@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-10-16T20:54:12.653256+00:00",
+  "status": "local-implementation-verified",
+  "git_commit": null,
+  "scope": "Cloud operations, pinned publication installation, model report integration, Spark benchmark collection and deployment preparation",
+  "tests": {
+    "primary": {
+      "passed": 122,
+      "skipped": 3
+    },
+    "python312": {
+      "passed": 111,
+      "skipped": 2
+    },
+    "base_isolation": {
+      "passed": 93,
+      "skipped": 11
+    },
+    "targeted_operations": {
+      "passed": 35,
+      "skipped": 0
+    },
+    "benchmark_collector": {
+      "passed": 3,
+      "skipped": 0
+    },
+    "browser": {
+      "passed": 4,
+      "skipped": 0
+    }
+  },
+  "workflow": {
+    "restored_hands": 256,
+    "restored_scores": 338,
+    "report_visible_in_restored_app": true,
+    "smoke_support_gate_remains_failed": true
+  },
+  "checks": {
+    "linux_snapshot_install": "passed",
+    "web_production_build": "passed",
+    "terraform_schema": "passed",
+    "wheel_outside_checkout": "passed",
+    "original_v3_summary": "unchanged",
+    "source_policy": "passed",
+    "cloud_comparison": "correctly incomplete; no speedup reported"
+  },
+  "spark_events": {
+    "task_attempts": 1791,
+    "stage_attempts": 101,
+    "metrics": {
+      "executor_run_ms": 15277,
+      "executor_cpu_ns": 7764784000,
+      "memory_spill_bytes": 0,
+      "disk_spill_bytes": 0,
+      "shuffle_read_bytes": 1234129,
+      "shuffle_write_bytes": 1104653,
+      "task_input_bytes": 1647633,
+      "task_output_bytes": 1098017
+    }
+  },
+  "cloud": {
+    "enabled": false,
+    "authorized_monthly_usd": 0,
+    "resources_created": false,
+    "account_access_used": false,
+    "personal_uploads": false
+  },
+  "remaining_external_gates": [
+    "Actual AWS and Databricks account/workspace validation",
+    "Reviewed runtime patches, notifications and priced execution approval",
+    "Cloud run, multi-machine benchmarks, IAM/SSM/alerts and private deployment verification",
+    "Sanitized official Ignition exports for actual parser compatibility"
+  ],
+  "research_limits": [
+    "Neural equity remains a synthetic research comparison; exact reference retained",
+    "Earlier behavior/Deep CFR quality gates remain failed; Holdem neural strategy stays gated"
+  ],
+  "local_processes": {
+    "app": "http://127.0.0.1:8000",
+    "verification_containers": "stopped",
+    "docker_desktop": "stopped"
+  },
+  "evidence_sha256": {
+    "operations-main-tests.txt": "059bef310d952053488144b17757c249a3c5a655eb23ce16844d8cf04c568cae",
+    "operations-python312-tests.txt": "8fcf5c00f9fc1ea5f8ec897c94baa75121ee4a554485b6c02add0472b862bcc1",
+    "operations-base-tests.txt": "a8fbfb20fae1e837a1019cf5910a172484ecbb482b4def5c184a1bcf57fecb21",
+    "operations-targeted-tests.txt": "0446882d129ba03f103925524abedc8ee631fc785aeb30c7018c2931f18e383f",
+    "operations-benchmark-tests.txt": "61ca266d920fafef052343603b50fecd4732b9b475dffd38709cbf8c33c80949",
+    "operations-browser-tests.txt": "72078b5add4767e6934ad9b2b1789a3eda4c0098355f29fea7f92c3d5ded61ae",
+    "operations-web-build.txt": "33e7ca9dce4de98b714f460019cb489e767aebdd472569c8bb94ad7054569375",
+    "operations-container-check.txt": "5f54a7ea4f33fe0c9621e5325cbe0858ae753e4a0cd6f240fe06f028cf556d80",
+    "operations-terraform-validation.txt": "2ff6f7b7b494d0f8d596def971d585d29ee3e06359aa4662e84c1988f7b74cbb",
+    "operations-policy-check.txt": "728b164244cc9d11abd3033ec65ec59dce430274f3cf0344a9f9e1daf609c2f0",
+    "operations-preflight.json": "4b708f256ee4c4fcc5cbcbac8403fce0b73c0d9a65859000522f5337ba6a30ee",
+    "operations-workflow.json": "906761528c5a47ea5b6a8fc376174c8c0222f007572f1c17ef4842c21754d0ce",
+    "operations-local-benchmark.json": "7af68b6cae6ac3ae458fe038b5829f02750ce4ec65cbd9b831d5bc0e81a529af",
+    "operations-scaling-gate.json": "45982284d75caa29bd99dd25e72fc89d2274176fe5d7a7dd304cc0b3c8aee8b5"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "status": "local-implementation-verified-strategy-quality-gates-failed",
+  "timestamp": "2026-10-17T03:13:58.559381+00:00",
+  "scope": "Generated two-player, 50-BB, zero-rake Holdem simulation with bounded NFSP training and frozen river-equity features",
+  "checks": {
+    "primary_tests": {
+      "passed": 138,
+      "skipped": 3
+    },
+    "base_runtime_tests": {
+      "passed": 100,
+      "skipped": 14
+    },
+    "browser_tests": {
+      "passed": 8,
+      "viewports": [
+        "1280x900",
+        "390x844"
+      ]
+    },
+    "web_build": "passed",
+    "source_policy": "passed",
+    "running_local_api": {
+      "status": "passed",
+      "completed_hands": 16,
+      "sampled_hero_actions": 32,
+      "observed_street_decisions": {
+        "preflop": 20,
+        "flop": 8,
+        "turn": 2,
+        "river": 2
+      },
+      "policy_probabilities_legal": true,
+      "chip_conservation": true,
+      "hidden_opponent_cards": true,
+      "reload_parity": true,
+      "selected_sha256": "e987961d283be14db1173dea32bcbd7ad5d5741f035ac465368c2101445a49c4",
+      "quality_gates": {
+        "holdem_baselines": false,
+        "holdem_exploitability_certified": false,
+        "kuhn": false
+      },
+      "cloud_enabled": false
+    }
+  },
+  "training": {
+    "protocol_id": "c5ca640298a1e0713deeae2bda74294fe35454e837238e1f014883c9057c16e2",
+    "training_holdem_hands": 18000,
+    "training_kuhn_hands": 30000,
+    "evaluation_hands": 14400,
+    "distinct_evaluation_deal_seeds": 400,
+    "selection": "First predeclared seed, final episode; never selected by arena results.",
+    "selected": {
+      "path": "models/holdem-nfsp/run-v1/holdem-101/average-policy.pt",
+      "sha256": "e987961d283be14db1173dea32bcbd7ad5d5741f035ac465368c2101445a49c4"
+    }
+  },
+  "quality_gates": {
+    "holdem_baselines": false,
+    "holdem_exploitability_certified": false,
+    "kuhn": false
+  },
+  "promotion": {
+    "eligible": false,
+    "reason": "Exploratory, abstracted heads-up self-play. General Hold\u2019em optimality is unproven; prior Deep CFR gates remain unchanged."
+  },
+  "cloud_enabled": false,
+  "cloud_budget_usd": 0,
+  "personal_data_upload_authorized": false,
+  "source_sha256": {
+    "packages/strategy/nfsp.py": "d31bc953a9337746126da8f9d5392c4b6402eeab530c0179b7b313007ff51a2e",
+    "packages/strategy/holdem_nfsp.py": "1b3bdeb9c9398502a50c8d8940996758d760b19c85c3bf5bc4bdb1f819b501ce",
+    "training/holdem_nfsp.py": "420674fe3a117fb15212a54903ab6f780eb434c0d3ab91f5a3be9bdd72652ddb",
+    "configs/holdem-nfsp-v1.json": "9c782b62fd68d45f4c155bf26d7c7f10bc8e9b8f2120e4e4022024c165309e78",
+    "services/api/nfsp_policy.py": "bc04d6c9b78a5eadb58cf7f84b77700731c346819039e50306604e22dccc6172",
+    "services/api/holdem.py": "5548909b45fa6d5879db5efc8d732e5a012ee30ae9d2d42290802c6816e5a273",
+    "services/api/app.py": "0f1163ea7276e9fb987a11abcb85a847077c2075d8983c00b3c5783c99972eb5",
+    "services/api/backup.py": "ef67321dfb550a638823a1c34b282f6e43d3289c1fc5bf6a73c20e8856f5f212",
+    "apps/web/src/HoldemTrainer.tsx": "4534d2f079ffb352fc27e5eef3130fc4ba3f8144f93385f8f56848b5f8d2ec59",
+    "apps/web/src/style.css": "5e1a45e4edb06c9f5231db21d2dbd3d0501e0544381a6043dcbe472cb170b53a",
+    "scripts/install_nfsp_research.py": "dc3006b3ea74e5b467b77e1cef48e415413a2fc06099e9f25cf689363c613f7b",
+    "tests/research/test_nfsp.py": "5eef9b94afc43115c6cd763daad7e0075d80fe5ee234c8c49a4fa2b3e9825641",
+    "tests/research/test_nfsp_app.py": "3cafd810686494deb174c5517d7c3737c54bb5324c52fa7e4b2383e448b06bf7",
+    "tests/e2e/serve.py": "54bfe365f8765ea1113a3b7cb4ed3562f0b8db9a10a73257a8b0bc41b5bf54d8",
+    "apps/web/e2e/product.spec.ts": "275450e4593f1e0488f7f53516211c8e9b929be952a29bccaa0706b2ac5b794a",
+    "docs/holdem-selfplay.md": "f9b9aeda3757e031404cb5a516b24d43884d131941f6724c52f431ed013339fc",
+    "docs/strategy-model-card.md": "330f700532cc2c21ec41c6fe3b9cb250ce3950830927184e4d297bd0b881d691",
+    "docs/verification.md": "9f78d1734bcc332473f2f1e183ff9a8ee4c8f1af6bb5626bff8ee4815282abb6",
+    "README.md": "61e212633e6f5478c457b2f3ca01dfb18c2670fe173b877f01883d5a60c518e9",
+    "Makefile": "18b8cfed2821ee0267e1bb4045009e7662315e9d6d27b8d96a8add2e17815391"
+  },
+  "evidence_sha256": {
+    "holdem-nfsp-v1-report.json": "c69aa98f9d278d639fffad18cca10fed43205595218e4f40eb2c18ebf067f5c7",
+    "holdem-nfsp-v1-protocol.json": "c5ca640298a1e0713deeae2bda74294fe35454e837238e1f014883c9057c16e2",
+    "holdem-nfsp-v1-summary.json": "15dd4fd66dab4c1ebfe00be8087690c279141195b2ba8fd01c7542e9d4cc3466",
+    "holdem-nfsp-v1-training.txt": "30827cb9ab849f6fe7ec72ec947d7138deb841e7f8c276399dc7a3313a8d3e33",
+    "nfsp-python-tests.txt": "09869e1e6745fd34c8b7805f26eef18bfe48261a80be56b14763a6355052f350",
+    "nfsp-base-tests.txt": "7465b122381c8d82a3adaf8f13ab42c62851ffa556697bb865636686ac1a64bf",
+    "nfsp-web-build.txt": "c889b80c0f61f804c34abe9904fe8f0fd4aba792a175c6a53641ab3c979210ff",
+    "nfsp-browser-tests.txt": "afd1bb182088c4ccf6e745a3a5cae3512db7c716c1f8c5bebdf34310abe4a415",
+    "nfsp-api-check.json": "be5368fe4263151aa386499d136fd29971e7f1b4c2d23c106b4358c2f6b623dc",
+    "nfsp-source-policy.txt": "728b164244cc9d11abd3033ec65ec59dce430274f3cf0344a9f9e1daf609c2f0"
+  },
+  "screenshot_sha256": {
+    "holdem-selfplay-desktop.png": "bdbd4f12fd4c38f7eb4167b53e9f26b280ed8cde44910b4e0c659b8c7649a7a6",
+    "holdem-selfplay-mobile.png": "1db738a02dd73b2ea9ae1da8c6600ef1529f4b8fb5dfe063664aae6faabb1bc7"
+  },
+  "limitations": [
+    "Strategy quality checks failed; this is not an optimal or GTO-certified policy.",
+    "Lossy card/history features and discrete betting choices; two players and fixed 50-BB stacks only.",
+    "The 14,400 evaluation hands reuse 400 deal seeds across opponents and model seeds.",
+    "No general Holdem exploitability certificate or real-player benefit measured.",
+    "No external-table input or live-platform integration.",
+    "No new cloud run, distributed NFSP training, container rebuild, or Python 3.12 compatibility rerun performed for this feature."
+  ]
+}

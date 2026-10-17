@@ -1,0 +1,54 @@
+{
+  "protocol": {
+    "version": "river-research-v3",
+    "declared_on": "2026-10-16",
+    "source": "uniform independent river card states; synthetic, not personal play",
+    "generation_seed": 946000,
+    "states": 16000,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "epochs": 100,
+    "patience": 15,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "width": 96,
+    "threads": 2,
+    "models": [
+      "structural",
+      "raw_counts"
+    ],
+    "thresholds": {
+      "minimum_test_families": 500,
+      "maximum_mae": 0.05,
+      "maximum_absolute_bias": 0.03,
+      "minimum_relative_gain_vs_best_baseline": 0.1
+    },
+    "limits": {
+      "max_seconds": 3600,
+      "max_bytes": 1073741824,
+      "minimum_free_gib": 6
+    },
+    "selection": "Validation MAE chooses checkpoint and serving research candidate. Test is evaluated only after all configurations finish; no tuning on test. Three new seeds, unchanged quality thresholds. No automatic promotion.",
+    "baselines": [
+      "constant_half",
+      "train_mean",
+      "ridge",
+      "histogram_boosted_same_structural_features"
+    ],
+    "ablations": [
+      "omit evaluator-derived features; same residual network and optimizer"
+    ],
+    "previous_evaluation": "New independent generation seed; audit exact canonical visible-card overlap against previous frozen equity shards and exclude collisions before split. Prior test results are never loaded by fitting."
+  },
+  "source_sha256": {
+    "configs/river-research-v3.json": "fc5062a5343e7112121fb37adcf7c43e43492129700598959eb93cb6e05b1d9c",
+    "packages/models/river.py": "3ba00eb51665adfcff6ef44284f13c1bb7327546371471040cc7fee8ce13d1d9",
+    "training/river.py": "fc867ae4cd45887ab0efe79a36321c2add865747898232be1e1563d9f3ff0187",
+    "pipelines/spark/workload.py": "bc7643d08362763294c2cff581f76983fa5485fe2be6c63faebcd18927c49283",
+    "scripts/run_river_research.py": "c9cd7a7128ef408fbd0f6e04d5e285fc30cd0daae0ed7fb1923fd09a012966ac"
+  },
+  "created_before_data": true
+}

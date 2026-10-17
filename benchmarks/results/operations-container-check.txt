@@ -1,0 +1,39 @@
+Production HTTP frontend, demo, replay and hidden-card checks passed
+Pinned snapshot verification and idempotent install passed in Linux serving image
+{
+  "status": "passed",
+  "image_id": "sha256:dd9012b28e0211ce59efd59f051c4d7d4ddb91626e430f1e33b8d70dc30b8ee1",
+  "health": {
+    "status": "ok",
+    "mode": "offline-local",
+    "cloud_enabled": false,
+    "version": "0.1.0"
+  },
+  "platform": "linux/amd64",
+  "host": "macOS ARM64 via Docker emulation",
+  "entrypoint": "unmodified production CMD",
+  "read_only_root": true,
+  "network": "none",
+  "user_id": 10001,
+  "hands": 48,
+  "production_http_checks": [
+    "frontend",
+    "demo",
+    "replay",
+    "hidden_cards"
+  ],
+  "pinned_snapshot_install": "passed",
+  "base_images": {
+    "platform": "linux/amd64",
+    "images": {
+      "python": {
+        "tag": "python:3.13.5-slim",
+        "digest": "python@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419"
+      },
+      "node": {
+        "tag": "node:26.7.0-bookworm-slim",
+        "digest": "node@sha256:4db36457f406501e6f608802e5da617e5fbd0e80b75901b6a09de1ae5a667d32"
+      }
+    }
+  }
+}

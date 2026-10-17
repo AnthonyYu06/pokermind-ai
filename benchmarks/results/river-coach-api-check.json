@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "health": {
+    "status": "ok",
+    "mode": "offline-local",
+    "cloud_enabled": false,
+    "version": "0.1.0"
+  },
+  "drill_id": "c4ec3b07abf84d02998d9aef9760bd03",
+  "ranking_source": "neural",
+  "model_members": 3,
+  "model_bundle_sha256": "cba5339f209bb1702c8ff7660ccd2d5c67391a9e9d9af2c6f0b5b3c4389a9b92",
+  "opponent_cards_hidden": true,
+  "result_persisted": true,
+  "cloud_budget_usd": 0
+}

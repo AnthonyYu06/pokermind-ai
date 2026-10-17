@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "execution": "local Spark on one Mac; not multiple workers",
+  "failure_stage": "silver",
+  "prior_publication_unchanged": true,
+  "incremental_extracted_hands": 8,
+  "full_incremental_hash_match": true,
+  "quarantine_retraction": true,
+  "unique_hands_before_retraction": 32,
+  "unique_hands_after_retraction": 31,
+  "seconds": 54.702090500009945,
+  "cost_usd": 0,
+  "incremental": {
+    "actual_cost_usd": 0,
+    "aqe": true,
+    "cost_status": "local compute only",
+    "dataset_manifest_hash": "bf55c703f238b878df54e82a8848f58959d624ffe59e2cb367157f86108eeff9",
+    "decisions": 193,
+    "delta_versions": {
+      "bronze": 2,
+      "gold": 1,
+      "labels": 1,
+      "silver": 2
+    },
+    "estimated_cost_usd": 0,
+    "event_log_dir": "lake/spark-events",
+    "executor_count": 1,
+    "experiment_id": "5e56b505b4580570",
+    "extracted_hands": 8,
+    "gold_counts": {
+      "synthetic:flop:bet": 8,
+      "synthetic:flop:call": 6,
+      "synthetic:flop:check": 29,
+      "synthetic:flop:fold": 2,
+      "synthetic:flop:raise": 1,
+      "synthetic:preflop:call": 25,
+      "synthetic:preflop:check": 15,
+      "synthetic:preflop:fold": 10,
+      "synthetic:preflop:raise": 14,
+      "synthetic:river:bet": 6,
+      "synthetic:river:call": 5,
+      "synthetic:river:check": 21,
+      "synthetic:river:fold": 1,
+      "synthetic:river:raise": 3,
+      "synthetic:turn:bet": 9,
+      "synthetic:turn:call": 5,
+      "synthetic:turn:check": 27,
+      "synthetic:turn:fold": 4,
+      "synthetic:turn:raise": 2
+    },
+    "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "input_bytes": 10412,
+    "label_hash": "d5624880bfd9fd1ed22082f4459844009aa16907e23114748f60d415c865d953",
+    "label_rows": 36,
+    "limitations": [
+      "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+      "No real histories in this training profile",
+      "No multi-machine execution",
+      "No atomic multi-table Delta transaction; manifest published after all writes"
+    ],
+    "local_reference_decisions": 193,
+    "local_reference_match": true,
+    "local_threads": 2,
+    "manifest": "lake/datasets/5e56b505b4580570b5704b3aa961a9e73a3d796634731e2375ca9b321c78e009.json",
+    "mode": "incremental",
+    "output_hash": "994e87247a0ab9b3c1fce341b636b6015f8234b5d3337b07ac8ea73be7c9b090",
+    "partition_rows": [
+      {
+        "count": 155,
+        "partition": 0
+      },
+      {
+        "count": 3,
+        "partition": 1
+      },
+      {
+        "count": 35,
+        "partition": 2
+      }
+    ],
+    "partitions": 2,
+    "removed_hands": 0,
+    "runtime_versions": {
+      "java": "openjdk version \"17.0.20.1\" 2026-08-18",
+      "python": "3.13.5",
+      "spark": "4.0.1"
+    },
+    "scope": "local-smoke, not a distributed benchmark",
+    "source_index_hash": "044060c7a941e5266753fa5aa976a684e9fb7be772c47671134f814780d76eb8",
+    "spark_application_id": "local-1792129895830",
+    "startup_seconds": 0.18161325000983197,
+    "timestamp": "2026-10-16T05:51:44.398380+00:00",
+    "total_seconds": 8.864758292009356,
+    "unique_hands": 32,
+    "worker_count": 1
+  },
+  "full": {
+    "actual_cost_usd": 0,
+    "aqe": true,
+    "cost_status": "local compute only",
+    "dataset_manifest_hash": "bf55c703f238b878df54e82a8848f58959d624ffe59e2cb367157f86108eeff9",
+    "decisions": 193,
+    "delta_versions": {
+      "bronze": 3,
+      "gold": 2,
+      "labels": 2,
+      "silver": 3
+    },
+    "estimated_cost_usd": 0,
+    "event_log_dir": "lake/spark-events",
+    "executor_count": 1,
+    "experiment_id": "5e56b505b4580570",
+    "extracted_hands": 32,
+    "gold_counts": {
+      "synthetic:flop:bet": 8,
+      "synthetic:flop:call": 6,
+      "synthetic:flop:check": 29,
+      "synthetic:flop:fold": 2,
+      "synthetic:flop:raise": 1,
+      "synthetic:preflop:call": 25,
+      "synthetic:preflop:check": 15,
+      "synthetic:preflop:fold": 10,
+      "synthetic:preflop:raise": 14,
+      "synthetic:river:bet": 6,
+      "synthetic:river:call": 5,
+      "synthetic:river:check": 21,
+      "synthetic:river:fold": 1,
+      "synthetic:river:raise": 3,
+      "synthetic:turn:bet": 9,
+      "synthetic:turn:call": 5,
+      "synthetic:turn:check": 27,
+      "synthetic:turn:fold": 4,
+      "synthetic:turn:raise": 2
+    },
+    "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "input_bytes": 45231,
+    "label_hash": "d5624880bfd9fd1ed22082f4459844009aa16907e23114748f60d415c865d953",
+    "label_rows": 36,
+    "limitations": [
+      "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+      "No real histories in this training profile",
+      "No multi-machine execution",
+      "No atomic multi-table Delta transaction; manifest published after all writes"
+    ],
+    "local_reference_decisions": 193,
+    "local_reference_match": true,
+    "local_threads": 2,
+    "manifest": "lake/datasets/5e56b505b4580570b5704b3aa961a9e73a3d796634731e2375ca9b321c78e009.json",
+    "mode": "full",
+    "output_hash": "994e87247a0ab9b3c1fce341b636b6015f8234b5d3337b07ac8ea73be7c9b090",
+    "partition_rows": [
+      {
+        "count": 90,
+        "partition": 0
+      },
+      {
+        "count": 103,
+        "partition": 1
+      }
+    ],
+    "partitions": 2,
+    "removed_hands": 0,
+    "runtime_versions": {
+      "java": "openjdk version \"17.0.20.1\" 2026-08-18",
+      "python": "3.13.5",
+      "spark": "4.0.1"
+    },
+    "scope": "local-smoke, not a distributed benchmark",
+    "source_index_hash": "044060c7a941e5266753fa5aa976a684e9fb7be772c47671134f814780d76eb8",
+    "spark_application_id": "local-1792129905705",
+    "startup_seconds": 0.18649529200047255,
+    "timestamp": "2026-10-16T05:51:52.801955+00:00",
+    "total_seconds": 7.2718579590000445,
+    "unique_hands": 32,
+    "worker_count": 1
+  },
+  "retracted": {
+    "actual_cost_usd": 0,
+    "aqe": true,
+    "cost_status": "local compute only",
+    "dataset_manifest_hash": "32ae57fcab50335cfece04aacf37514439c88b72832b503d7eed7a5cf3aa1629",
+    "decisions": 183,
+    "delta_versions": {
+      "bronze": 4,
+      "gold": 3,
+      "labels": 3,
+      "silver": 4
+    },
+    "estimated_cost_usd": 0,
+    "event_log_dir": "lake/spark-events",
+    "executor_count": 1,
+    "experiment_id": "f41c9419b585b89a",
+    "extracted_hands": 0,
+    "gold_counts": {
+      "synthetic:flop:bet": 8,
+      "synthetic:flop:call": 6,
+      "synthetic:flop:check": 27,
+      "synthetic:flop:fold": 2,
+      "synthetic:flop:raise": 1,
+      "synthetic:preflop:call": 24,
+      "synthetic:preflop:check": 15,
+      "synthetic:preflop:fold": 10,
+      "synthetic:preflop:raise": 13,
+      "synthetic:river:bet": 5,
+      "synthetic:river:call": 4,
+      "synthetic:river:check": 21,
+      "synthetic:river:fold": 1,
+      "synthetic:river:raise": 1,
+      "synthetic:turn:bet": 9,
+      "synthetic:turn:call": 5,
+      "synthetic:turn:check": 25,
+      "synthetic:turn:fold": 4,
+      "synthetic:turn:raise": 2
+    },
+    "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "input_bytes": 0,
+    "label_hash": "f0df7cba83c409b146e96e910b72bee979224dd3736182fd7ae590b27cf85c86",
+    "label_rows": 32,
+    "limitations": [
+      "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+      "No real histories in this training profile",
+      "No multi-machine execution",
+      "No atomic multi-table Delta transaction; manifest published after all writes"
+    ],
+    "local_reference_decisions": 183,
+    "local_reference_match": true,
+    "local_threads": 2,
+    "manifest": "lake/datasets/f41c9419b585b89a51080a01c31611e7a62d715eb4ba72e2d50892a3cb3d2676.json",
+    "mode": "incremental",
+    "output_hash": "35147a7dcfa8007e55c34355dd60e87a50d6eeefa2221b4aa16c1d5697b3d313",
+    "partition_rows": [
+      {
+        "count": 183,
+        "partition": 0
+      }
+    ],
+    "partitions": 2,
+    "removed_hands": 1,
+    "runtime_versions": {
+      "java": "openjdk version \"17.0.20.1\" 2026-08-18",
+      "python": "3.13.5",
+      "spark": "4.0.1"
+    },
+    "scope": "local-smoke, not a distributed benchmark",
+    "source_index_hash": "a1579472f6dfabe14330fd21b10c7f90ace4fb4a5d857b35954c92909b25d289",
+    "spark_application_id": "local-1792129913988",
+    "startup_seconds": 0.1799948330008192,
+    "timestamp": "2026-10-16T05:52:01.203764+00:00",
+    "total_seconds": 7.699260375011363,
+    "unique_hands": 31,
+    "worker_count": 1
+  }
+}

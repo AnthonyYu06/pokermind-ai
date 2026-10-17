@@ -1,0 +1,40 @@
+{
+  "experiment_id": "0dfd1261e937c073",
+  "timestamp": "2026-10-15T08:13:39.508489+00:00",
+  "scope": "local-smoke, not a distributed benchmark",
+  "unique_hands": 304,
+  "decisions": 2512,
+  "label_rows": 323,
+  "input_bytes": 486029,
+  "dataset_manifest_hash": "c9c4eb0721cef39ef8f5d4c0900bf163f641e2e19a6e5e4818e8bcc7b5b5f8dd",
+  "worker_count": 1,
+  "executor_count": 1,
+  "local_threads": 2,
+  "runtime_versions": {
+    "python": "3.13.5",
+    "spark": "4.0.1",
+    "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+  },
+  "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "startup_seconds": 2.963553125009639,
+  "total_seconds": 19.646149583000806,
+  "delta_versions": {
+    "bronze": 1,
+    "silver": 1,
+    "gold": 1,
+    "labels": 1
+  },
+  "estimated_cost_usd": 0,
+  "actual_cost_usd": 0,
+  "cost_status": "local compute only",
+  "output_hash": "90e69302980f742a1b2aea91e4edcab750cd3e0d5ca6b397347a1c9ab6adbfcd",
+  "local_reference_match": true,
+  "local_reference_decisions": 2512,
+  "limitations": [
+    "Full eligible snapshot merged; incremental source extraction not implemented",
+    "No real histories in this training profile",
+    "No multi-machine execution",
+    "No atomic multi-table Delta transaction; manifest published after all writes"
+  ],
+  "manifest": "lake/datasets/0dfd1261e937c0736a18d7a0bad5b28dc32063c4ce023432c0a7eeef47d8549b.json"
+}

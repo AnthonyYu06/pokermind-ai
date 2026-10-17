@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "initial_hands": 96,
+  "overlap_hands": 96,
+  "incremental_hands": 128,
+  "full_hands": 128,
+  "full_incremental_identity_match": true,
+  "duplicate_overlap_identity_match": true,
+  "compaction": {
+    "before": {
+      "numFiles": 8,
+      "sizeInBytes": 81378,
+      "minReaderVersion": 1,
+      "minWriterVersion": 2
+    },
+    "after": {
+      "numFiles": 1,
+      "sizeInBytes": 37935,
+      "minReaderVersion": 1,
+      "minWriterVersion": 2
+    },
+    "before_version": 0,
+    "after_version": 1,
+    "metrics": [
+      {
+        "path": "file:/Users/anthony/Documents/poker ai/.data/portable-incremental-v2/fragmented-labels",
+        "metrics": {
+          "numFilesAdded": 1,
+          "numFilesRemoved": 8,
+          "filesAdded": {
+            "min": 37935,
+            "max": 37935,
+            "avg": 37935.0,
+            "totalFiles": 1,
+            "totalSize": 37935
+          },
+          "filesRemoved": {
+            "min": 9907,
+            "max": 10376,
+            "avg": 10172.25,
+            "totalFiles": 8,
+            "totalSize": 81378
+          },
+          "partitionsOptimized": 1,
+          "zOrderStats": null,
+          "clusteringStats": null,
+          "numBins": 1,
+          "numBatches": 1,
+          "totalConsideredFiles": 8,
+          "totalFilesSkipped": 0,
+          "preserveInsertionOrder": false,
+          "numFilesSkippedToReduceWriteAmplification": 0,
+          "numBytesSkippedToReduceWriteAmplification": 0,
+          "startTimeMs": 1792176503789,
+          "endTimeMs": 0,
+          "totalClusterParallelism": 2,
+          "totalScheduledTasks": 0,
+          "autoCompactParallelismStats": null,
+          "deletionVectorStats": null,
+          "numTableColumns": 11,
+          "numTableColumnsWithStats": 11
+        }
+      }
+    ],
+    "pinned_versions_verified": [
+      0
+    ],
+    "vacuum_executed": false,
+    "retention": "No files deleted. VACUUM is refused while any retained manifest pins this table; retain original files and Delta logs or export an independent frozen snapshot first."
+  },
+  "scope": "local Spark only",
+  "spark": "4.0.1",
+  "python": "3.13.5"
+}

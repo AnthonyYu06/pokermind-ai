@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-16T05:51:29.440109+00:00",
+  "rows": 7395,
+  "delta_score_version": 0,
+  "dataset_id": "20c883ac1b636c1a5de68d6912f56b9ba9d7c5a9acda195ce708da96f417319e",
+  "artifact_hash": "5dd9ecd6a413926b632012cc639bf04e9a81549afa5a6037a29634d106f3bc3d",
+  "mlflow_run_id": "2adea930436b4eb18952255ee58c91ac",
+  "promotion": "research-only; exact reference retained",
+  "execution": "local Spark, one machine"
+}

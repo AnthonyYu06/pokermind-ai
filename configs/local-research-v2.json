@@ -1,0 +1,71 @@
+{
+  "version": "local-research-v2",
+  "declared_on": "2026-10-16",
+  "declared_before_runs": true,
+  "seeds": [
+    11,
+    23,
+    47
+  ],
+  "local_only": true,
+  "limits": {
+    "threads_per_job": 2,
+    "minimum_free_disk_gib": 6,
+    "max_profile_bytes": 2147483648,
+    "max_hours_per_suite": 2
+  },
+  "behavior": {
+    "hands_per_policy": 2000,
+    "generation_seed": 1710000,
+    "epochs": 50,
+    "early_stopping_patience": 8,
+    "minimum_independent_test_families": 500,
+    "max_ood_relative_regression": 0.02,
+    "min_test_class_support": 10
+  },
+  "strategy": {
+    "iterations": 100,
+    "traversals_per_player": 400,
+    "advantage_steps": 250,
+    "strategy_steps": 1200,
+    "capacity": 60000,
+    "width": 128
+  },
+  "equity": {
+    "hands": 6000,
+    "generation_seed": 246000,
+    "epochs": 100,
+    "early_stopping_patience": 15,
+    "models": [
+      "mlp",
+      "card_set",
+      "card_set_small"
+    ],
+    "data_fractions": [
+      1.0,
+      0.25
+    ],
+    "min_independent_test_deals": 500,
+    "max_mae": 0.05,
+    "max_absolute_bias": 0.03,
+    "relative_gain_vs_best_baseline": 0.1
+  },
+  "benchmark": {
+    "repetitions": 3,
+    "warmups": 1,
+    "page_size": 50,
+    "targets_ms": {
+      "hand_page_p95": 250,
+      "import_page_p95": 250,
+      "session_page_p95": 1000,
+      "overview_p95": 5000
+    },
+    "partitions": [
+      2,
+      4
+    ],
+    "aqe": true,
+    "comparison": "streaming Python materialized snapshots versus local Spark/Delta; same generation, canonical input, reconstruction, exact labels and aggregate semantics; format and transaction overhead differ"
+  },
+  "interpretation": "Larger local research, not a multi-machine benchmark. No threshold changes after inspecting results. A failed model remains unpromoted. Holdem neural strategy is conditional on the small-game quality gate."
+}

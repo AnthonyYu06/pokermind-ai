@@ -1,0 +1,51 @@
+{
+  "kuhn": {
+    "mean_exploitability": 0.05035274095967628,
+    "std_exploitability": 0.006493509125211463,
+    "promotion": {
+      "eligible": false,
+      "reason": "Neural quality gate failed; validated tabular policy retained"
+    },
+    "tabular": 0.0009376166469941272
+  },
+  "leduc": {
+    "mean_exploitability": 0.6830927846588146,
+    "std_exploitability": 0.010160609337602135,
+    "promotion": {
+      "eligible": false,
+      "reason": "Neural quality gate failed; validated tabular policy retained"
+    },
+    "tabular": 0.053838323902881735
+  },
+  "behavior": {
+    "decisions": {
+      "ood": 1079,
+      "test": 401,
+      "train": 3145,
+      "validation": 875
+    },
+    "hands": {
+      "ood": 292,
+      "test": 95,
+      "train": 608,
+      "validation": 197
+    },
+    "frequency_test_nll": 1.043662436168303,
+    "promotion": {
+      "eligible": false,
+      "reason": "Quality/support gate not met; frequency baseline retained"
+    },
+    "logistic": {
+      "test": 1.0265729796485934,
+      "ood": 1.4368676675942733
+    },
+    "gru": {
+      "test": 0.9888918828707256,
+      "ood": 1.4555400788944988
+    },
+    "gru_small": {
+      "test": 0.9969440712254484,
+      "ood": 1.451213003515968
+    }
+  }
+}

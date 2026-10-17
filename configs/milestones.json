@@ -1,0 +1,48 @@
+{
+  "updated": "2026-10-16",
+  "scope": "Fresh residual equity research, portable Spark/Databricks batch workflow and fail-closed AWS budget preparation",
+  "milestones": [
+    {
+      "id": "M0",
+      "title": "Reproducible foundation",
+      "status": "verified",
+      "detail": "Local demo, typed contracts, loopback API, React UI, doctor and lockfiles verified. Desktop/mobile regressions and the Linux serving container pass locally. CI defined; remote run pending."
+    },
+    {
+      "id": "M1",
+      "title": "Import, engine & replay",
+      "status": "partial",
+      "detail": "Durable import preview/commit jobs, cancellation/retry, paged imports/sessions, offline eligibility, replay, privacy controls and backup/restore verified. Six-thousand-hand app latency targets pass. Actual Ignition text remains unsupported pending real fixtures."
+    },
+    {
+      "id": "M2",
+      "title": "Local data platform & equity research",
+      "status": "verified",
+      "detail": "Local Spark/Delta, frozen datasets, MLflow, equity baselines and partition scoring executed. Fresh v3 structural residual model passes declared synthetic gates (three seeds, 1,536 independent test families, MAE 0.032568 vs boosted 0.042021). Exact reference retained; no real-player validation."
+    },
+    {
+      "id": "M3",
+      "title": "Local behavior & Deep CFR research",
+      "status": "verified",
+      "detail": "8,000 generated behavior hands and 100-iteration Kuhn/Leduc Deep CFR runs, three seeds and ablations executed. Independent split audit corrected retained support. Neural quality gates fail; Hold\u2019em neural strategy extension remains gated. Local artifact snapshot rollback verified."
+    },
+    {
+      "id": "M4",
+      "title": "AWS & Databricks execution",
+      "status": "blocked",
+      "detail": "Four-stage job, shared transformations, wheel, S3 snapshot adapter, MLflow registration and DynamoDB admission controls implemented. Full workflow verified locally under Python 3.12/Spark 4/Torch 2.7/MLflow 3. Account-specific workspace, IAM, costs and actual cloud execution remain unverified. Authorized spending $0."
+    },
+    {
+      "id": "M5",
+      "title": "Distributed benchmarks",
+      "status": "pending",
+      "detail": "Requires measured one-worker and multiple-machine cloud runs."
+    },
+    {
+      "id": "M6",
+      "title": "Private deployment",
+      "status": "pending",
+      "detail": "Linux serving image and local restoration verified. Private AWS access, monitoring and recovery require an approved account-specific cloud envelope."
+    }
+  ]
+}

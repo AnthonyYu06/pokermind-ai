@@ -1,0 +1,11 @@
+{
+  "status": "incomplete",
+  "reasons": [
+    "Actual cloud worker/stop evidence is incomplete",
+    "End-to-end timing evidence is incomplete",
+    "A one-worker and multiple-worker comparison is required",
+    "At least three distinct measured repetitions per configuration are required"
+  ],
+  "comparisons": [],
+  "warmups_excluded": 0
+}

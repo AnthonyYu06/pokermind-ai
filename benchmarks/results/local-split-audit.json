@@ -1,0 +1,45 @@
+{
+  "research": {
+    "dataset_id": "20c883ac1b636c1a5de68d6912f56b9ba9d7c5a9acda195ce708da96f417319e",
+    "decision_counts": {
+      "test": 801,
+      "train": 5038,
+      "validation": 1556
+    },
+    "hands": {
+      "test": 358,
+      "train": 2232,
+      "validation": 700
+    },
+    "independent_families": {
+      "test": 358,
+      "train": 2232,
+      "validation": 700
+    },
+    "cross_split_family_overlap": 0,
+    "cross_split_exact_feature_overlap": 0
+  },
+  "behavior": {
+    "dataset_id": "54d36456afa426bdb6629e9291be335972db837e10c1d3023f779775859020bd",
+    "decision_counts": {
+      "ood": 6119,
+      "test": 2300,
+      "train": 21349,
+      "validation": 4720
+    },
+    "hands": {
+      "ood": 1655,
+      "test": 483,
+      "train": 3997,
+      "validation": 972
+    },
+    "independent_families": {
+      "ood": 1619,
+      "test": 453,
+      "train": 3728,
+      "validation": 911
+    },
+    "cross_split_family_overlap": 0,
+    "cross_split_exact_feature_overlap": 0
+  }
+}

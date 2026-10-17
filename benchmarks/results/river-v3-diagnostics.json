@@ -1,0 +1,81 @@
+{
+  "protocol": "Post-training diagnostics only; no tuning or promotion. Fixed first 40 test states, one warmup and three timed repetitions. Shift audit uses prior simulator-policy test states excluded from v3 fitting.",
+  "selected_on": "validation only",
+  "selected_model": "fdb8cc2d75ceb06a0f8e6f423b8b122f1ed6d93fc7af9d1c7e88b60bb3c6833e",
+  "synthetic_policy_shift": {
+    "n": 801,
+    "independent_families": 358,
+    "mae": 0.031777043000198485,
+    "rmse": 0.050270155081809605,
+    "bias": -0.0031099538487404325,
+    "mae_ci95": [
+      0.02871927903632072,
+      0.03529565654815854
+    ],
+    "calibration_bins": [
+      {
+        "n": 102,
+        "predicted": 0.049069457961355936,
+        "reference": 0.052753020424907114
+      },
+      {
+        "n": 86,
+        "predicted": 0.1551051214337349,
+        "reference": 0.16334272916753625
+      },
+      {
+        "n": 86,
+        "predicted": 0.24386083248049714,
+        "reference": 0.244996476138747
+      },
+      {
+        "n": 71,
+        "predicted": 0.3497038802630465,
+        "reference": 0.3400625987371928
+      },
+      {
+        "n": 72,
+        "predicted": 0.4458999012907346,
+        "reference": 0.4427749713261922
+      },
+      {
+        "n": 85,
+        "predicted": 0.5477173721089083,
+        "reference": 0.5627391555730035
+      },
+      {
+        "n": 78,
+        "predicted": 0.6562555951949878,
+        "reference": 0.663092464972765
+      },
+      {
+        "n": 60,
+        "predicted": 0.751782375574112,
+        "reference": 0.7617424209912618
+      },
+      {
+        "n": 79,
+        "predicted": 0.8485112167611907,
+        "reference": 0.846662829948377
+      },
+      {
+        "n": 82,
+        "predicted": 0.9471052252664799,
+        "reference": 0.9465816689700615
+      }
+    ]
+  },
+  "inference": {
+    "network_with_encoding": {
+      "median_ms": 0.19162500007041672,
+      "p95_ms": 0.2524374998984058
+    },
+    "exact": {
+      "median_ms": 9.928312500051106,
+      "p95_ms": 11.373438099963096
+    }
+  },
+  "diagnostic_states": 40,
+  "diagnostic_mae": 0.03306947431047306,
+  "cost_usd": 0
+}

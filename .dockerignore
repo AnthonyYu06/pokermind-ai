@@ -1,0 +1,12 @@
+.git
+.data
+.runtime
+.venv
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+**/dist
+*.tfvars
+*.tfstate*
+.codex
+.agents

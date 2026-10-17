@@ -1,0 +1,1123 @@
+{
+  "protocol": {
+    "version": "local-research-v2",
+    "declared_on": "2026-10-16",
+    "declared_before_runs": true,
+    "seeds": [
+      11,
+      23,
+      47
+    ],
+    "local_only": true,
+    "limits": {
+      "threads_per_job": 2,
+      "minimum_free_disk_gib": 6,
+      "max_profile_bytes": 2147483648,
+      "max_hours_per_suite": 2
+    },
+    "behavior": {
+      "hands_per_policy": 2000,
+      "generation_seed": 1710000,
+      "epochs": 50,
+      "early_stopping_patience": 8,
+      "minimum_independent_test_families": 500,
+      "max_ood_relative_regression": 0.02,
+      "min_test_class_support": 10
+    },
+    "strategy": {
+      "iterations": 100,
+      "traversals_per_player": 400,
+      "advantage_steps": 250,
+      "strategy_steps": 1200,
+      "capacity": 60000,
+      "width": 128
+    },
+    "equity": {
+      "hands": 6000,
+      "generation_seed": 246000,
+      "epochs": 100,
+      "early_stopping_patience": 15,
+      "models": [
+        "mlp",
+        "card_set",
+        "card_set_small"
+      ],
+      "data_fractions": [
+        1.0,
+        0.25
+      ],
+      "min_independent_test_deals": 500,
+      "max_mae": 0.05,
+      "max_absolute_bias": 0.03,
+      "relative_gain_vs_best_baseline": 0.1
+    },
+    "benchmark": {
+      "repetitions": 3,
+      "warmups": 1,
+      "page_size": 50,
+      "targets_ms": {
+        "hand_page_p95": 250,
+        "import_page_p95": 250,
+        "session_page_p95": 1000,
+        "overview_p95": 5000
+      },
+      "partitions": [
+        2,
+        4
+      ],
+      "aqe": true,
+      "comparison": "streaming Python materialized snapshots versus local Spark/Delta; same generation, canonical input, reconstruction, exact labels and aggregate semantics; format and transaction overhead differ"
+    },
+    "interpretation": "Larger local research, not a multi-machine benchmark. No threshold changes after inspecting results. A failed model remains unpromoted. Holdem neural strategy is conditional on the small-game quality gate."
+  },
+  "execution": "one Mac; local Spark threads are not worker machines",
+  "records": [
+    {
+      "engine": "streaming",
+      "partitions": 1,
+      "repetition": 0,
+      "warmup_or_measured": "warmup",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local CPU; no cloud",
+      "throughput_hands_per_second": 80.48470149719378,
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:raise": 300,
+        "synthetic:river:fold": 354,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:fold": 469
+      },
+      "total_seconds": 74.5483289170079,
+      "output_bytes": 61087706,
+      "startup_seconds": 0.0,
+      "worker_count": 1,
+      "executor_count": 1,
+      "python_process_highwater_rss_bytes": 108675072
+    },
+    {
+      "engine": "streaming",
+      "partitions": 1,
+      "repetition": 1,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local CPU; no cloud",
+      "throughput_hands_per_second": 80.34499085698822,
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:raise": 300,
+        "synthetic:river:fold": 354,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:fold": 469
+      },
+      "total_seconds": 74.67795983298856,
+      "output_bytes": 61087706,
+      "startup_seconds": 0.0,
+      "worker_count": 1,
+      "executor_count": 1,
+      "python_process_highwater_rss_bytes": 111116288
+    },
+    {
+      "engine": "streaming",
+      "partitions": 1,
+      "repetition": 2,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local CPU; no cloud",
+      "throughput_hands_per_second": 80.37912493341267,
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:raise": 300,
+        "synthetic:river:fold": 354,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:fold": 469
+      },
+      "total_seconds": 74.64624683299917,
+      "output_bytes": 61087706,
+      "startup_seconds": 0.0,
+      "worker_count": 1,
+      "executor_count": 1,
+      "python_process_highwater_rss_bytes": 111132672
+    },
+    {
+      "engine": "streaming",
+      "partitions": 1,
+      "repetition": 3,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local CPU; no cloud",
+      "throughput_hands_per_second": 79.94209083728364,
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:raise": 300,
+        "synthetic:river:fold": 354,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:fold": 469
+      },
+      "total_seconds": 75.05432916700374,
+      "output_bytes": 61087706,
+      "startup_seconds": 0.0,
+      "worker_count": 1,
+      "executor_count": 1,
+      "python_process_highwater_rss_bytes": 111132672
+    },
+    {
+      "engine": "spark",
+      "partitions": 2,
+      "repetition": 0,
+      "warmup_or_measured": "warmup",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 92.14897968973784,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:44:44.615961+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 18621
+        },
+        {
+          "partition": 1,
+          "count": 18061
+        }
+      ],
+      "spark_application_id": "local-1792129426584",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 8.16132104198914,
+      "total_seconds": 65.11195262499677,
+      "delta_versions": {
+        "bronze": 1,
+        "silver": 1,
+        "gold": 1,
+        "labels": 1
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:flop:raise": 377,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:river:raise": 300,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 86068,
+        "Executor CPU Time": 12384901000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 73182546,
+        "shuffle_write_bytes": 71615962,
+        "peak_task_execution_memory_bytes": 68157312,
+        "tasks": 744,
+        "task_duration_median_ms": 15.0,
+        "task_duration_max_ms": 34527,
+        "max_to_median_task_ratio": 2301.8,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 2,
+      "repetition": 1,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 109.04384923514684,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:45:40.688617+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 18621
+        },
+        {
+          "partition": 1,
+          "count": 18061
+        }
+      ],
+      "spark_application_id": "local-1792129490763",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 5.059128332999535,
+      "total_seconds": 55.02373625000473,
+      "delta_versions": {
+        "bronze": 2,
+        "silver": 2,
+        "gold": 2,
+        "labels": 2
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:flop:raise": 377,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:river:raise": 300,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 81043,
+        "Executor CPU Time": 8169656000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 71571375,
+        "shuffle_write_bytes": 70004791,
+        "peak_task_execution_memory_bytes": 68157312,
+        "tasks": 748,
+        "task_duration_median_ms": 11.0,
+        "task_duration_max_ms": 33963,
+        "max_to_median_task_ratio": 3087.5454545454545,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 2,
+      "repetition": 2,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 121.6491337444958,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:46:31.056519+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 18621
+        },
+        {
+          "partition": 1,
+          "count": 18061
+        }
+      ],
+      "spark_application_id": "local-1792129546473",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 4.7073768750124145,
+      "total_seconds": 49.32217612500244,
+      "delta_versions": {
+        "bronze": 3,
+        "silver": 3,
+        "gold": 3,
+        "labels": 3
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:flop:raise": 377,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:river:raise": 300,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 73151,
+        "Executor CPU Time": 6791418000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 71586800,
+        "shuffle_write_bytes": 70020216,
+        "peak_task_execution_memory_bytes": 68157312,
+        "tasks": 748,
+        "task_duration_median_ms": 9.0,
+        "task_duration_max_ms": 31338,
+        "max_to_median_task_ratio": 3482.0,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 2,
+      "repetition": 3,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 122.15382997220917,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:47:21.291430+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 18621
+        },
+        {
+          "partition": 1,
+          "count": 18061
+        }
+      ],
+      "spark_application_id": "local-1792129596637",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 4.456751915990026,
+      "total_seconds": 49.11839441600023,
+      "delta_versions": {
+        "bronze": 4,
+        "silver": 4,
+        "gold": 4,
+        "labels": 4
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:preflop:call": 4800,
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:flop:raise": 377,
+        "synthetic:preflop:check": 2809,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:check": 5256,
+        "synthetic:turn:call": 948,
+        "synthetic:river:check": 4723,
+        "synthetic:river:raise": 300,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 73300,
+        "Executor CPU Time": 6730629000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 71600863,
+        "shuffle_write_bytes": 70034279,
+        "peak_task_execution_memory_bytes": 68157312,
+        "tasks": 748,
+        "task_duration_median_ms": 9.0,
+        "task_duration_max_ms": 31507,
+        "max_to_median_task_ratio": 3500.777777777778,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 4,
+      "repetition": 0,
+      "warmup_or_measured": "warmup",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 122.24993403558274,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:48:11.425782+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 9555
+        },
+        {
+          "partition": 1,
+          "count": 9110
+        },
+        {
+          "partition": 2,
+          "count": 9066
+        },
+        {
+          "partition": 3,
+          "count": 8951
+        }
+      ],
+      "spark_application_id": "local-1792129647056",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 4.667720750003355,
+      "total_seconds": 49.0797810840013,
+      "delta_versions": {
+        "bronze": 5,
+        "silver": 5,
+        "gold": 5,
+        "labels": 5
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:preflop:check": 2809,
+        "synthetic:turn:check": 5256,
+        "synthetic:river:check": 4723,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:raise": 300,
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:call": 948,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 73258,
+        "Executor CPU Time": 7014952000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 75049053,
+        "shuffle_write_bytes": 73478951,
+        "peak_task_execution_memory_bytes": 34078656,
+        "tasks": 823,
+        "task_duration_median_ms": 9,
+        "task_duration_max_ms": 16159,
+        "max_to_median_task_ratio": 1795.4444444444443,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 4,
+      "repetition": 1,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 122.8777426670422,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:49:01.373744+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 9555
+        },
+        {
+          "partition": 1,
+          "count": 9110
+        },
+        {
+          "partition": 2,
+          "count": 9066
+        },
+        {
+          "partition": 3,
+          "count": 8951
+        }
+      ],
+      "spark_application_id": "local-1792129697193",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 4.633442792008282,
+      "total_seconds": 48.82902200000535,
+      "delta_versions": {
+        "bronze": 6,
+        "silver": 6,
+        "gold": 6,
+        "labels": 6
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:preflop:check": 2809,
+        "synthetic:turn:check": 5256,
+        "synthetic:river:check": 4723,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:raise": 300,
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:call": 948,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 73044,
+        "Executor CPU Time": 6966887000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 75069207,
+        "shuffle_write_bytes": 73499105,
+        "peak_task_execution_memory_bytes": 34078656,
+        "tasks": 827,
+        "task_duration_median_ms": 9,
+        "task_duration_max_ms": 16103,
+        "max_to_median_task_ratio": 1789.2222222222222,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 4,
+      "repetition": 2,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 121.51621800251692,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:49:51.831248+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 9555
+        },
+        {
+          "partition": 1,
+          "count": 9110
+        },
+        {
+          "partition": 2,
+          "count": 9066
+        },
+        {
+          "partition": 3,
+          "count": 8951
+        }
+      ],
+      "spark_application_id": "local-1792129747196",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 4.718169417013996,
+      "total_seconds": 49.37612525001168,
+      "delta_versions": {
+        "bronze": 7,
+        "silver": 7,
+        "gold": 7,
+        "labels": 7
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:preflop:check": 2809,
+        "synthetic:turn:check": 5256,
+        "synthetic:river:check": 4723,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:raise": 300,
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:call": 948,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 73645,
+        "Executor CPU Time": 7036918000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 75089715,
+        "shuffle_write_bytes": 73519613,
+        "peak_task_execution_memory_bytes": 34078656,
+        "tasks": 831,
+        "task_duration_median_ms": 9,
+        "task_duration_max_ms": 16135,
+        "max_to_median_task_ratio": 1792.7777777777778,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    },
+    {
+      "engine": "spark",
+      "partitions": 4,
+      "repetition": 3,
+      "warmup_or_measured": "measured",
+      "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+      "cost_usd": 0,
+      "cost_status": "local compute only",
+      "throughput_hands_per_second": 120.18081574366624,
+      "experiment_id": "57b6d10244abeafe",
+      "timestamp": "2026-10-16T05:50:42.828905+00:00",
+      "scope": "local-smoke, not a distributed benchmark",
+      "unique_hands": 6000,
+      "decisions": 36682,
+      "label_rows": 7395,
+      "input_bytes": 8557167,
+      "mode": "full",
+      "extracted_hands": 6000,
+      "removed_hands": 0,
+      "source_index_hash": "51849f5b86489bac286ede70e85e7093f3a9c19b7a74458b7a9166f0dbd70e2c",
+      "dataset_manifest_hash": "8894000c0ec95c4a8486da886496d0200c4722019ad4c134a5f4cbdbcc3a1b0b",
+      "worker_count": 1,
+      "executor_count": 1,
+      "local_threads": 2,
+      "aqe": true,
+      "partition_rows": [
+        {
+          "partition": 0,
+          "count": 9555
+        },
+        {
+          "partition": 1,
+          "count": 9110
+        },
+        {
+          "partition": 2,
+          "count": 9066
+        },
+        {
+          "partition": 3,
+          "count": 8951
+        }
+      ],
+      "spark_application_id": "local-1792129797730",
+      "event_log_dir": "lake/spark-events",
+      "runtime_versions": {
+        "python": "3.13.5",
+        "spark": "4.0.1",
+        "java": "openjdk version \"17.0.20.1\" 2026-08-18"
+      },
+      "startup_seconds": 4.815736792006646,
+      "total_seconds": 49.924773457998526,
+      "delta_versions": {
+        "bronze": 8,
+        "silver": 8,
+        "gold": 8,
+        "labels": 8
+      },
+      "estimated_cost_usd": 0,
+      "actual_cost_usd": 0,
+      "output_hash": "99ec1b9fdc5012e9c3d72595cde9d7d9310a197e47dfa7b7a6e1dfc036356a88",
+      "local_reference_match": true,
+      "local_reference_decisions": 36682,
+      "label_hash": "bf09928e45fad498c2f49c8f4240400d147d4c34b52f98a2d2232449f77d54e9",
+      "gold_counts": {
+        "synthetic:turn:bet": 1300,
+        "synthetic:turn:raise": 340,
+        "synthetic:river:bet": 1186,
+        "synthetic:river:fold": 354,
+        "synthetic:preflop:check": 2809,
+        "synthetic:turn:check": 5256,
+        "synthetic:river:check": 4723,
+        "synthetic:turn:fold": 352,
+        "synthetic:river:raise": 300,
+        "synthetic:preflop:call": 4800,
+        "synthetic:preflop:raise": 2309,
+        "synthetic:preflop:fold": 1886,
+        "synthetic:flop:bet": 1495,
+        "synthetic:flop:call": 1026,
+        "synthetic:flop:raise": 377,
+        "synthetic:flop:check": 5920,
+        "synthetic:turn:call": 948,
+        "synthetic:river:call": 832,
+        "synthetic:flop:fold": 469
+      },
+      "limitations": [
+        "Incremental extraction/reconstruction with full streaming parity verification; no speedup claim",
+        "No real histories in this training profile",
+        "No multi-machine execution",
+        "No atomic multi-table Delta transaction; manifest published after all writes"
+      ],
+      "manifest": "lake/datasets/57b6d10244abeafeb9044ed92262fd4cd7a8c0c378da87ba8105866ff1ceff9e.json",
+      "spark_metrics": {
+        "Executor Run Time": 74249,
+        "Executor CPU Time": 7397502000,
+        "Memory Bytes Spilled": 0,
+        "Disk Bytes Spilled": 0,
+        "shuffle_read_bytes": 75103082,
+        "shuffle_write_bytes": 73532980,
+        "peak_task_execution_memory_bytes": 34078656,
+        "tasks": 827,
+        "task_duration_median_ms": 10,
+        "task_duration_max_ms": 16158,
+        "max_to_median_task_ratio": 1615.8,
+        "executor_identities": [
+          [
+            "driver",
+            "localhost"
+          ]
+        ]
+      },
+      "python_process_highwater_rss_bytes": 187482112
+    }
+  ],
+  "output_equivalence": true,
+  "limitations": [
+    "Warm filesystem/JVM state; generation and idempotent import included",
+    "Python writes JSONL snapshots; Spark writes transactional Delta and frozen Parquet; includes format overhead",
+    "Other bounded local research may contend for CPU",
+    "No multi-machine speedup or cloud cost crossover claim"
+  ]
+}

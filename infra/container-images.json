@@ -1,0 +1,13 @@
+{
+  "platform": "linux/amd64",
+  "images": {
+    "python": {
+      "tag": "python:3.13.5-slim",
+      "digest": "python@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419"
+    },
+    "node": {
+      "tag": "node:26.7.0-bookworm-slim",
+      "digest": "node@sha256:4db36457f406501e6f608802e5da617e5fbd0e80b75901b6a09de1ae5a667d32"
+    }
+  }
+}

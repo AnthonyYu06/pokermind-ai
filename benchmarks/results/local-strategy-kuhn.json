@@ -1,0 +1,3765 @@
+{
+  "baselines": {
+    "check_call": {
+      "best_response_values": [
+        1.0,
+        1.0
+      ],
+      "expected_returns": [
+        0.0,
+        0.0
+      ],
+      "exploitability": 1.0,
+      "nash_conv": 2.0,
+      "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+    },
+    "tabular": {
+      "best_response_values": [
+        -0.054845842881137474,
+        0.05672107617512573
+      ],
+      "expected_returns": [
+        -0.05562503158224902,
+        0.05562503158224902
+      ],
+      "exploitability": 0.0009376166469941272,
+      "nash_conv": 0.0018752332939882543,
+      "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+    },
+    "uniform": {
+      "best_response_values": [
+        0.5,
+        0.4166666666666666
+      ],
+      "expected_returns": [
+        0.12500000000000003,
+        -0.12500000000000003
+      ],
+      "exploitability": 0.45833333333333326,
+      "nash_conv": 0.9166666666666665,
+      "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+    }
+  },
+  "cost_usd": 0,
+  "elapsed_seconds": 368.83060066599865,
+  "game": "kuhn",
+  "independent_reference": {
+    "max_policy_difference": 3.111400026512001e-14,
+    "metrics": {
+      "exploitability": 0.0009376166469941272,
+      "nash_conv": 0.0018752332939882543
+    },
+    "name": "OpenSpiel C++ CFR and Python best response"
+  },
+  "information_sets": 12,
+  "mean_exploitability": 0.010778495431723415,
+  "nodes": 58,
+  "promotion": {
+    "eligible": false,
+    "reason": "Neural quality gate failed; validated tabular policy retained"
+  },
+  "protocol": {
+    "ablations": [
+      "no_iteration_weighting",
+      "no_network_reset"
+    ],
+    "active_profile": "local-research-v2",
+    "cloud_cost_usd": 0,
+    "declared_before_neural_runs": true,
+    "games": [
+      "kuhn",
+      "leduc"
+    ],
+    "local": {
+      "advantage_steps": 250,
+      "capacity": 60000,
+      "iterations": 100,
+      "strategy_steps": 1200,
+      "traversals_per_player": 400,
+      "width": 128
+    },
+    "promotion": {
+      "all_seeds_must_pass": true,
+      "max_exploitability": {
+        "kuhn": 0.01,
+        "leduc": 0.1
+      },
+      "must_match_or_beat_tabular": true
+    },
+    "seeds": [
+      11,
+      23,
+      47
+    ],
+    "tabular_iterations": {
+      "kuhn": 1000,
+      "leduc": 200
+    },
+    "tiny": {
+      "advantage_steps": 150,
+      "capacity": 30000,
+      "iterations": 30,
+      "strategy_steps": 600,
+      "traversals_per_player": 150,
+      "width": 64
+    },
+    "units": "OpenSpiel game chips per hand; exploitability=NashConv/2",
+    "version": "small-game-evaluation-v1"
+  },
+  "runs": [
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/main-11-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.4987302099181954,
+            0.33333430765652117
+          ],
+          "expected_returns": [
+            0.4982102971336248,
+            -0.4982102971336248
+          ],
+          "exploitability": 0.4160322587873583,
+          "iteration": 1,
+          "nash_conv": 0.8320645175747166,
+          "samples": 1000,
+          "seconds": 1.4563696669938508,
+          "stored_samples": 1000,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.13001600957002957,
+            0.14233981830750475
+          ],
+          "expected_returns": [
+            -0.0063299097624724965,
+            0.0063299097624724965
+          ],
+          "exploitability": 0.13617791393876716,
+          "iteration": 5,
+          "nash_conv": 0.2723558278775343,
+          "samples": 5080,
+          "seconds": 2.672287041990785,
+          "stored_samples": 5080,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.00203754142206386,
+            0.12851441948801534
+          ],
+          "expected_returns": [
+            -0.048794966464784706,
+            0.048794966464784706
+          ],
+          "exploitability": 0.06323843903297574,
+          "iteration": 10,
+          "nash_conv": 0.12647687806595148,
+          "samples": 9833,
+          "seconds": 4.090104957998847,
+          "stored_samples": 9833,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.006338953601251196,
+            0.08790727869503895
+          ],
+          "expected_returns": [
+            -0.0469011654862278,
+            0.0469011654862278
+          ],
+          "exploitability": 0.04712311614814507,
+          "iteration": 15,
+          "nash_conv": 0.09424623229629014,
+          "samples": 14897,
+          "seconds": 5.567562582989922,
+          "stored_samples": 14897,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.032038621069023165,
+            0.08675283522355504
+          ],
+          "expected_returns": [
+            -0.05870663132818743,
+            0.05870663132818743
+          ],
+          "exploitability": 0.027357107077265935,
+          "iteration": 20,
+          "nash_conv": 0.05471421415453187,
+          "samples": 19610,
+          "seconds": 7.10232883298886,
+          "stored_samples": 19610,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.033583451030978484,
+            0.07757370389033902
+          ],
+          "expected_returns": [
+            -0.06078373720947022,
+            0.06078373720947022
+          ],
+          "exploitability": 0.021995126429680267,
+          "iteration": 25,
+          "nash_conv": 0.043990252859360535,
+          "samples": 24653,
+          "seconds": 8.828252999999677,
+          "stored_samples": 24653,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.015706222433919503,
+            0.07547255044962714
+          ],
+          "expected_returns": [
+            -0.057418027746762745,
+            0.057418027746762745
+          ],
+          "exploitability": 0.02988316400785382,
+          "iteration": 30,
+          "nash_conv": 0.05976632801570764,
+          "samples": 29674,
+          "seconds": 10.491177832998801,
+          "stored_samples": 29674,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.033925172932680436,
+            0.07900841924922569
+          ],
+          "expected_returns": [
+            -0.05433070493277481,
+            0.05433070493277481
+          ],
+          "exploitability": 0.022541623158272628,
+          "iteration": 35,
+          "nash_conv": 0.045083246316545256,
+          "samples": 34518,
+          "seconds": 12.212098499992862,
+          "stored_samples": 34518,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01609976663968038,
+            0.06478637695695938
+          ],
+          "expected_returns": [
+            -0.05743309635962668,
+            0.05743309635962668
+          ],
+          "exploitability": 0.0243433051586395,
+          "iteration": 40,
+          "nash_conv": 0.048686610317279,
+          "samples": 39189,
+          "seconds": 14.010937916988041,
+          "stored_samples": 39189,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04252181359008478,
+            0.09330238027588683
+          ],
+          "expected_returns": [
+            -0.05656952162957657,
+            0.05656952162957657
+          ],
+          "exploitability": 0.025390283342901027,
+          "iteration": 45,
+          "nash_conv": 0.05078056668580205,
+          "samples": 44075,
+          "seconds": 15.862224332988262,
+          "stored_samples": 44075,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.007291406412387513,
+            0.0644091188126018
+          ],
+          "expected_returns": [
+            -0.05579293459351148,
+            0.05579293459351148
+          ],
+          "exploitability": 0.028558856200107147,
+          "iteration": 50,
+          "nash_conv": 0.05711771240021429,
+          "samples": 49208,
+          "seconds": 17.770896374990116,
+          "stored_samples": 49208,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04173892502143778,
+            0.07129555492786022
+          ],
+          "expected_returns": [
+            -0.057643745408964,
+            0.057643745408964
+          ],
+          "exploitability": 0.014778314953211219,
+          "iteration": 55,
+          "nash_conv": 0.029556629906422438,
+          "samples": 53950,
+          "seconds": 19.70999324999866,
+          "stored_samples": 53950,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.022259527328947204,
+            0.07644265769978131
+          ],
+          "expected_returns": [
+            -0.05412214254168607,
+            0.05412214254168607
+          ],
+          "exploitability": 0.027091565185417055,
+          "iteration": 60,
+          "nash_conv": 0.05418313037083411,
+          "samples": 58698,
+          "seconds": 21.71402008298901,
+          "stored_samples": 58698,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.047957961674902905,
+            0.07499103818122022
+          ],
+          "expected_returns": [
+            -0.05539925381353533,
+            0.05539925381353533
+          ],
+          "exploitability": 0.013516538253158655,
+          "iteration": 65,
+          "nash_conv": 0.02703307650631731,
+          "samples": 63791,
+          "seconds": 23.74832649999007,
+          "stored_samples": 63791,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.035729781887771817,
+            0.06506178752954778
+          ],
+          "expected_returns": [
+            -0.05571797828683056,
+            0.05571797828683056
+          ],
+          "exploitability": 0.01466600282088798,
+          "iteration": 70,
+          "nash_conv": 0.02933200564177596,
+          "samples": 68757,
+          "seconds": 25.845595999999205,
+          "stored_samples": 68757,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04226535054755226,
+            0.06437174773168008
+          ],
+          "expected_returns": [
+            -0.05663260809634907,
+            0.05663260809634907
+          ],
+          "exploitability": 0.011053198592063912,
+          "iteration": 75,
+          "nash_conv": 0.022106397184127824,
+          "samples": 73612,
+          "seconds": 27.961827041988727,
+          "stored_samples": 73612,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.024718041062140095,
+            0.061637506686831656
+          ],
+          "expected_returns": [
+            -0.056090195039943,
+            0.056090195039943
+          ],
+          "exploitability": 0.01845973281234578,
+          "iteration": 80,
+          "nash_conv": 0.03691946562469156,
+          "samples": 78337,
+          "seconds": 30.12157695798669,
+          "stored_samples": 78337,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.049110921622511794,
+            0.06863266917038369
+          ],
+          "expected_returns": [
+            -0.05570363943604595,
+            0.05570363943604595
+          ],
+          "exploitability": 0.009760873773935946,
+          "iteration": 85,
+          "nash_conv": 0.019521747547871893,
+          "samples": 83445,
+          "seconds": 32.29192599999078,
+          "stored_samples": 83445,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03133695552628141,
+            0.07388129546077199
+          ],
+          "expected_returns": [
+            -0.05473111765537719,
+            0.05473111765537719
+          ],
+          "exploitability": 0.02127216996724529,
+          "iteration": 90,
+          "nash_conv": 0.04254433993449058,
+          "samples": 88090,
+          "seconds": 34.58976137499849,
+          "stored_samples": 88090,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04709811882171111,
+            0.07057795327039523
+          ],
+          "expected_returns": [
+            -0.05702660622075639,
+            0.05702660622075639
+          ],
+          "exploitability": 0.011739917224342061,
+          "iteration": 95,
+          "nash_conv": 0.023479834448684123,
+          "samples": 92955,
+          "seconds": 36.88766420799948,
+          "stored_samples": 92955,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.044997072765234236,
+            0.061850785092508465
+          ],
+          "expected_returns": [
+            -0.05571545687235052,
+            0.05571545687235052
+          ],
+          "exploitability": 0.008426856163637114,
+          "iteration": 100,
+          "nash_conv": 0.01685371232727423,
+          "samples": 97914,
+          "seconds": 39.17484329199942,
+          "stored_samples": 97914,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.044997072765234236,
+          0.061850785092508465
+        ],
+        "expected_returns": [
+          -0.05571545687235052,
+          0.05571545687235052
+        ],
+        "exploitability": 0.008426856163637114,
+        "nash_conv": 0.01685371232727423,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/main-11-policy-e2b65863149710dc.json",
+      "run_id": "e806b867614847f2ae37a016d840c151",
+      "seconds": 39.993941332999384,
+      "seed": 11,
+      "sha256": "e2b65863149710dcb59de28bec5b731f68e5766642063a63b838b6db9682fa99",
+      "variant": "main"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/main-23-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.495527734136714,
+            0.3333961928933208
+          ],
+          "expected_returns": [
+            0.4945637208722935,
+            -0.4945637208722935
+          ],
+          "exploitability": 0.4144619635150174,
+          "iteration": 1,
+          "nash_conv": 0.8289239270300348,
+          "samples": 1001,
+          "seconds": 0.6641586250043474,
+          "stored_samples": 1001,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.13839763567616703,
+            0.15377685852969986
+          ],
+          "expected_returns": [
+            -0.01718978467293375,
+            0.01718978467293375
+          ],
+          "exploitability": 0.14608724710293344,
+          "iteration": 5,
+          "nash_conv": 0.2921744942058669,
+          "samples": 5017,
+          "seconds": 1.856746707999264,
+          "stored_samples": 5017,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.009812482018899116,
+            0.1071686337127633
+          ],
+          "expected_returns": [
+            -0.060081448300343454,
+            0.060081448300343454
+          ],
+          "exploitability": 0.048678075846932095,
+          "iteration": 10,
+          "nash_conv": 0.09735615169386419,
+          "samples": 9774,
+          "seconds": 3.285263750003651,
+          "stored_samples": 9774,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.010382306028999588,
+            0.08716374303617064
+          ],
+          "expected_returns": [
+            -0.05951438406225906,
+            0.05951438406225906
+          ],
+          "exploitability": 0.038390718503585525,
+          "iteration": 15,
+          "nash_conv": 0.07678143700717105,
+          "samples": 14671,
+          "seconds": 4.881807500001742,
+          "stored_samples": 14671,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04627088752369041,
+            0.09162409193842252
+          ],
+          "expected_returns": [
+            -0.0580753782163666,
+            0.0580753782163666
+          ],
+          "exploitability": 0.02267660220736606,
+          "iteration": 20,
+          "nash_conv": 0.04535320441473212,
+          "samples": 19583,
+          "seconds": 6.4316423749987734,
+          "stored_samples": 19583,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03284351591889578,
+            0.1054303193070939
+          ],
+          "expected_returns": [
+            -0.06086268985463206,
+            0.06086268985463206
+          ],
+          "exploitability": 0.03629340169409906,
+          "iteration": 25,
+          "nash_conv": 0.07258680338819812,
+          "samples": 24475,
+          "seconds": 8.050393249999615,
+          "stored_samples": 24475,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.014935920623463217,
+            0.07366496299951714
+          ],
+          "expected_returns": [
+            -0.05140875166152914,
+            0.05140875166152914
+          ],
+          "exploitability": 0.02936452118802696,
+          "iteration": 30,
+          "nash_conv": 0.05872904237605392,
+          "samples": 29325,
+          "seconds": 9.743593542007147,
+          "stored_samples": 29325,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03195312465825073,
+            0.08920565129919061
+          ],
+          "expected_returns": [
+            -0.04922694866020488,
+            0.04922694866020488
+          ],
+          "exploitability": 0.02862626332046994,
+          "iteration": 35,
+          "nash_conv": 0.05725252664093988,
+          "samples": 34188,
+          "seconds": 11.49884379201103,
+          "stored_samples": 34188,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03161171362238785,
+            0.07189766407954956
+          ],
+          "expected_returns": [
+            -0.05726142196823014,
+            0.05726142196823014
+          ],
+          "exploitability": 0.020142975228580856,
+          "iteration": 40,
+          "nash_conv": 0.04028595045716171,
+          "samples": 39141,
+          "seconds": 13.328861500005587,
+          "stored_samples": 39141,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.013532467130787873,
+            0.08323644063885127
+          ],
+          "expected_returns": [
+            -0.06081892070044975,
+            0.06081892070044975
+          ],
+          "exploitability": 0.0348519867540317,
+          "iteration": 45,
+          "nash_conv": 0.0697039735080634,
+          "samples": 44310,
+          "seconds": 15.21548020800401,
+          "stored_samples": 44310,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.00858710480358904,
+            0.07059920800884584
+          ],
+          "expected_returns": [
+            -0.05133071083805579,
+            0.05133071083805579
+          ],
+          "exploitability": 0.0310060516026284,
+          "iteration": 50,
+          "nash_conv": 0.0620121032052568,
+          "samples": 49341,
+          "seconds": 17.151673208005377,
+          "stored_samples": 49341,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0489490271352504,
+            0.07516384532054471
+          ],
+          "expected_returns": [
+            -0.05541432605487806,
+            0.05541432605487806
+          ],
+          "exploitability": 0.013107409092647154,
+          "iteration": 55,
+          "nash_conv": 0.02621481818529431,
+          "samples": 54059,
+          "seconds": 19.13112129199726,
+          "stored_samples": 54059,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03361564495796554,
+            0.09178667057028306
+          ],
+          "expected_returns": [
+            -0.055541117017161634,
+            0.055541117017161634
+          ],
+          "exploitability": 0.02908551280615876,
+          "iteration": 60,
+          "nash_conv": 0.05817102561231752,
+          "samples": 58708,
+          "seconds": 21.13835975000984,
+          "stored_samples": 58708,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.024003290200345584,
+            0.07126309643066198
+          ],
+          "expected_returns": [
+            -0.05785497053044292,
+            0.05785497053044292
+          ],
+          "exploitability": 0.023629903115158196,
+          "iteration": 65,
+          "nash_conv": 0.04725980623031639,
+          "samples": 63374,
+          "seconds": 23.182539292,
+          "stored_samples": 63374,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.026200011113305055,
+            0.07849104892413167
+          ],
+          "expected_returns": [
+            -0.0536201151279459,
+            0.0536201151279459
+          ],
+          "exploitability": 0.026145518905413306,
+          "iteration": 70,
+          "nash_conv": 0.05229103781082661,
+          "samples": 68393,
+          "seconds": 25.276641999997082,
+          "stored_samples": 68393,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04653023614930646,
+            0.07236985259196077
+          ],
+          "expected_returns": [
+            -0.055135896376563576,
+            0.055135896376563576
+          ],
+          "exploitability": 0.012919808221327156,
+          "iteration": 75,
+          "nash_conv": 0.025839616442654312,
+          "samples": 73410,
+          "seconds": 27.406844625002122,
+          "stored_samples": 73410,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03642462422428244,
+            0.06262254770667991
+          ],
+          "expected_returns": [
+            -0.05569622281144765,
+            0.05569622281144765
+          ],
+          "exploitability": 0.013098961741198734,
+          "iteration": 80,
+          "nash_conv": 0.026197923482397467,
+          "samples": 78347,
+          "seconds": 29.597315208011423,
+          "stored_samples": 78347,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03882449065534338,
+            0.08041732294450227
+          ],
+          "expected_returns": [
+            -0.057475293507730285,
+            0.057475293507730285
+          ],
+          "exploitability": 0.020796416144579444,
+          "iteration": 85,
+          "nash_conv": 0.04159283228915889,
+          "samples": 83040,
+          "seconds": 31.80914633300563,
+          "stored_samples": 83040,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03464386558781152,
+            0.07392518342283028
+          ],
+          "expected_returns": [
+            -0.05564477441449822,
+            0.05564477441449822
+          ],
+          "exploitability": 0.01964065891750938,
+          "iteration": 90,
+          "nash_conv": 0.03928131783501876,
+          "samples": 87977,
+          "seconds": 34.111922666998,
+          "stored_samples": 87977,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.031411899066157045,
+            0.06684389350562103
+          ],
+          "expected_returns": [
+            -0.052135666751078114,
+            0.052135666751078114
+          ],
+          "exploitability": 0.017715997219731994,
+          "iteration": 95,
+          "nash_conv": 0.03543199443946399,
+          "samples": 92996,
+          "seconds": 36.39820133300964,
+          "stored_samples": 92996,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.037645993967436286,
+            0.061433941074981735
+          ],
+          "expected_returns": [
+            -0.0545189544458648,
+            0.0545189544458648
+          ],
+          "exploitability": 0.011893973553772724,
+          "iteration": 100,
+          "nash_conv": 0.02378794710754545,
+          "samples": 97965,
+          "seconds": 38.862772207998205,
+          "stored_samples": 97965,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.037645993967436286,
+          0.061433941074981735
+        ],
+        "expected_returns": [
+          -0.0545189544458648,
+          0.0545189544458648
+        ],
+        "exploitability": 0.011893973553772724,
+        "nash_conv": 0.02378794710754545,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/main-23-policy-d331b48966d6cefc.json",
+      "run_id": "71b35a81c38e4fda8b360019f7704688",
+      "seconds": 39.67625050000788,
+      "seed": 23,
+      "sha256": "d331b48966d6cefc0492a7aad258e365b950825f857f4aae884b7c1fd1175327",
+      "variant": "main"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/main-47-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.4999997193614788,
+            0.333333210403781
+          ],
+          "expected_returns": [
+            0.4999388254955644,
+            -0.4999388254955644
+          ],
+          "exploitability": 0.41666646488262993,
+          "iteration": 1,
+          "nash_conv": 0.8333329297652599,
+          "samples": 1006,
+          "seconds": 0.6653103749995353,
+          "stored_samples": 1006,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.17725698978969495,
+            0.1374347051964807
+          ],
+          "expected_returns": [
+            0.01535741353381348,
+            -0.01535741353381348
+          ],
+          "exploitability": 0.15734584749308783,
+          "iteration": 5,
+          "nash_conv": 0.31469169498617566,
+          "samples": 5141,
+          "seconds": 1.8680530839919811,
+          "stored_samples": 5141,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01873808105786645,
+            0.11375956067666948
+          ],
+          "expected_returns": [
+            -0.0493095117883417,
+            0.0493095117883417
+          ],
+          "exploitability": 0.047510739809401514,
+          "iteration": 10,
+          "nash_conv": 0.09502147961880303,
+          "samples": 9963,
+          "seconds": 3.306299834002857,
+          "stored_samples": 9963,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03073112065329775,
+            0.07955868938784422
+          ],
+          "expected_returns": [
+            -0.04910623238811945,
+            0.04910623238811945
+          ],
+          "exploitability": 0.024413784367273234,
+          "iteration": 15,
+          "nash_conv": 0.04882756873454647,
+          "samples": 14934,
+          "seconds": 4.812902167002903,
+          "stored_samples": 14934,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.019362101330162917,
+            0.07015071063897632
+          ],
+          "expected_returns": [
+            -0.05398348873226533,
+            0.05398348873226533
+          ],
+          "exploitability": 0.025394304654406702,
+          "iteration": 20,
+          "nash_conv": 0.050788609308813404,
+          "samples": 19737,
+          "seconds": 6.385279708993039,
+          "stored_samples": 19737,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.037256633303817344,
+            0.06946619149593808
+          ],
+          "expected_returns": [
+            -0.05462672014285497,
+            0.05462672014285497
+          ],
+          "exploitability": 0.016104779096060368,
+          "iteration": 25,
+          "nash_conv": 0.032209558192120735,
+          "samples": 24759,
+          "seconds": 8.018820583994966,
+          "stored_samples": 24759,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02807964310382094,
+            0.07897136230222179
+          ],
+          "expected_returns": [
+            -0.05027172783660916,
+            0.05027172783660916
+          ],
+          "exploitability": 0.025445859599200427,
+          "iteration": 30,
+          "nash_conv": 0.05089171919840085,
+          "samples": 29721,
+          "seconds": 9.725698124995688,
+          "stored_samples": 29721,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.05028195534854979,
+            0.06662009774013194
+          ],
+          "expected_returns": [
+            -0.05484268017511351,
+            0.05484268017511351
+          ],
+          "exploitability": 0.008169071195791078,
+          "iteration": 35,
+          "nash_conv": 0.016338142391582156,
+          "samples": 34485,
+          "seconds": 11.490474666992668,
+          "stored_samples": 34485,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.023927612772858375,
+            0.08826733464806491
+          ],
+          "expected_returns": [
+            -0.05314823287082027,
+            0.05314823287082027
+          ],
+          "exploitability": 0.03216986093760327,
+          "iteration": 40,
+          "nash_conv": 0.06433972187520653,
+          "samples": 39282,
+          "seconds": 13.331363749995944,
+          "stored_samples": 39282,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04851332922943441,
+            0.06754237332716384
+          ],
+          "expected_returns": [
+            -0.05428884516734367,
+            0.05428884516734367
+          ],
+          "exploitability": 0.009514522048864715,
+          "iteration": 45,
+          "nash_conv": 0.01902904409772943,
+          "samples": 44351,
+          "seconds": 15.256624458997976,
+          "stored_samples": 44351,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04801223394857873,
+            0.07138657926441228
+          ],
+          "expected_returns": [
+            -0.055644511825987064,
+            0.055644511825987064
+          ],
+          "exploitability": 0.011687172657916772,
+          "iteration": 50,
+          "nash_conv": 0.023374345315833545,
+          "samples": 49114,
+          "seconds": 17.283370958990417,
+          "stored_samples": 49114,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02958999671384782,
+            0.07944030858941037
+          ],
+          "expected_returns": [
+            -0.05392634240388344,
+            0.05392634240388344
+          ],
+          "exploitability": 0.024925155937781274,
+          "iteration": 55,
+          "nash_conv": 0.04985031187556255,
+          "samples": 53886,
+          "seconds": 19.301809416996548,
+          "stored_samples": 53886,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.039377707903460346,
+            0.08116949610378732
+          ],
+          "expected_returns": [
+            -0.05559041947265231,
+            0.05559041947265231
+          ],
+          "exploitability": 0.020895894100163487,
+          "iteration": 60,
+          "nash_conv": 0.041791788200326974,
+          "samples": 58791,
+          "seconds": 21.349111749994336,
+          "stored_samples": 58791,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.035069127077218876,
+            0.0927463813568492
+          ],
+          "expected_returns": [
+            -0.05845720508467395,
+            0.05845720508467395
+          ],
+          "exploitability": 0.028838627139815165,
+          "iteration": 65,
+          "nash_conv": 0.05767725427963033,
+          "samples": 63998,
+          "seconds": 23.45082933398953,
+          "stored_samples": 63998,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03439206950270285,
+            0.09778382007669784
+          ],
+          "expected_returns": [
+            -0.06037548891785649,
+            0.06037548891785649
+          ],
+          "exploitability": 0.031695875286997494,
+          "iteration": 70,
+          "nash_conv": 0.06339175057399499,
+          "samples": 69222,
+          "seconds": 25.68387295899447,
+          "stored_samples": 69222,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.009533937626717559,
+            0.08120689010985965
+          ],
+          "expected_returns": [
+            -0.05865393984833084,
+            0.05865393984833084
+          ],
+          "exploitability": 0.03583647624157105,
+          "iteration": 75,
+          "nash_conv": 0.0716729524831421,
+          "samples": 74168,
+          "seconds": 28.040503416996216,
+          "stored_samples": 74168,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.026663613337044256,
+            0.07087229836858178
+          ],
+          "expected_returns": [
+            -0.05579979568710558,
+            0.05579979568710558
+          ],
+          "exploitability": 0.02210434251576876,
+          "iteration": 80,
+          "nash_conv": 0.04420868503153752,
+          "samples": 78892,
+          "seconds": 30.269556166997063,
+          "stored_samples": 78892,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03130788966690212,
+            0.07372057102703583
+          ],
+          "expected_returns": [
+            -0.0561836163531364,
+            0.0561836163531364
+          ],
+          "exploitability": 0.021206340680066854,
+          "iteration": 85,
+          "nash_conv": 0.04241268136013371,
+          "samples": 83537,
+          "seconds": 32.52572829199198,
+          "stored_samples": 83537,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0321002165216524,
+            0.08081426121570734
+          ],
+          "expected_returns": [
+            -0.055992233574994055,
+            0.055992233574994055
+          ],
+          "exploitability": 0.02435702234702747,
+          "iteration": 90,
+          "nash_conv": 0.04871404469405494,
+          "samples": 88210,
+          "seconds": 34.82710216699343,
+          "stored_samples": 88210,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.030115935174444386,
+            0.07666082394274815
+          ],
+          "expected_returns": [
+            -0.05591270246001884,
+            0.05591270246001884
+          ],
+          "exploitability": 0.02327244438415188,
+          "iteration": 95,
+          "nash_conv": 0.04654488876830376,
+          "samples": 92892,
+          "seconds": 37.20877233399369,
+          "stored_samples": 92892,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.044613395075398854,
+            0.06864270823091967
+          ],
+          "expected_returns": [
+            -0.05564147451881779,
+            0.05564147451881779
+          ],
+          "exploitability": 0.012014656577760408,
+          "iteration": 100,
+          "nash_conv": 0.024029313155520815,
+          "samples": 98084,
+          "seconds": 39.591605708992574,
+          "stored_samples": 98084,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.044613395075398854,
+          0.06864270823091967
+        ],
+        "expected_returns": [
+          -0.05564147451881779,
+          0.05564147451881779
+        ],
+        "exploitability": 0.012014656577760408,
+        "nash_conv": 0.024029313155520815,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/main-47-policy-7ad1170080823e2f.json",
+      "run_id": "9f01cb7c1aec4c43af9daae42834969f",
+      "seconds": 40.42127029199037,
+      "seed": 47,
+      "sha256": "7ad1170080823e2ffa8d87ae00c6fe88607c3211616903b51c81269076be0909",
+      "variant": "main"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/no_iteration_weighting-11-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.4987302099181954,
+            0.33333430765652117
+          ],
+          "expected_returns": [
+            0.4982102971336248,
+            -0.4982102971336248
+          ],
+          "exploitability": 0.4160322587873583,
+          "iteration": 1,
+          "nash_conv": 0.8320645175747166,
+          "samples": 1000,
+          "seconds": 0.6825008330051787,
+          "stored_samples": 1000,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.037828270145225495,
+            0.1527672749387975
+          ],
+          "expected_returns": [
+            -0.030812471615683512,
+            0.030812471615683512
+          ],
+          "exploitability": 0.0952977725420115,
+          "iteration": 5,
+          "nash_conv": 0.190595545084023,
+          "samples": 4858,
+          "seconds": 1.8932377919991268,
+          "stored_samples": 4858,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.04626352283959756,
+            0.1068181659424518
+          ],
+          "expected_returns": [
+            -0.0524396023243382,
+            0.0524396023243382
+          ],
+          "exploitability": 0.07654084439102468,
+          "iteration": 10,
+          "nash_conv": 0.15308168878204936,
+          "samples": 9933,
+          "seconds": 3.362315332997241,
+          "stored_samples": 9933,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.009949997937578947,
+            0.08730501022142872
+          ],
+          "expected_returns": [
+            -0.05327556315616583,
+            0.05327556315616583
+          ],
+          "exploitability": 0.048627504079503836,
+          "iteration": 15,
+          "nash_conv": 0.09725500815900767,
+          "samples": 14665,
+          "seconds": 4.874780291997013,
+          "stored_samples": 14665,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.00567546041519601,
+            0.11210506450301927
+          ],
+          "expected_returns": [
+            -0.053106046058753464,
+            0.053106046058753464
+          ],
+          "exploitability": 0.05889026245910764,
+          "iteration": 20,
+          "nash_conv": 0.11778052491821528,
+          "samples": 19756,
+          "seconds": 6.451001958004781,
+          "stored_samples": 19756,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0019073102036149536,
+            0.1186020002977648
+          ],
+          "expected_returns": [
+            -0.05048850816031364,
+            0.05048850816031364
+          ],
+          "exploitability": 0.05834734504707492,
+          "iteration": 25,
+          "nash_conv": 0.11669469009414984,
+          "samples": 24626,
+          "seconds": 8.115926708007464,
+          "stored_samples": 24626,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.004950149383832092,
+            0.08703568179926902
+          ],
+          "expected_returns": [
+            -0.04716642617966288,
+            0.04716642617966288
+          ],
+          "exploitability": 0.04104276620771846,
+          "iteration": 30,
+          "nash_conv": 0.08208553241543692,
+          "samples": 29269,
+          "seconds": 9.893303958000615,
+          "stored_samples": 29269,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.015001711717629596,
+            0.09010031917130473
+          ],
+          "expected_returns": [
+            -0.04707585093557509,
+            0.04707585093557509
+          ],
+          "exploitability": 0.03754930372683757,
+          "iteration": 35,
+          "nash_conv": 0.07509860745367514,
+          "samples": 34114,
+          "seconds": 11.669860708003398,
+          "stored_samples": 34114,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.010401396410992525,
+            0.09991163146192794
+          ],
+          "expected_returns": [
+            -0.04897757550722559,
+            0.04897757550722559
+          ],
+          "exploitability": 0.04475511752546771,
+          "iteration": 40,
+          "nash_conv": 0.08951023505093542,
+          "samples": 39430,
+          "seconds": 13.505732749996241,
+          "stored_samples": 39430,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.011012977976859406,
+            0.0755263049749505
+          ],
+          "expected_returns": [
+            -0.050690333094590256,
+            0.050690333094590256
+          ],
+          "exploitability": 0.04326964147590495,
+          "iteration": 45,
+          "nash_conv": 0.0865392829518099,
+          "samples": 44750,
+          "seconds": 15.536604583001463,
+          "stored_samples": 44750,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.005974775781223796,
+            0.0846324032598017
+          ],
+          "expected_returns": [
+            -0.048035335631282094,
+            0.048035335631282094
+          ],
+          "exploitability": 0.04530358952051275,
+          "iteration": 50,
+          "nash_conv": 0.0906071790410255,
+          "samples": 49704,
+          "seconds": 17.494868292007595,
+          "stored_samples": 49704,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.004128402495184702,
+            0.09715800788568452
+          ],
+          "expected_returns": [
+            -0.04881253557437065,
+            0.04881253557437065
+          ],
+          "exploitability": 0.05064320519043461,
+          "iteration": 55,
+          "nash_conv": 0.10128641038086922,
+          "samples": 54478,
+          "seconds": 19.50292862500646,
+          "stored_samples": 54478,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01409625247898938,
+            0.08554509227797957
+          ],
+          "expected_returns": [
+            -0.04870503988952035,
+            0.04870503988952035
+          ],
+          "exploitability": 0.0357244198994951,
+          "iteration": 60,
+          "nash_conv": 0.0714488397989902,
+          "samples": 59174,
+          "seconds": 21.544585708004888,
+          "stored_samples": 59174,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03639947627522511,
+            0.0828160219852731
+          ],
+          "expected_returns": [
+            -0.05181812449985923,
+            0.05181812449985923
+          ],
+          "exploitability": 0.023208272855023998,
+          "iteration": 65,
+          "nash_conv": 0.046416545710047996,
+          "samples": 63872,
+          "seconds": 23.71277770800225,
+          "stored_samples": 63872,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04266583454354539,
+            0.08503151166348832
+          ],
+          "expected_returns": [
+            -0.053183576442134395,
+            0.053183576442134395
+          ],
+          "exploitability": 0.021182838559971467,
+          "iteration": 70,
+          "nash_conv": 0.042365677119942935,
+          "samples": 68547,
+          "seconds": 25.914164832996903,
+          "stored_samples": 68547,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02396624859738261,
+            0.07625900561329496
+          ],
+          "expected_returns": [
+            -0.05770014920194799,
+            0.05770014920194799
+          ],
+          "exploitability": 0.026146378507956175,
+          "iteration": 75,
+          "nash_conv": 0.05229275701591235,
+          "samples": 73204,
+          "seconds": 28.14552000000549,
+          "stored_samples": 73204,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02424212143650417,
+            0.06843167242210002
+          ],
+          "expected_returns": [
+            -0.05431421915224399,
+            0.05431421915224399
+          ],
+          "exploitability": 0.022094775492797925,
+          "iteration": 80,
+          "nash_conv": 0.04418955098559585,
+          "samples": 77833,
+          "seconds": 30.39363333300571,
+          "stored_samples": 77833,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.038819954744760965,
+            0.0661482960645644
+          ],
+          "expected_returns": [
+            -0.0535693157765294,
+            0.0535693157765294
+          ],
+          "exploitability": 0.01366417065990172,
+          "iteration": 85,
+          "nash_conv": 0.02732834131980344,
+          "samples": 82671,
+          "seconds": 32.66646066699468,
+          "stored_samples": 82671,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.028970674477543756,
+            0.0880072334040719
+          ],
+          "expected_returns": [
+            -0.05157563798388015,
+            0.05157563798388015
+          ],
+          "exploitability": 0.029518279463264074,
+          "iteration": 90,
+          "nash_conv": 0.05903655892652815,
+          "samples": 87759,
+          "seconds": 34.96539016699535,
+          "stored_samples": 87759,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.037705904944948965,
+            0.07928039923284158
+          ],
+          "expected_returns": [
+            -0.054014352840517255,
+            0.054014352840517255
+          ],
+          "exploitability": 0.020787247143946308,
+          "iteration": 95,
+          "nash_conv": 0.041574494287892616,
+          "samples": 92884,
+          "seconds": 37.317985375004355,
+          "stored_samples": 92884,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0428479856010614,
+            0.07864204610194803
+          ],
+          "expected_returns": [
+            -0.05526341268466001,
+            0.05526341268466001
+          ],
+          "exploitability": 0.017897030250443313,
+          "iteration": 100,
+          "nash_conv": 0.035794060500886626,
+          "samples": 98198,
+          "seconds": 39.66061900000204,
+          "stored_samples": 98198,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.0428479856010614,
+          0.07864204610194803
+        ],
+        "expected_returns": [
+          -0.05526341268466001,
+          0.05526341268466001
+        ],
+        "exploitability": 0.017897030250443313,
+        "nash_conv": 0.035794060500886626,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/no_iteration_weighting-11-policy-0472351b3ac2c7cd.json",
+      "run_id": "dc8dcd8b76f745559efebea2337dacc2",
+      "seconds": 40.488222957996186,
+      "seed": 11,
+      "sha256": "0472351b3ac2c7cd5b14a7added16540e071c01d02774f34a9e2e53810cef3ee",
+      "variant": "no_iteration_weighting"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/no_iteration_weighting-23-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.495527734136714,
+            0.3333961928933208
+          ],
+          "expected_returns": [
+            0.4945637208722935,
+            -0.4945637208722935
+          ],
+          "exploitability": 0.4144619635150174,
+          "iteration": 1,
+          "nash_conv": 0.8289239270300348,
+          "samples": 1001,
+          "seconds": 0.6786250420118449,
+          "stored_samples": 1001,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.13233633469653755,
+            0.13163421923258856
+          ],
+          "expected_returns": [
+            -0.00027251878565737186,
+            0.00027251878565737186
+          ],
+          "exploitability": 0.13198527696456305,
+          "iteration": 5,
+          "nash_conv": 0.2639705539291261,
+          "samples": 4881,
+          "seconds": 1.8794741250021616,
+          "stored_samples": 4881,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.08530128606184606,
+            0.12202804871871559
+          ],
+          "expected_returns": [
+            -0.014556600553367882,
+            0.014556600553367882
+          ],
+          "exploitability": 0.10366466739028082,
+          "iteration": 10,
+          "nash_conv": 0.20732933478056165,
+          "samples": 9986,
+          "seconds": 3.3175242920115124,
+          "stored_samples": 9986,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.008103424369466317,
+            0.11238391264762104
+          ],
+          "expected_returns": [
+            -0.05118053998238764,
+            0.05118053998238764
+          ],
+          "exploitability": 0.05214024413907736,
+          "iteration": 15,
+          "nash_conv": 0.10428048827815473,
+          "samples": 14640,
+          "seconds": 4.824297167011537,
+          "stored_samples": 14640,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.013262434878850482,
+            0.09747423700732782
+          ],
+          "expected_returns": [
+            -0.0549561497802854,
+            0.0549561497802854
+          ],
+          "exploitability": 0.04210590106423867,
+          "iteration": 20,
+          "nash_conv": 0.08421180212847734,
+          "samples": 19432,
+          "seconds": 6.40158474999771,
+          "stored_samples": 19432,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.007434447757081575,
+            0.0769334071331585
+          ],
+          "expected_returns": [
+            -0.05017726597875455,
+            0.05017726597875455
+          ],
+          "exploitability": 0.03474947968803846,
+          "iteration": 25,
+          "nash_conv": 0.06949895937607692,
+          "samples": 24732,
+          "seconds": 8.027727083011996,
+          "stored_samples": 24732,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.012462903807327619,
+            0.09502541540556131
+          ],
+          "expected_returns": [
+            -0.050351240675440556,
+            0.050351240675440556
+          ],
+          "exploitability": 0.041281255799116845,
+          "iteration": 30,
+          "nash_conv": 0.08256251159823369,
+          "samples": 29476,
+          "seconds": 9.746727792007732,
+          "stored_samples": 29476,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.034251994765207905,
+            0.07787717797053262
+          ],
+          "expected_returns": [
+            -0.05261525324963151,
+            0.05261525324963151
+          ],
+          "exploitability": 0.021812591602662357,
+          "iteration": 35,
+          "nash_conv": 0.043625183205324713,
+          "samples": 34128,
+          "seconds": 11.673748208006145,
+          "stored_samples": 34128,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.024986709364461457,
+            0.07432943474115317
+          ],
+          "expected_returns": [
+            -0.05206572801115955,
+            0.05206572801115955
+          ],
+          "exploitability": 0.024671362688345855,
+          "iteration": 40,
+          "nash_conv": 0.04934272537669171,
+          "samples": 38950,
+          "seconds": 13.549063541999203,
+          "stored_samples": 38950,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.029306408982068155,
+            0.0703585414852737
+          ],
+          "expected_returns": [
+            -0.05369211540940705,
+            0.05369211540940705
+          ],
+          "exploitability": 0.020526066251602776,
+          "iteration": 45,
+          "nash_conv": 0.04105213250320555,
+          "samples": 44008,
+          "seconds": 15.494377499999246,
+          "stored_samples": 44008,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0279211605981618,
+            0.08521834417831486
+          ],
+          "expected_returns": [
+            -0.054429362141958926,
+            0.054429362141958926
+          ],
+          "exploitability": 0.028648591790076533,
+          "iteration": 50,
+          "nash_conv": 0.057297183580153066,
+          "samples": 48935,
+          "seconds": 17.488835374999326,
+          "stored_samples": 48935,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.027184708651372846,
+            0.08078522734491883
+          ],
+          "expected_returns": [
+            -0.05704382170600031,
+            0.05704382170600031
+          ],
+          "exploitability": 0.026800259346772992,
+          "iteration": 55,
+          "nash_conv": 0.053600518693545984,
+          "samples": 53850,
+          "seconds": 19.52777016699838,
+          "stored_samples": 53850,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01901630391539544,
+            0.06508335042003349
+          ],
+          "expected_returns": [
+            -0.05363966162554007,
+            0.05363966162554007
+          ],
+          "exploitability": 0.023033523252319027,
+          "iteration": 60,
+          "nash_conv": 0.046067046504638054,
+          "samples": 58632,
+          "seconds": 21.658073167011025,
+          "stored_samples": 58632,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.021742430341742502,
+            0.07733671568902623
+          ],
+          "expected_returns": [
+            -0.05946977762026884,
+            0.05946977762026884
+          ],
+          "exploitability": 0.02779714267364186,
+          "iteration": 65,
+          "nash_conv": 0.05559428534728372,
+          "samples": 63424,
+          "seconds": 23.83070841700828,
+          "stored_samples": 63424,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.012198303552981238,
+            0.08157607598143285
+          ],
+          "expected_returns": [
+            -0.04895165807172552,
+            0.04895165807172552
+          ],
+          "exploitability": 0.034688886214225806,
+          "iteration": 70,
+          "nash_conv": 0.06937777242845161,
+          "samples": 68365,
+          "seconds": 26.017340000005788,
+          "stored_samples": 68365,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03459631419729864,
+            0.07779230252872127
+          ],
+          "expected_returns": [
+            -0.05408444550326891,
+            0.05408444550326891
+          ],
+          "exploitability": 0.021597994165711315,
+          "iteration": 75,
+          "nash_conv": 0.04319598833142263,
+          "samples": 73307,
+          "seconds": 28.235631292001926,
+          "stored_samples": 73307,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.032965634051008996,
+            0.07267615442457792
+          ],
+          "expected_returns": [
+            -0.05322218889451785,
+            0.05322218889451785
+          ],
+          "exploitability": 0.019855260186784462,
+          "iteration": 80,
+          "nash_conv": 0.039710520373568925,
+          "samples": 78475,
+          "seconds": 30.50324379200174,
+          "stored_samples": 78475,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.036921975891193115,
+            0.07657124057215275
+          ],
+          "expected_returns": [
+            -0.05123387348865294,
+            0.05123387348865294
+          ],
+          "exploitability": 0.01982463234047982,
+          "iteration": 85,
+          "nash_conv": 0.03964926468095964,
+          "samples": 83410,
+          "seconds": 32.82952316700539,
+          "stored_samples": 83410,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04202025497071726,
+            0.07476936016313884
+          ],
+          "expected_returns": [
+            -0.053942480604779075,
+            0.053942480604779075
+          ],
+          "exploitability": 0.01637455259621079,
+          "iteration": 90,
+          "nash_conv": 0.03274910519242158,
+          "samples": 88292,
+          "seconds": 35.2109615829977,
+          "stored_samples": 88292,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.049308539541594976,
+            0.08019237342678365
+          ],
+          "expected_returns": [
+            -0.055966083073437534,
+            0.055966083073437534
+          ],
+          "exploitability": 0.015441916942594336,
+          "iteration": 95,
+          "nash_conv": 0.030883833885188672,
+          "samples": 92996,
+          "seconds": 37.75325820800208,
+          "stored_samples": 92996,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03689990529969889,
+            0.0711221641883592
+          ],
+          "expected_returns": [
+            -0.053073365752122514,
+            0.053073365752122514
+          ],
+          "exploitability": 0.01711112944433016,
+          "iteration": 100,
+          "nash_conv": 0.03422225888866032,
+          "samples": 97659,
+          "seconds": 40.40643883300072,
+          "stored_samples": 97659,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.03689990529969889,
+          0.0711221641883592
+        ],
+        "expected_returns": [
+          -0.053073365752122514,
+          0.053073365752122514
+        ],
+        "exploitability": 0.01711112944433016,
+        "nash_conv": 0.03422225888866032,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/no_iteration_weighting-23-policy-950ee258a69ae40b.json",
+      "run_id": "c2878c4cf1824dbdb21c5a4168a8d688",
+      "seconds": 41.34982383300667,
+      "seed": 23,
+      "sha256": "950ee258a69ae40bf93c4a705ff2465943b1daec2f364c7a4bc714ffd1374111",
+      "variant": "no_iteration_weighting"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/no_iteration_weighting-47-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.4999997193614788,
+            0.333333210403781
+          ],
+          "expected_returns": [
+            0.4999388254955644,
+            -0.4999388254955644
+          ],
+          "exploitability": 0.41666646488262993,
+          "iteration": 1,
+          "nash_conv": 0.8333329297652599,
+          "samples": 1006,
+          "seconds": 0.7751600000046892,
+          "stored_samples": 1006,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.08883758986168605,
+            0.14381063984902265
+          ],
+          "expected_returns": [
+            0.005807461351548637,
+            -0.005807461351548637
+          ],
+          "exploitability": 0.11632411485535435,
+          "iteration": 5,
+          "nash_conv": 0.2326482297107087,
+          "samples": 5131,
+          "seconds": 2.0966359169979114,
+          "stored_samples": 5131,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.04210466062585244,
+            0.1225451966274223
+          ],
+          "expected_returns": [
+            -0.026331511814994102,
+            0.026331511814994102
+          ],
+          "exploitability": 0.08232492862663737,
+          "iteration": 10,
+          "nash_conv": 0.16464985725327475,
+          "samples": 9802,
+          "seconds": 3.698365709002246,
+          "stored_samples": 9802,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.008661256189141153,
+            0.09430537728258431
+          ],
+          "expected_returns": [
+            -0.047404939749844055,
+            0.047404939749844055
+          ],
+          "exploitability": 0.05148331673586273,
+          "iteration": 15,
+          "nash_conv": 0.10296663347172547,
+          "samples": 14463,
+          "seconds": 5.357915708998917,
+          "stored_samples": 14463,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0008412297622531484,
+            0.10248394785192877
+          ],
+          "expected_returns": [
+            -0.05381223622426051,
+            0.05381223622426051
+          ],
+          "exploitability": 0.05082135904483781,
+          "iteration": 20,
+          "nash_conv": 0.10164271808967562,
+          "samples": 19418,
+          "seconds": 7.119830750001711,
+          "stored_samples": 19418,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.008080672049200488,
+            0.08885843947062233
+          ],
+          "expected_returns": [
+            -0.0503181589934627,
+            0.0503181589934627
+          ],
+          "exploitability": 0.04038888371071092,
+          "iteration": 25,
+          "nash_conv": 0.08077776742142184,
+          "samples": 24646,
+          "seconds": 8.912165333997109,
+          "stored_samples": 24646,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0001421331453790864,
+            0.08261431626694155
+          ],
+          "expected_returns": [
+            -0.04927083985175784,
+            0.04927083985175784
+          ],
+          "exploitability": 0.04123609156078123,
+          "iteration": 30,
+          "nash_conv": 0.08247218312156246,
+          "samples": 29653,
+          "seconds": 10.739764917001594,
+          "stored_samples": 29653,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.025312944052593767,
+            0.10275086105634507
+          ],
+          "expected_returns": [
+            -0.04816494817716471,
+            0.04816494817716471
+          ],
+          "exploitability": 0.03871895850187565,
+          "iteration": 35,
+          "nash_conv": 0.0774379170037513,
+          "samples": 34307,
+          "seconds": 12.754668167006457,
+          "stored_samples": 34307,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.028042475995457616,
+            0.09438400770794297
+          ],
+          "expected_returns": [
+            -0.046971576350725464,
+            0.046971576350725464
+          ],
+          "exploitability": 0.03317076585624268,
+          "iteration": 40,
+          "nash_conv": 0.06634153171248536,
+          "samples": 38950,
+          "seconds": 14.69907741699717,
+          "stored_samples": 38950,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.030317409270125273,
+            0.08719224882325477
+          ],
+          "expected_returns": [
+            -0.0519412342028201,
+            0.0519412342028201
+          ],
+          "exploitability": 0.02843741977656475,
+          "iteration": 45,
+          "nash_conv": 0.0568748395531295,
+          "samples": 43605,
+          "seconds": 16.71997000000556,
+          "stored_samples": 43605,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.007099812437121322,
+            0.0694116103792553
+          ],
+          "expected_returns": [
+            -0.04930919934037975,
+            0.04930919934037975
+          ],
+          "exploitability": 0.031155898971066992,
+          "iteration": 50,
+          "nash_conv": 0.062311797942133984,
+          "samples": 48281,
+          "seconds": 18.779920959001174,
+          "stored_samples": 48281,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03574571797509252,
+            0.07931203157968825
+          ],
+          "expected_returns": [
+            -0.05419737631558735,
+            0.05419737631558735
+          ],
+          "exploitability": 0.021783156802297865,
+          "iteration": 55,
+          "nash_conv": 0.04356631360459573,
+          "samples": 53204,
+          "seconds": 20.894397374999244,
+          "stored_samples": 53204,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0388235786368481,
+            0.07760247065539688
+          ],
+          "expected_returns": [
+            -0.050739156632036264,
+            0.050739156632036264
+          ],
+          "exploitability": 0.01938944600927439,
+          "iteration": 60,
+          "nash_conv": 0.03877889201854878,
+          "samples": 58587,
+          "seconds": 23.04108870899654,
+          "stored_samples": 58587,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0300385758508106,
+            0.06453662532772297
+          ],
+          "expected_returns": [
+            -0.052446248815355256,
+            0.052446248815355256
+          ],
+          "exploitability": 0.017249024738456187,
+          "iteration": 65,
+          "nash_conv": 0.034498049476912374,
+          "samples": 63908,
+          "seconds": 25.24016145900532,
+          "stored_samples": 63908,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.015313590185055737,
+            0.07290308682752156
+          ],
+          "expected_returns": [
+            -0.056133050048802424,
+            0.056133050048802424
+          ],
+          "exploitability": 0.02879474832123291,
+          "iteration": 70,
+          "nash_conv": 0.05758949664246582,
+          "samples": 69063,
+          "seconds": 27.49070512500475,
+          "stored_samples": 69063,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01857920802505658,
+            0.06648620070100097
+          ],
+          "expected_returns": [
+            -0.052666202298861875,
+            0.052666202298861875
+          ],
+          "exploitability": 0.023953496337972197,
+          "iteration": 75,
+          "nash_conv": 0.04790699267594439,
+          "samples": 74113,
+          "seconds": 29.739592416997766,
+          "stored_samples": 74113,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01971615737147825,
+            0.06830854252372709
+          ],
+          "expected_returns": [
+            -0.05285545869880093,
+            0.05285545869880093
+          ],
+          "exploitability": 0.02429619257612442,
+          "iteration": 80,
+          "nash_conv": 0.04859238515224884,
+          "samples": 78896,
+          "seconds": 32.041022874997,
+          "stored_samples": 78896,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03230742382934937,
+            0.07187490930677959
+          ],
+          "expected_returns": [
+            -0.0536540468839764,
+            0.0536540468839764
+          ],
+          "exploitability": 0.01978374273871511,
+          "iteration": 85,
+          "nash_conv": 0.03956748547743022,
+          "samples": 83537,
+          "seconds": 34.37348799999745,
+          "stored_samples": 83537,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.039222191567378106,
+            0.07805247194368309
+          ],
+          "expected_returns": [
+            -0.054130103796533935,
+            0.054130103796533935
+          ],
+          "exploitability": 0.01941514018815249,
+          "iteration": 90,
+          "nash_conv": 0.03883028037630498,
+          "samples": 88182,
+          "seconds": 36.76691595900047,
+          "stored_samples": 88182,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02523607776442771,
+            0.08754541000328436
+          ],
+          "expected_returns": [
+            -0.05049521012384811,
+            0.05049521012384811
+          ],
+          "exploitability": 0.031154666119428326,
+          "iteration": 95,
+          "nash_conv": 0.06230933223885665,
+          "samples": 92798,
+          "seconds": 39.19510770900524,
+          "stored_samples": 92798,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.018495778766628446,
+            0.08882536455054374
+          ],
+          "expected_returns": [
+            -0.05595989102210902,
+            0.05595989102210902
+          ],
+          "exploitability": 0.03516479289195765,
+          "iteration": 100,
+          "nash_conv": 0.0703295857839153,
+          "samples": 97474,
+          "seconds": 41.65547254199919,
+          "stored_samples": 97474,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.018495778766628446,
+          0.08882536455054374
+        ],
+        "expected_returns": [
+          -0.05595989102210902,
+          0.05595989102210902
+        ],
+        "exploitability": 0.03516479289195765,
+        "nash_conv": 0.0703295857839153,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/no_iteration_weighting-47-policy-f992391eeb5e38ed.json",
+      "run_id": "a448eab953a747029d7b6abe0d188aad",
+      "seconds": 42.52248637500452,
+      "seed": 47,
+      "sha256": "f992391eeb5e38ede846e38189665422d78907cdb8e14cf86afc87a73c6d4973",
+      "variant": "no_iteration_weighting"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/no_network_reset-11-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.4987302099181954,
+            0.33333430765652117
+          ],
+          "expected_returns": [
+            0.4982102971336248,
+            -0.4982102971336248
+          ],
+          "exploitability": 0.4160322587873583,
+          "iteration": 1,
+          "nash_conv": 0.8320645175747166,
+          "samples": 1000,
+          "seconds": 0.7046952909877291,
+          "stored_samples": 1000,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.03592847877804606,
+            0.11991795702815711
+          ],
+          "expected_returns": [
+            -0.04773755716278888,
+            0.04773755716278888
+          ],
+          "exploitability": 0.07792321790310158,
+          "iteration": 5,
+          "nash_conv": 0.15584643580620317,
+          "samples": 5168,
+          "seconds": 1.972772207998787,
+          "stored_samples": 5168,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.00556240562343413,
+            0.10189052888431605
+          ],
+          "expected_returns": [
+            -0.04845900944682702,
+            0.04845900944682702
+          ],
+          "exploitability": 0.04816406163044096,
+          "iteration": 10,
+          "nash_conv": 0.09632812326088191,
+          "samples": 10125,
+          "seconds": 3.459506125000189,
+          "stored_samples": 10125,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0046349968791105645,
+            0.07571815881604443
+          ],
+          "expected_returns": [
+            -0.05511330049362584,
+            0.05511330049362584
+          ],
+          "exploitability": 0.035541580968466935,
+          "iteration": 15,
+          "nash_conv": 0.07108316193693387,
+          "samples": 15003,
+          "seconds": 5.332285582990153,
+          "stored_samples": 15003,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03432519724307265,
+            0.07374565498879204
+          ],
+          "expected_returns": [
+            -0.05382062195580878,
+            0.05382062195580878
+          ],
+          "exploitability": 0.019710228872859697,
+          "iteration": 20,
+          "nash_conv": 0.039420457745719395,
+          "samples": 19909,
+          "seconds": 7.054554582995479,
+          "stored_samples": 19909,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04767876964425144,
+            0.06756996976997676
+          ],
+          "expected_returns": [
+            -0.05571162059654011,
+            0.05571162059654011
+          ],
+          "exploitability": 0.009945600062862658,
+          "iteration": 25,
+          "nash_conv": 0.019891200125725317,
+          "samples": 24798,
+          "seconds": 8.738753415993415,
+          "stored_samples": 24798,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.037356700426074474,
+            0.06048616163114667
+          ],
+          "expected_returns": [
+            -0.05472599531329725,
+            0.05472599531329725
+          ],
+          "exploitability": 0.0115647306025361,
+          "iteration": 30,
+          "nash_conv": 0.0231294612050722,
+          "samples": 29651,
+          "seconds": 10.495177249991684,
+          "stored_samples": 29651,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03700795384090205,
+            0.0647513194696202
+          ],
+          "expected_returns": [
+            -0.05505680810438096,
+            0.05505680810438096
+          ],
+          "exploitability": 0.013871682814359076,
+          "iteration": 35,
+          "nash_conv": 0.027743365628718153,
+          "samples": 34753,
+          "seconds": 12.309057958002086,
+          "stored_samples": 34753,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03423880381756461,
+            0.07442114768399166
+          ],
+          "expected_returns": [
+            -0.05470366151749384,
+            0.05470366151749384
+          ],
+          "exploitability": 0.020091171933213525,
+          "iteration": 40,
+          "nash_conv": 0.04018234386642705,
+          "samples": 39509,
+          "seconds": 14.208344415994361,
+          "stored_samples": 39509,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03536271224499388,
+            0.06518435775026427
+          ],
+          "expected_returns": [
+            -0.056188975532838026,
+            0.056188975532838026
+          ],
+          "exploitability": 0.014910822752635194,
+          "iteration": 45,
+          "nash_conv": 0.02982164550527039,
+          "samples": 44318,
+          "seconds": 16.16882349998923,
+          "stored_samples": 44318,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02688589892320664,
+            0.0665099123783281
+          ],
+          "expected_returns": [
+            -0.05527319144256049,
+            0.05527319144256049
+          ],
+          "exploitability": 0.019812006727560727,
+          "iteration": 50,
+          "nash_conv": 0.039624013455121454,
+          "samples": 49536,
+          "seconds": 18.259664457989857,
+          "stored_samples": 49536,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02514778492345149,
+            0.08280218712158816
+          ],
+          "expected_returns": [
+            -0.05432415708612498,
+            0.05432415708612498
+          ],
+          "exploitability": 0.028827201099068334,
+          "iteration": 55,
+          "nash_conv": 0.05765440219813667,
+          "samples": 54375,
+          "seconds": 20.505219707993092,
+          "stored_samples": 54375,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.029830195308173157,
+            0.07921930390222459
+          ],
+          "expected_returns": [
+            -0.058717996472983425,
+            0.058717996472983425
+          ],
+          "exploitability": 0.024694554297025717,
+          "iteration": 60,
+          "nash_conv": 0.049389108594051434,
+          "samples": 59032,
+          "seconds": 22.601243375000195,
+          "stored_samples": 59032,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.0024481899046409072,
+            0.06262076266097838
+          ],
+          "expected_returns": [
+            -0.05708005418735884,
+            0.05708005418735884
+          ],
+          "exploitability": 0.03253447628280964,
+          "iteration": 65,
+          "nash_conv": 0.06506895256561929,
+          "samples": 63785,
+          "seconds": 24.78458354099712,
+          "stored_samples": 63785,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.013027403754818756,
+            0.07861669688361478
+          ],
+          "expected_returns": [
+            -0.06045187418166775,
+            0.06045187418166775
+          ],
+          "exploitability": 0.03279464656439801,
+          "iteration": 70,
+          "nash_conv": 0.06558929312879602,
+          "samples": 68880,
+          "seconds": 26.963924040988786,
+          "stored_samples": 68880,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0010815391778149497,
+            0.06301704615796788
+          ],
+          "expected_returns": [
+            -0.05712602310019976,
+            0.05712602310019976
+          ],
+          "exploitability": 0.030967753490076466,
+          "iteration": 75,
+          "nash_conv": 0.06193550698015293,
+          "samples": 73980,
+          "seconds": 29.20603979099542,
+          "stored_samples": 73980,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.005509608449170256,
+            0.0677508026153189
+          ],
+          "expected_returns": [
+            -0.05011011707470048,
+            0.05011011707470048
+          ],
+          "exploitability": 0.03663020553224458,
+          "iteration": 80,
+          "nash_conv": 0.07326041106448916,
+          "samples": 78861,
+          "seconds": 31.459144415988703,
+          "stored_samples": 78861,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.022701825824730737,
+            0.0711809904761811
+          ],
+          "expected_returns": [
+            -0.05258111406938637,
+            0.05258111406938637
+          ],
+          "exploitability": 0.02423958232572518,
+          "iteration": 85,
+          "nash_conv": 0.04847916465145036,
+          "samples": 83755,
+          "seconds": 33.75103145799949,
+          "stored_samples": 83755,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.017831694286953526,
+            0.07408452154109602
+          ],
+          "expected_returns": [
+            -0.04723572770898116,
+            0.04723572770898116
+          ],
+          "exploitability": 0.028126413627071245,
+          "iteration": 90,
+          "nash_conv": 0.05625282725414249,
+          "samples": 88716,
+          "seconds": 36.12623874998826,
+          "stored_samples": 88716,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03847906939089096,
+            0.07271729476771915
+          ],
+          "expected_returns": [
+            -0.052847865657609905,
+            0.052847865657609905
+          ],
+          "exploitability": 0.017119112688414095,
+          "iteration": 95,
+          "nash_conv": 0.03423822537682819,
+          "samples": 93596,
+          "seconds": 38.479897915996844,
+          "stored_samples": 93596,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04573157082183371,
+            0.07842159202628413
+          ],
+          "expected_returns": [
+            -0.05527634468459813,
+            0.05527634468459813
+          ],
+          "exploitability": 0.016345010602225207,
+          "iteration": 100,
+          "nash_conv": 0.032690021204450415,
+          "samples": 98452,
+          "seconds": 41.015319999991334,
+          "stored_samples": 98452,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.04573157082183371,
+          0.07842159202628413
+        ],
+        "expected_returns": [
+          -0.05527634468459813,
+          0.05527634468459813
+        ],
+        "exploitability": 0.016345010602225207,
+        "nash_conv": 0.032690021204450415,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/no_network_reset-11-policy-d74fe7b0a4326d8a.json",
+      "run_id": "b39cae1ced8d42e8a175cd21b953cc30",
+      "seconds": 41.86460337499739,
+      "seed": 11,
+      "sha256": "d74fe7b0a4326d8aa691a189e605d896e9c54b838add04546e8cb1a96fe4f073",
+      "variant": "no_network_reset"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/no_network_reset-23-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.495527734136714,
+            0.3333961928933208
+          ],
+          "expected_returns": [
+            0.4945637208722935,
+            -0.4945637208722935
+          ],
+          "exploitability": 0.4144619635150174,
+          "iteration": 1,
+          "nash_conv": 0.8289239270300348,
+          "samples": 1001,
+          "seconds": 0.6894190409948351,
+          "stored_samples": 1001,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.14580100098139903,
+            0.1320590122563995
+          ],
+          "expected_returns": [
+            0.004593227820609169,
+            -0.004593227820609169
+          ],
+          "exploitability": 0.13893000661889926,
+          "iteration": 5,
+          "nash_conv": 0.2778600132377985,
+          "samples": 5128,
+          "seconds": 1.924978082999587,
+          "stored_samples": 5128,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.011734563211809268,
+            0.12374205479027761
+          ],
+          "expected_returns": [
+            -0.037909780137849236,
+            0.037909780137849236
+          ],
+          "exploitability": 0.06773830900104344,
+          "iteration": 10,
+          "nash_conv": 0.13547661800208688,
+          "samples": 9867,
+          "seconds": 3.3943326659937156,
+          "stored_samples": 9867,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.011115269303711428,
+            0.09455334699247314
+          ],
+          "expected_returns": [
+            -0.04362560108512081,
+            0.04362560108512081
+          ],
+          "exploitability": 0.04171903884438086,
+          "iteration": 15,
+          "nash_conv": 0.08343807768876171,
+          "samples": 14930,
+          "seconds": 4.91987674999109,
+          "stored_samples": 14930,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02952631865449612,
+            0.07180182638626559
+          ],
+          "expected_returns": [
+            -0.05558869751889772,
+            0.05558869751889772
+          ],
+          "exploitability": 0.021137753865884734,
+          "iteration": 20,
+          "nash_conv": 0.04227550773176947,
+          "samples": 19722,
+          "seconds": 6.526837499986868,
+          "stored_samples": 19722,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.01763326516207464,
+            0.07718846818187686
+          ],
+          "expected_returns": [
+            -0.05752382078634316,
+            0.05752382078634316
+          ],
+          "exploitability": 0.029777601509901108,
+          "iteration": 25,
+          "nash_conv": 0.059555203019802216,
+          "samples": 24606,
+          "seconds": 8.206539457998588,
+          "stored_samples": 24606,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.039659850486847614,
+            0.08199846310382469
+          ],
+          "expected_returns": [
+            -0.05414680207739048,
+            0.05414680207739048
+          ],
+          "exploitability": 0.02116930630848854,
+          "iteration": 30,
+          "nash_conv": 0.04233861261697708,
+          "samples": 29498,
+          "seconds": 9.948348415986402,
+          "stored_samples": 29498,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.026319523574967918,
+            0.0676362697066254
+          ],
+          "expected_returns": [
+            -0.05498753604925288,
+            0.05498753604925288
+          ],
+          "exploitability": 0.02065837306582874,
+          "iteration": 35,
+          "nash_conv": 0.04131674613165748,
+          "samples": 34372,
+          "seconds": 11.764912665996235,
+          "stored_samples": 34372,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02968843578722924,
+            0.07884994277187002
+          ],
+          "expected_returns": [
+            -0.05791748091802312,
+            0.05791748091802312
+          ],
+          "exploitability": 0.02458075349232039,
+          "iteration": 40,
+          "nash_conv": 0.04916150698464078,
+          "samples": 39371,
+          "seconds": 13.64621716599504,
+          "stored_samples": 39371,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02719645899629941,
+            0.06212516910628396
+          ],
+          "expected_returns": [
+            -0.055914757516303815,
+            0.055914757516303815
+          ],
+          "exploitability": 0.017464355054992275,
+          "iteration": 45,
+          "nash_conv": 0.03492871010998455,
+          "samples": 44307,
+          "seconds": 15.600275207994855,
+          "stored_samples": 44307,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03906521931026774,
+            0.06508909130009582
+          ],
+          "expected_returns": [
+            -0.05381081765493356,
+            0.05381081765493356
+          ],
+          "exploitability": 0.013011935994914042,
+          "iteration": 50,
+          "nash_conv": 0.026023871989828085,
+          "samples": 49250,
+          "seconds": 17.597879749999265,
+          "stored_samples": 49250,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.028633890380054206,
+            0.08846544387546951
+          ],
+          "expected_returns": [
+            -0.05470982338040897,
+            0.05470982338040897
+          ],
+          "exploitability": 0.02991577674770765,
+          "iteration": 55,
+          "nash_conv": 0.0598315534954153,
+          "samples": 54050,
+          "seconds": 19.63967579099699,
+          "stored_samples": 54050,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.021909682370151062,
+            0.07389590204419694
+          ],
+          "expected_returns": [
+            -0.0574328952743437,
+            0.0574328952743437
+          ],
+          "exploitability": 0.025993109837022937,
+          "iteration": 60,
+          "nash_conv": 0.051986219674045875,
+          "samples": 58665,
+          "seconds": 21.723987290999503,
+          "stored_samples": 58665,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.034212261065653005,
+            0.07909008146832275
+          ],
+          "expected_returns": [
+            -0.055991369606823604,
+            0.055991369606823604
+          ],
+          "exploitability": 0.022438910201334872,
+          "iteration": 65,
+          "nash_conv": 0.044877820402669744,
+          "samples": 63833,
+          "seconds": 23.849356207996607,
+          "stored_samples": 63833,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.024130355631189426,
+            0.06668773820324264
+          ],
+          "expected_returns": [
+            -0.05456190094368146,
+            0.05456190094368146
+          ],
+          "exploitability": 0.021278691286026608,
+          "iteration": 70,
+          "nash_conv": 0.042557382572053215,
+          "samples": 69139,
+          "seconds": 26.156477040989557,
+          "stored_samples": 69139,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03058156480300811,
+            0.08393568173947275
+          ],
+          "expected_returns": [
+            -0.050219671460929205,
+            0.050219671460929205
+          ],
+          "exploitability": 0.026677058468232318,
+          "iteration": 75,
+          "nash_conv": 0.053354116936464635,
+          "samples": 73966,
+          "seconds": 28.359661040987703,
+          "stored_samples": 73966,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04159398739667797,
+            0.08378697938228907
+          ],
+          "expected_returns": [
+            -0.05425461580450769,
+            0.05425461580450769
+          ],
+          "exploitability": 0.021096495992805553,
+          "iteration": 80,
+          "nash_conv": 0.042192991985611106,
+          "samples": 78629,
+          "seconds": 30.60696354099491,
+          "stored_samples": 78629,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.043086842368018685,
+            0.0832509344603044
+          ],
+          "expected_returns": [
+            -0.057000115382057515,
+            0.057000115382057515
+          ],
+          "exploitability": 0.02008204604614286,
+          "iteration": 85,
+          "nash_conv": 0.04016409209228572,
+          "samples": 83282,
+          "seconds": 32.88688312500017,
+          "stored_samples": 83282,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.023802916264470397,
+            0.0843346463400868
+          ],
+          "expected_returns": [
+            -0.05905767892929503,
+            0.05905767892929503
+          ],
+          "exploitability": 0.030265865037808204,
+          "iteration": 90,
+          "nash_conv": 0.06053173007561641,
+          "samples": 87930,
+          "seconds": 35.20869312499417,
+          "stored_samples": 87930,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.003961974971076088,
+            0.06742767042615361
+          ],
+          "expected_returns": [
+            -0.05783043997078191,
+            0.05783043997078191
+          ],
+          "exploitability": 0.03173284772753876,
+          "iteration": 95,
+          "nash_conv": 0.06346569545507752,
+          "samples": 92649,
+          "seconds": 37.552272082990385,
+          "stored_samples": 92649,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.010912406830619614,
+            0.07965138143761225
+          ],
+          "expected_returns": [
+            -0.05555704261895461,
+            0.05555704261895461
+          ],
+          "exploitability": 0.034369487303496316,
+          "iteration": 100,
+          "nash_conv": 0.06873897460699263,
+          "samples": 97636,
+          "seconds": 39.94259491599223,
+          "stored_samples": 97636,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.010912406830619614,
+          0.07965138143761225
+        ],
+        "expected_returns": [
+          -0.05555704261895461,
+          0.05555704261895461
+        ],
+        "exploitability": 0.034369487303496316,
+        "nash_conv": 0.06873897460699263,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/no_network_reset-23-policy-566d615002989ee1.json",
+      "run_id": "0bcbbe06a1ec4ae2afdf345aee7e252e",
+      "seconds": 40.79001983298804,
+      "seed": 23,
+      "sha256": "566d615002989ee128f7d1f343e469beb3979f1276980319e837df8fc1aca70a",
+      "variant": "no_network_reset"
+    },
+    {
+      "checkpoint": "strategy/kuhn/run-521b8677c738/no_network_reset-47-checkpoint.pt",
+      "curve": [
+        {
+          "best_response_values": [
+            0.4999997193614788,
+            0.333333210403781
+          ],
+          "expected_returns": [
+            0.4999388254955644,
+            -0.4999388254955644
+          ],
+          "exploitability": 0.41666646488262993,
+          "iteration": 1,
+          "nash_conv": 0.8333329297652599,
+          "samples": 1006,
+          "seconds": 0.6888971660082461,
+          "stored_samples": 1006,
+          "traversals": 800,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.1504103973083064,
+            0.13440143689120287
+          ],
+          "expected_returns": [
+            -0.007856332458523074,
+            0.007856332458523074
+          ],
+          "exploitability": 0.14240591709975464,
+          "iteration": 5,
+          "nash_conv": 0.2848118341995093,
+          "samples": 5024,
+          "seconds": 1.9143184999993537,
+          "stored_samples": 5024,
+          "traversals": 4000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            0.03205091030678131,
+            0.09747592470537908
+          ],
+          "expected_returns": [
+            -0.048804342802583334,
+            0.048804342802583334
+          ],
+          "exploitability": 0.0647634175060802,
+          "iteration": 10,
+          "nash_conv": 0.1295268350121604,
+          "samples": 9726,
+          "seconds": 3.3956921659992076,
+          "stored_samples": 9726,
+          "traversals": 8000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.005744606548669262,
+            0.0985055765270601
+          ],
+          "expected_returns": [
+            -0.04917399783262677,
+            0.04917399783262677
+          ],
+          "exploitability": 0.04638048498919542,
+          "iteration": 15,
+          "nash_conv": 0.09276096997839084,
+          "samples": 14823,
+          "seconds": 4.931144750007661,
+          "stored_samples": 14823,
+          "traversals": 12000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.015705649612982764,
+            0.07074548017843585
+          ],
+          "expected_returns": [
+            -0.0550991027212005,
+            0.0550991027212005
+          ],
+          "exploitability": 0.027519915282726543,
+          "iteration": 20,
+          "nash_conv": 0.055039830565453085,
+          "samples": 19514,
+          "seconds": 6.541163333007717,
+          "stored_samples": 19514,
+          "traversals": 16000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.036909259613967016,
+            0.09837497536562856
+          ],
+          "expected_returns": [
+            -0.05706066274241128,
+            0.05706066274241128
+          ],
+          "exploitability": 0.03073285787583077,
+          "iteration": 25,
+          "nash_conv": 0.06146571575166154,
+          "samples": 24566,
+          "seconds": 8.217389790996094,
+          "stored_samples": 24566,
+          "traversals": 20000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.02602063580202063,
+            0.07724134687776796
+          ],
+          "expected_returns": [
+            -0.05259029281804489,
+            0.05259029281804489
+          ],
+          "exploitability": 0.025610355537873664,
+          "iteration": 30,
+          "nash_conv": 0.05122071107574733,
+          "samples": 29407,
+          "seconds": 9.960343708007713,
+          "stored_samples": 29407,
+          "traversals": 24000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03463807962409787,
+            0.07803354839505888
+          ],
+          "expected_returns": [
+            -0.055542038066255905,
+            0.055542038066255905
+          ],
+          "exploitability": 0.021697734385480505,
+          "iteration": 35,
+          "nash_conv": 0.04339546877096101,
+          "samples": 34163,
+          "seconds": 11.763053874994512,
+          "stored_samples": 34163,
+          "traversals": 28000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03137529233342984,
+            0.07039867647321618
+          ],
+          "expected_returns": [
+            -0.05512144731468238,
+            0.05512144731468238
+          ],
+          "exploitability": 0.01951169206989317,
+          "iteration": 40,
+          "nash_conv": 0.03902338413978634,
+          "samples": 39251,
+          "seconds": 13.624955374994897,
+          "stored_samples": 39251,
+          "traversals": 32000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03845569374152097,
+            0.08188971705681791
+          ],
+          "expected_returns": [
+            -0.05489042313495274,
+            0.05489042313495274
+          ],
+          "exploitability": 0.021717011657648472,
+          "iteration": 45,
+          "nash_conv": 0.043434023315296943,
+          "samples": 44104,
+          "seconds": 15.664994582999498,
+          "stored_samples": 44104,
+          "traversals": 36000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04550864482282757,
+            0.06190316166744325
+          ],
+          "expected_returns": [
+            -0.055824185244617075,
+            0.055824185244617075
+          ],
+          "exploitability": 0.00819725842230784,
+          "iteration": 50,
+          "nash_conv": 0.01639451684461568,
+          "samples": 48783,
+          "seconds": 17.63381266599754,
+          "stored_samples": 48783,
+          "traversals": 40000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04507318709910668,
+            0.08868494790824849
+          ],
+          "expected_returns": [
+            -0.05463771823168445,
+            0.05463771823168445
+          ],
+          "exploitability": 0.021805880404570904,
+          "iteration": 55,
+          "nash_conv": 0.04361176080914181,
+          "samples": 53833,
+          "seconds": 19.65159345799475,
+          "stored_samples": 53833,
+          "traversals": 44000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.017149493255720294,
+            0.07839233544078894
+          ],
+          "expected_returns": [
+            -0.05772735728247186,
+            0.05772735728247186
+          ],
+          "exploitability": 0.030621421092534323,
+          "iteration": 60,
+          "nash_conv": 0.06124284218506865,
+          "samples": 58952,
+          "seconds": 21.717397165994043,
+          "stored_samples": 58952,
+          "traversals": 48000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03368129384308405,
+            0.07429224282659835
+          ],
+          "expected_returns": [
+            -0.056260511454372386,
+            0.056260511454372386
+          ],
+          "exploitability": 0.020305474491757153,
+          "iteration": 65,
+          "nash_conv": 0.040610948983514306,
+          "samples": 63715,
+          "seconds": 23.817059791006614,
+          "stored_samples": 63715,
+          "traversals": 52000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.031154057399386925,
+            0.0732176521607702
+          ],
+          "expected_returns": [
+            -0.055043671498670455,
+            0.055043671498670455
+          ],
+          "exploitability": 0.021031797380691636,
+          "iteration": 70,
+          "nash_conv": 0.04206359476138327,
+          "samples": 68392,
+          "seconds": 25.95346645799873,
+          "stored_samples": 68392,
+          "traversals": 56000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.04547518596255512,
+            0.07337871176763394
+          ],
+          "expected_returns": [
+            -0.055052718732343464,
+            0.055052718732343464
+          ],
+          "exploitability": 0.01395176290253941,
+          "iteration": 75,
+          "nash_conv": 0.02790352580507882,
+          "samples": 73273,
+          "seconds": 28.127653375006048,
+          "stored_samples": 73273,
+          "traversals": 60000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.0361920162266961,
+            0.06941235462557815
+          ],
+          "expected_returns": [
+            -0.05503962459288336,
+            0.05503962459288336
+          ],
+          "exploitability": 0.016610169199441027,
+          "iteration": 80,
+          "nash_conv": 0.033220338398882054,
+          "samples": 78402,
+          "seconds": 30.399569707995397,
+          "stored_samples": 78402,
+          "traversals": 64000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03819195219887933,
+            0.07363804953548903
+          ],
+          "expected_returns": [
+            -0.05547668004590395,
+            0.05547668004590395
+          ],
+          "exploitability": 0.017723048668304847,
+          "iteration": 85,
+          "nash_conv": 0.035446097336609694,
+          "samples": 83408,
+          "seconds": 32.73318270800519,
+          "stored_samples": 83408,
+          "traversals": 68000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03771569461572816,
+            0.06439835475379235
+          ],
+          "expected_returns": [
+            -0.05523634327394489,
+            0.05523634327394489
+          ],
+          "exploitability": 0.013341330069032098,
+          "iteration": 90,
+          "nash_conv": 0.026682660138064196,
+          "samples": 88143,
+          "seconds": 35.07006337499479,
+          "stored_samples": 88143,
+          "traversals": 72000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.03804968250004093,
+            0.06494983195892745
+          ],
+          "expected_returns": [
+            -0.05538808290107872,
+            0.05538808290107872
+          ],
+          "exploitability": 0.013450074729443262,
+          "iteration": 95,
+          "nash_conv": 0.026900149458886524,
+          "samples": 92836,
+          "seconds": 37.45845312500023,
+          "stored_samples": 92836,
+          "traversals": 76000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        },
+        {
+          "best_response_values": [
+            -0.036523058758536064,
+            0.06325966351964907
+          ],
+          "expected_returns": [
+            -0.05453607261555343,
+            0.05453607261555343
+          ],
+          "exploitability": 0.013368302380556502,
+          "iteration": 100,
+          "nash_conv": 0.026736604761113003,
+          "samples": 97899,
+          "seconds": 39.88583829099662,
+          "stored_samples": 97899,
+          "traversals": 80000,
+          "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+        }
+      ],
+      "metrics": {
+        "best_response_values": [
+          -0.036523058758536064,
+          0.06325966351964907
+        ],
+        "expected_returns": [
+          -0.05453607261555343,
+          0.05453607261555343
+        ],
+        "exploitability": 0.013368302380556502,
+        "nash_conv": 0.026736604761113003,
+        "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+      },
+      "model_bytes": 73224,
+      "policy": "strategy/kuhn/run-521b8677c738/no_network_reset-47-policy-e71eb3d6da6b808a.json",
+      "run_id": "776145d609b349508332323e96da534b",
+      "seconds": 40.729693000001134,
+      "seed": 47,
+      "sha256": "e71eb3d6da6b808a98aef81a2ea28e1dfd773f878516c34271859bc5e73bc2fc",
+      "variant": "no_network_reset"
+    }
+  ],
+  "runtime": {
+    "hardware": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "open_spiel": "2.0.2",
+    "python": "3.13.5",
+    "torch": "2.13.0"
+  },
+  "serving": {
+    "kind": "tabular-cfr",
+    "metrics": {
+      "best_response_values": [
+        -0.054845842881137474,
+        0.05672107617512573
+      ],
+      "expected_returns": [
+        -0.05562503158224902,
+        0.05562503158224902
+      ],
+      "exploitability": 0.0009376166469941272,
+      "nash_conv": 0.0018752332939882543,
+      "units": "OpenSpiel game chips per hand; exploitability = NashConv / 2"
+    },
+    "policy": "strategy/kuhn/run-521b8677c738/tabular-cd92378d1cec41d4.json",
+    "sha256": "cd92378d1cec41d4cf3e1389c7f69fc828a27ae1e2183865683ee5c6a097ecc2"
+  },
+  "status": "research-only",
+  "std_exploitability": 0.0016635897998953564,
+  "version": "deep-cfr-small-v1"
+}

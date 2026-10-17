@@ -1,0 +1,13 @@
+
+Running 4 tests using 1 worker
+
+(node:20707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › e2e/product.spec.ts:4:1 › measured neural evidence is visible without horizontal page overflow (938ms)
+  ✓  2 [desktop] › e2e/product.spec.ts:19:1 › static file preview commits and reports real provenance (2.9s)
+(node:20748) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [mobile] › e2e/product.spec.ts:4:1 › measured neural evidence is visible without horizontal page overflow (445ms)
+  ✓  4 [mobile] › e2e/product.spec.ts:19:1 › static file preview commits and reports real provenance (1.8s)
+
+  4 passed (9.3s)

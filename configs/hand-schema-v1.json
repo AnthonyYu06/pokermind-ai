@@ -1,0 +1,322 @@
+{
+  "$defs": {
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "fold",
+            "check",
+            "call",
+            "bet",
+            "raise",
+            "deal"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "seat": {
+          "anyOf": [
+            {
+              "maximum": 9,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seat"
+        },
+        "to": {
+          "anyOf": [
+            {
+              "maximum": 1000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "To"
+        },
+        "cards": {
+          "items": {
+            "pattern": "^[2-9TJQKA][cdhs]$",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Cards",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "Player": {
+      "additionalProperties": false,
+      "properties": {
+        "seat": {
+          "maximum": 9,
+          "minimum": 1,
+          "title": "Seat",
+          "type": "integer"
+        },
+        "stack": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Stack",
+          "type": "integer"
+        },
+        "cards": {
+          "items": {
+            "pattern": "^[2-9TJQKA][cdhs]$",
+            "type": "string"
+          },
+          "maxItems": 2,
+          "title": "Cards",
+          "type": "array"
+        }
+      },
+      "required": [
+        "seat",
+        "stack"
+      ],
+      "title": "Player",
+      "type": "object"
+    },
+    "Summary": {
+      "additionalProperties": false,
+      "properties": {
+        "awards": {
+          "additionalProperties": {
+            "maximum": 1000000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Awards",
+          "type": "object"
+        },
+        "final_stacks": {
+          "additionalProperties": {
+            "maximum": 1000000000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Final Stacks",
+          "type": "object"
+        },
+        "rake": {
+          "maximum": 1000000000,
+          "minimum": 0,
+          "title": "Rake",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "awards",
+        "final_stacks",
+        "rake"
+      ],
+      "title": "Summary",
+      "type": "object"
+    },
+    "TimeEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "started_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Started At"
+        },
+        "session_end": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Session End"
+        },
+        "timezone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timezone"
+        },
+        "precision": {
+          "default": "unknown",
+          "enum": [
+            "second",
+            "minute",
+            "date",
+            "unknown"
+          ],
+          "title": "Precision",
+          "type": "string"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "maxLength": 256,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence"
+        }
+      },
+      "title": "TimeEvidence",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "format": {
+      "const": "pokermind-canonical-v1",
+      "default": "pokermind-canonical-v1",
+      "title": "Format",
+      "type": "string"
+    },
+    "source_hand_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Source Hand Id",
+      "type": "string"
+    },
+    "session_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Session Id",
+      "type": "string"
+    },
+    "variant": {
+      "default": "NLHE_CASH",
+      "title": "Variant",
+      "type": "string"
+    },
+    "rules_version": {
+      "default": "nlhe-v1",
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "timestamps": {
+      "$ref": "#/$defs/TimeEvidence"
+    },
+    "currency": {
+      "const": "USD",
+      "default": "USD",
+      "title": "Currency",
+      "type": "string"
+    },
+    "scale": {
+      "const": 100,
+      "default": 100,
+      "title": "Scale",
+      "type": "integer"
+    },
+    "button": {
+      "maximum": 9,
+      "minimum": 1,
+      "title": "Button",
+      "type": "integer"
+    },
+    "small_blind": {
+      "maximum": 1000000000,
+      "minimum": 0,
+      "title": "Small Blind",
+      "type": "integer"
+    },
+    "big_blind": {
+      "maximum": 1000000000,
+      "minimum": 0,
+      "title": "Big Blind",
+      "type": "integer"
+    },
+    "hero": {
+      "anyOf": [
+        {
+          "maximum": 9,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hero"
+    },
+    "players": {
+      "items": {
+        "$ref": "#/$defs/Player"
+      },
+      "maxItems": 9,
+      "minItems": 2,
+      "title": "Players",
+      "type": "array"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/Event"
+      },
+      "maxItems": 500,
+      "minItems": 1,
+      "title": "Events",
+      "type": "array"
+    },
+    "rake": {
+      "default": 0,
+      "maximum": 1000000000,
+      "minimum": 0,
+      "title": "Rake",
+      "type": "integer"
+    },
+    "terminal_summary": {
+      "$ref": "#/$defs/Summary"
+    }
+  },
+  "required": [
+    "source_hand_id",
+    "session_id",
+    "button",
+    "small_blind",
+    "big_blind",
+    "players",
+    "events",
+    "terminal_summary"
+  ],
+  "title": "Hand",
+  "type": "object"
+}

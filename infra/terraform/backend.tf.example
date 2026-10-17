@@ -1,0 +1,10 @@
+# Copy to backend.tf after an approved private state bucket has been created.
+terraform {
+  backend "s3" {
+    bucket       = "REVIEWED-STATE-BUCKET"
+    key          = "pokermind/learning.tfstate"
+    region       = "us-east-1"
+    encrypt      = true
+    use_lockfile = true
+  }
+}

@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:35269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › e2e/product.spec.ts:4:1 › full-hand self-play opponent exposes a legal policy and resumes (1.8s)
+  ✓  2 [desktop] › e2e/product.spec.ts:27:1 › practice coach compares generated actions and preserves a drill (793ms)
+  ✓  3 [desktop] › e2e/product.spec.ts:56:1 › measured neural evidence is visible without horizontal page overflow (432ms)
+  ✓  4 [desktop] › e2e/product.spec.ts:71:1 › static file preview commits and reports real provenance (2.9s)
+(node:35307) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [mobile] › e2e/product.spec.ts:4:1 › full-hand self-play opponent exposes a legal policy and resumes (993ms)
+  ✓  6 [mobile] › e2e/product.spec.ts:27:1 › practice coach compares generated actions and preserves a drill (746ms)
+  ✓  7 [mobile] › e2e/product.spec.ts:56:1 › measured neural evidence is visible without horizontal page overflow (489ms)
+  ✓  8 [mobile] › e2e/product.spec.ts:71:1 › static file preview commits and reports real provenance (1.8s)
+
+  8 passed (12.5s)

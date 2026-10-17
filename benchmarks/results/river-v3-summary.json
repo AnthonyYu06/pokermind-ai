@@ -1,0 +1,56 @@
+{
+  "status": "measured",
+  "version": "river-structure-v1",
+  "domain": "Synthetic river / heads-up uniform opponent / showdown equity, no action EV",
+  "dataset_id": "ac4b74f32bced21bbed8f7e4e60d6f3d0a27fcb9a8bb3c5c9679e69c37fa815c",
+  "counts": {
+    "validation": 3107,
+    "test": 1536,
+    "train": 11355
+  },
+  "groups": [
+    {
+      "model": "structural",
+      "n": 3,
+      "mae_mean": 0.03256840931792087,
+      "mae_std": 0.000551818157340983,
+      "minimum_independent_test_families": 1536,
+      "gates": {
+        "support": true,
+        "quality": true,
+        "baseline_gain": true
+      }
+    },
+    {
+      "model": "raw_counts",
+      "n": 3,
+      "mae_mean": 0.09414997489582472,
+      "mae_std": 0.00470282195903615,
+      "minimum_independent_test_families": 1536,
+      "gates": {
+        "support": true,
+        "quality": false,
+        "baseline_gain": false
+      }
+    }
+  ],
+  "baselines": {
+    "constant_half": 0.2532101618711143,
+    "train_mean": 0.25334211832796427,
+    "ridge": 0.07888967376283063,
+    "histogram_boosted": 0.04202102036939887
+  },
+  "scored_rows": 15998,
+  "prior_family_audit": {
+    "canonical_visible_families": 6872,
+    "datasets": [
+      "0dfd1261e937c0736a18d7a0bad5b28dc32063c4ce023432c0a7eeef47d8549b",
+      "20c883ac1b636c1a5de68d6912f56b9ba9d7c5a9acda195ce708da96f417319e"
+    ],
+    "hash": "4a869fb40295a13a609c3f278e71d34a7dfb6b69809dd6dc194a9473e3245709"
+  },
+  "promotion": "No automatic promotion; explicit release and independent gate review required.",
+  "execution": "Local Spark and CPU PyTorch; no cloud resources",
+  "cloud_enabled": false,
+  "report_sha256": "b4a5d68d96822206c45b7a03fafe9b95e7c70337e6e460d5a452613d769293cc"
+}

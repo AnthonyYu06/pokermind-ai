@@ -1,0 +1,8 @@
+{
+  "rows": 323,
+  "training_dataset_id": "ac4b74f32bced21bbed8f7e4e60d6f3d0a27fcb9a8bb3c5c9679e69c37fa815c",
+  "scoring_dataset_id": "0dfd1261e937c0736a18d7a0bad5b28dc32063c4ce023432c0a7eeef47d8549b",
+  "model_sha256": "fdb8cc2d75ceb06a0f8e6f423b8b122f1ed6d93fc7af9d1c7e88b60bb3c6833e",
+  "exact_reference_retained": true,
+  "scope": "local Spark; eligible synthetic historical decisions"
+}

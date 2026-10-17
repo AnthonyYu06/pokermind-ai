@@ -1,0 +1,20 @@
+{
+  "python": "3.13.5",
+  "machine": "arm64",
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "fastapi": "0.143.1",
+    "pydantic": "2.11.7",
+    "treys": "0.1.8",
+    "torch": "2.13.0",
+    "pyspark": "4.0.1",
+    "delta-spark": "4.0.0",
+    "mlflow": "3.17.1",
+    "open-spiel": "2.0.2"
+  },
+  "java": "java version \"11.0.15\" 2022-04-19 LTS",
+  "cloud_enabled": false,
+  "data_note": "Spark 4 requires Java 17+; set JAVA_HOME to an ARM64 JDK 17 before running pipeline-local",
+  "cuda": "not tested",
+  "mps": "optional; CPU reference is default"
+}

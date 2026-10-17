@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-16",
+  "completed": [
+    "isolated fixture upload preview and queued commit",
+    "import diagnostics next page and status filter",
+    "weighted pair-heavy river equity",
+    "bounded action EV with paired intervals and model/observation identity",
+    "larger research and corrected support counts",
+    "snapshot save, activation and rollback",
+    "390px and 1280px document overflow checks"
+  ],
+  "screenshots": [
+    "docs/screenshots/action-analysis-mobile.png",
+    "docs/screenshots/release-rollback-mobile.png",
+    "docs/screenshots/research-local-desktop.png"
+  ],
+  "limitation": "Further optional navigation was declined by the browser permission gate after these checks; browser interaction stopped.",
+  "cloud_enabled": false
+}

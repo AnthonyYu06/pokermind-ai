@@ -1,0 +1,13 @@
+{
+  "version":"behavior-evaluation-v1",
+  "declared_before_training":true,
+  "seeds":[11,23,47],
+  "generation_seed":71000,
+  "hands_per_policy":300,
+  "policies":["cautious","pressure","responsive"],
+  "unseen_policy":"unseen_mixed",
+  "epochs":35,
+  "early_stopping_patience":6,
+  "promotion":{"relative_nll_improvement":0.03,"maximum_ece":0.08,"minimum_test_hands":500},
+  "scope":"Heads-up synthetic next-action prediction; not optimal strategy or real-player inference"
+}

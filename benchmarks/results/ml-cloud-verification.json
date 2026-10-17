@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-10-16T19:10:18.394103+00:00",
+  "scope": "Verified local ML/Spark execution and cloud implementation preparation; not an executed AWS/Databricks milestone",
+  "git_commit": null,
+  "source_state": "uncommitted local implementation",
+  "tests": {
+    "main_research": {
+      "passed": 107,
+      "skipped": 2
+    },
+    "base_isolation": {
+      "passed": 78,
+      "skipped": 10
+    },
+    "python312_patched": {
+      "passed": 95,
+      "skipped": 2
+    },
+    "python312_cloud_river_subset": {
+      "passed": 20
+    },
+    "desktop_mobile_browser": {
+      "passed": 4
+    }
+  },
+  "checks": {
+    "web_build": "passed",
+    "terraform_validate": "passed",
+    "linux_amd64_serving_container": "passed",
+    "batch_wheel_outside_checkout": "passed",
+    "patched_dependency_audit": "no known vulnerabilities; local project package not in PyPI advisory lookup",
+    "frontend_dependency_audit": "zero findings",
+    "cross_runtime_data_identity": "equal across three runs"
+  },
+  "research": {
+    "summary": "river-v3-summary.json",
+    "held_out_states": 1536,
+    "seeds": 3,
+    "neural_mae": 0.03256840931792087,
+    "boosted_baseline_mae": 0.04202102036939887,
+    "scored_rows": 15998,
+    "exact_reference_remains_default": true,
+    "model_promoted": false
+  },
+  "cloud": {
+    "spending_enabled": false,
+    "authorized_monthly_usd": 0,
+    "resources_created": false,
+    "personal_data_uploaded": false,
+    "databricks_execution": "unverified",
+    "multi_machine_benchmark": "unverified",
+    "private_aws_deployment": "unverified",
+    "account_specific_priced_plan": "missing"
+  },
+  "local_processes": {
+    "app": "http://127.0.0.1:8000",
+    "verification_containers": "stopped",
+    "docker_desktop": "stopped"
+  },
+  "artifacts": {
+    "ml-cloud-tests.txt": "f0978dd544b5e44c4741322b58d1de11b5fd9f8ae3fd6060b45394d1f1211d84",
+    "ml-cloud-base-tests.txt": "93636d3d5855cd813f2a8f5c26f437cceb5f39799aa6f528bd9adbaf891eb5a4",
+    "python312-original-tests.txt": "3c88c972cc3bf9d9c5b2e8f38a7d744312d334464cf84b6e19b8622bd36b1d31",
+    "python312-patched-tests.txt": "443b2bb51f350137dd956a172539d64fb2b83e1d17d140abaf7075da8ade2d7e",
+    "python312-patched-contract-tests.txt": "1f268f484f5b04378d15e48d27876640b7cb0495b09a004114242611111a5555",
+    "python312-compatibility-audit.json": "56310d7618eba4fad7023296292d7864fdd8375bd2495b025e6e7156bc4d1f5e",
+    "python312-patched-dependency-audit.json": "7647fbeedf932441e01d416adc452d2f2cbc415232f06bfba621d359b0f091fa",
+    "ml-cloud-frontend-audit.json": "c12eedb08c6a6548bdd9634764809f7f7e265409cb86b2a555f7b706211a78a0",
+    "ml-cloud-browser-tests.txt": "9a614d6e5648a069557ec6e4cfa191eb2affe3dc9e12ae3349cfe9ee244e52ff",
+    "ml-cloud-web-build.txt": "c8bb20c49822db2a55526db34bdec167a2b902893ea86e2e91bdad9fdad76587",
+    "ml-cloud-container-check.txt": "58ba315191330ef70886d6d8d6c94eeb4d5a73ce11d381c689dfc7b0ce46e20a",
+    "ml-cloud-terraform-check.txt": "2ff6f7b7b494d0f8d596def971d585d29ee3e06359aa4662e84c1988f7b74cbb",
+    "cloud-portability-python312-patched.json": "f39177724b274490bdf2bd0247788e2e5d978834587ea5d3ac5c22cc05134074"
+  }
+}

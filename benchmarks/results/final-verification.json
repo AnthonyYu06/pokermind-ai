@@ -1,0 +1,16 @@
+{
+  "tests": 87,
+  "base_tests": 62,
+  "base_skipped": 6,
+  "production_build": "passed",
+  "source_policy_check": "passed",
+  "cloud_run_exit_code": 2,
+  "cloud_enabled": false,
+  "authorized_spend_usd": 0,
+  "new_dependencies": 0,
+  "paid_resources_started": 0,
+  "scored_research_rows": 7395,
+  "pipeline_benchmark_measured_repetitions": 9,
+  "neural_promotions": 0,
+  "browser_evidence": "browser-local-checks.json"
+}

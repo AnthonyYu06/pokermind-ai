@@ -1,0 +1,76 @@
+{
+  "status": "local-feature-verified",
+  "timestamp": "2026-10-16T21:44:04.871451+00:00",
+  "scope": "Synthetic river practice coach; existing three trained residual networks and exact passive-opponent action comparison",
+  "checks": {
+    "primary_tests": {
+      "passed": 131,
+      "skipped": 3
+    },
+    "base_runtime_tests": {
+      "passed": 100,
+      "skipped": 12
+    },
+    "neural_browser_tests": 6,
+    "reference_only_browser_tests": 2,
+    "web_build": "passed",
+    "running_local_api": "passed",
+    "source_policy": "passed"
+  },
+  "model_bundle_sha256": "cba5339f209bb1702c8ff7660ccd2d5c67391a9e9d9af2c6f0b5b3c4389a9b92",
+  "diagnostic": {
+    "status": "measured",
+    "scope": "Local synthetic river drills with a passive uniform opponent; exploratory diagnostic, not strategy validation.",
+    "count": 256,
+    "seed": 1760000,
+    "bundle_sha256": "cba5339f209bb1702c8ff7660ccd2d5c67391a9e9d9af2c6f0b5b3c4389a9b92",
+    "equity_mae": 0.0330163340802333,
+    "ranking_agreement_fraction": 0.94921875,
+    "mean_gap_bb": 0.08611505681818175,
+    "max_gap_bb": 6.129292929292927,
+    "seed_disagreements": 16,
+    "sensitive_rankings": 37,
+    "records_sha256": "a7d9cd9fdab6c711707b198736214916924f4acd599bfd688e2f64ef24ceee10",
+    "cloud_enabled": false
+  },
+  "cloud_enabled": false,
+  "cloud_budget_usd": 0,
+  "model_promotion": false,
+  "source_sha256": {
+    "packages/models/river_inference.py": "4805ea322b6828966f7bb932181aaeaf75b2e6d0a98eb177bca44a62ab63c975",
+    "services/api/coach.py": "57c817f049c6ca67cfc90deabff0b95db08238d1d8f1323e5daff38f5fbeb2e0",
+    "services/api/app.py": "56f8beeff89959a82b704bf3c83c267e0be512e45c0fe0b44a2348a6af08665a",
+    "services/api/backup.py": "6189625215bd1255395610eb57d65fd291bf92f3658759876abf1c3d5fcbbf25",
+    "apps/web/src/RiverCoach.tsx": "13c0e3461319728426cfca5b7d7c6738d1bc80755a7a25a2e1057def866008ad",
+    "apps/web/src/PokerTable.tsx": "44811673f89dfb8fdf2d3222daa0f6381c7b25590d12c1ef071531fc38f7ba96",
+    "apps/web/src/main.tsx": "a88773f5e01de95024b589b2114a4ac137eb99a35dfa46a70c5184798dfabd4c",
+    "apps/web/src/style.css": "5f4010ed7b06351e229c58931ffabb09eae0da183c0222a740ce4aefe5c9a222",
+    "scripts/prepare_river_coach.py": "145e974101e9f84d360e115311aea5dacd56de566c532b9f953386a3fd6ac3d9",
+    "scripts/verify_river_coach.py": "583f9b47d9595916bf62cb458886be5e8f57211bcbf95248d409d98ed3bf4d99",
+    "tests/integration/test_coach.py": "25bdff790378ad85af28df4c73beb616df50282fee0f526505007e981cc9def1",
+    "tests/research/test_coach_models.py": "18b03f6e65157dd87495ff00dec05bd67e4433e8af8ed5b7b53e4397344cb2ca",
+    "tests/e2e/serve.py": "6bad20c84aaf4708e02698cb691a11875ee88410f2e2e09c55f23d895b627459",
+    "apps/web/e2e/product.spec.ts": "4920451a40711aaf75c4bae7eca0597b56b6921e2b28bb86f9dc606df1101de4",
+    "docs/ai-practice-coach.md": "dcde07059b854b6cf3c79aa5c3b9bcf30890330efaab1999b9cdeab6c940000d",
+    "docs/model-card.md": "907bfbb7b2f329b1d2d67d76b000c709c12de6c8c3e1372d4c291b86ab0717cd",
+    "docs/verification.md": "1452abb82b031b5687442718aa407fc36c84313dc613214b5ed54efce6779d4b",
+    "README.md": "06f91c4980bb724d83ab35364ed9c783fe490367bf5c0693226e5c2cdc2c1c28",
+    "Makefile": "d14b32e9c5acb403a48dec1169d39cae8cc6de84d144667c397bebffe0d49117"
+  },
+  "evidence_sha256": {
+    "river-coach-tests.txt": "576bce1e222a917da630fca8a0be020e1e3dfb3942a3f5c7d029894625cecc9c",
+    "river-coach-base-tests.txt": "522b1de3e1cb8acbc1bfb429ebf76b9ea4eb4576deceeb5ac64813dbbb6dde94",
+    "river-coach-web-build.txt": "7b51c55f247be42d92c9fdb903f8c508cf7d0cf70338f046459efe7d1371247b",
+    "river-coach-browser-tests.txt": "956232777d88d1d0c490a2d6ffe3193b10ec12c5c8050dc87d7d8d8482d2a722",
+    "river-coach-reference-browser-tests.txt": "7aa0bfb15725dfcf002478094495f2846256a6501dbc8e11668d2e99333a266d",
+    "river-coach-diagnostic.json": "a6362b161fab9aec404633310cc8d6fcb94489d1b710fe58c7b6051f2af31e8b",
+    "river-coach-api-check.json": "a171b7874a209a3ff63ef8e71365c7d4543d9b53e0cddfac2a34d12a9a88e288"
+  },
+  "limitations": [
+    "River/headsup/uniform range/zero rake only",
+    "Opponent checks or calls; no folds or raises",
+    "Only discrete legal candidates compared",
+    "Equity accuracy is not general strategy validation; diagnostics include ranking errors",
+    "No cloud deployment or new distributed benchmark performed"
+  ]
+}

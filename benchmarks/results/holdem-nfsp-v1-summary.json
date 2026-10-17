@@ -1,0 +1,241 @@
+{
+  "version": "nfsp-research-v1",
+  "status": "research-only",
+  "protocol_id": "c5ca640298a1e0713deeae2bda74294fe35454e837238e1f014883c9057c16e2",
+  "training_holdem_hands": 18000,
+  "training_kuhn_hands": 30000,
+  "evaluation_hands": 14400,
+  "distinct_evaluation_deal_seeds": 400,
+  "selection": "First predeclared seed, final episode; never selected by arena results.",
+  "selected": {
+    "path": "models/holdem-nfsp/run-v1/holdem-101/average-policy.pt",
+    "sha256": "e987961d283be14db1173dea32bcbd7ad5d5741f035ac465368c2101445a49c4"
+  },
+  "kuhn": {
+    "101": 0.21700425794254202,
+    "202": 0.1732340327250686,
+    "303": 0.1770238403620396
+  },
+  "opponents": {
+    "cautious": {
+      "mean_bb_per_hand_across_seeds": 1.3854166666666667,
+      "per_seed": {
+        "101": {
+          "bb_per_hand": 1.70875,
+          "ci95": [
+            0.2241009323483385,
+            3.1933990676516615
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7574740141079905
+        },
+        "202": {
+          "bb_per_hand": 1.0875,
+          "ci95": [
+            -0.39241546255716564,
+            2.5674154625571655
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7550589094679416
+        },
+        "303": {
+          "bb_per_hand": 1.36,
+          "ci95": [
+            -0.06983189430258263,
+            2.7898318943025826
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.729506068521726
+        }
+      }
+    },
+    "passive": {
+      "mean_bb_per_hand_across_seeds": -0.4791666666666667,
+      "per_seed": {
+        "101": {
+          "bb_per_hand": -0.265,
+          "ci95": [
+            -1.6016355413972487,
+            1.0716355413972485
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.6819569088761472
+        },
+        "202": {
+          "bb_per_hand": -0.693125,
+          "ci95": [
+            -2.058831121650159,
+            0.6725811216501592
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.6967888375766118
+        },
+        "303": {
+          "bb_per_hand": -0.479375,
+          "ci95": [
+            -1.910231164971003,
+            0.951481164971003
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7300286555974506
+        }
+      }
+    },
+    "pressure": {
+      "mean_bb_per_hand_across_seeds": 1.5754166666666667,
+      "per_seed": {
+        "101": {
+          "bb_per_hand": 0.83125,
+          "ci95": [
+            -0.9454454371909351,
+            2.607945437190935
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.9064772638729262
+        },
+        "202": {
+          "bb_per_hand": 1.480625,
+          "ci95": [
+            -0.2966718743494623,
+            3.2579218743494627
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.9067841195660522
+        },
+        "303": {
+          "bb_per_hand": 2.414375,
+          "ci95": [
+            0.7424321331761228,
+            4.086317866823878
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.8530320749101415
+        }
+      }
+    },
+    "responsive": {
+      "mean_bb_per_hand_across_seeds": 3.2616666666666667,
+      "per_seed": {
+        "101": {
+          "bb_per_hand": 3.414375,
+          "ci95": [
+            1.94043812683901,
+            4.8883118731609905
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7520086087556072
+        },
+        "202": {
+          "bb_per_hand": 3.60125,
+          "ci95": [
+            2.1221828808837384,
+            5.080317119116261
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.754626081181766
+        },
+        "303": {
+          "bb_per_hand": 2.769375,
+          "ci95": [
+            1.2222673265471864,
+            4.316482673452814
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7893406497208234
+        }
+      }
+    },
+    "uniform": {
+      "mean_bb_per_hand_across_seeds": 1.7106249999999998,
+      "per_seed": {
+        "101": {
+          "bb_per_hand": 0.945,
+          "ci95": [
+            -0.7730195523058704,
+            2.66301955230587
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.8765405879111583
+        },
+        "202": {
+          "bb_per_hand": 2.7575,
+          "ci95": [
+            0.9543347900953372,
+            4.560665209904663
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.9199822499513586
+        },
+        "303": {
+          "bb_per_hand": 1.429375,
+          "ci95": [
+            -0.3351387861965349,
+            3.193888786196535
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.9002621358145587
+        }
+      }
+    },
+    "unseen_mixed": {
+      "mean_bb_per_hand_across_seeds": -0.4666666666666667,
+      "per_seed": {
+        "101": {
+          "bb_per_hand": -0.05375,
+          "ci95": [
+            -1.7665914090847519,
+            1.659091409084752
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.8738986781044653
+        },
+        "202": {
+          "bb_per_hand": -0.435,
+          "ci95": [
+            -1.9731270811915176,
+            1.1031270811915175
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7847587148936314
+        },
+        "303": {
+          "bb_per_hand": -0.91125,
+          "ci95": [
+            -2.461465697173512,
+            0.6389656971735119
+          ],
+          "hands": 800,
+          "paired_deals": 400,
+          "standard_error": 0.7909263761089347
+        }
+      }
+    }
+  },
+  "quality_gates": {
+    "holdem_baselines": false,
+    "holdem_exploitability_certified": false,
+    "kuhn": false
+  },
+  "promotion": {
+    "eligible": false,
+    "reason": "Exploratory, abstracted heads-up self-play. General Hold\u2019em optimality is unproven; prior Deep CFR gates remain unchanged."
+  },
+  "cloud_enabled": false
+}

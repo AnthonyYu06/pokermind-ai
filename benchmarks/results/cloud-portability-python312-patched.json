@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "local task-body portability; no AWS/Databricks execution",
+  "stages": {
+    "materialize": {
+      "path": "materialize-75fffa74e804/dataset.json",
+      "sha256": "913523582060f74b9b331131a4d5122f3e03d697b31306a3b80e392f6d53298a",
+      "plan_hash": "2f4727aa1fb39303a0d5a58087e90b7fec91aafcb6800844d0af8f5a2c4940e7",
+      "seconds": 15.145054458999766
+    },
+    "train": {
+      "path": "train-ebc5118ec086/report.json",
+      "sha256": "b1afe45240ac491f82cc8e228abdc070d385155a55a04e79ac181afe4e5e8cfc",
+      "plan_hash": "2f4727aa1fb39303a0d5a58087e90b7fec91aafcb6800844d0af8f5a2c4940e7",
+      "seconds": 7.08441700000003
+    },
+    "score": {
+      "path": "score-a411d8ad8fac.json",
+      "sha256": "e972986d3cbaca51b17a80bcbed1c7d3fc4c936a35dd4f84f2b801049dc0b371",
+      "plan_hash": "2f4727aa1fb39303a0d5a58087e90b7fec91aafcb6800844d0af8f5a2c4940e7",
+      "seconds": 1.4753372909999598
+    },
+    "publish": {
+      "path": "publish-e532c6326e5e.json",
+      "sha256": "78b6dbde9b71b26b192ba479652f67563745205c28cf9c5aa3e392432a3e4f41",
+      "plan_hash": "2f4727aa1fb39303a0d5a58087e90b7fec91aafcb6800844d0af8f5a2c4940e7",
+      "seconds": 0.9965918749994671
+    }
+  },
+  "restored_hands": 256,
+  "restored_scores": 338,
+  "retry_reuses_artifacts": true,
+  "failed_attempt_not_published": true,
+  "spark": "4.0.0",
+  "python": "3.12.15",
+  "local_registry_tested": true,
+  "seconds": 26.72013770800004,
+  "cloud_enabled": false
+}

@@ -1,0 +1,49 @@
+#!/bin/bash
+set -euo pipefail
+# Bounded stop is scheduled before downloads or application startup.
+cat >/etc/systemd/system/pokermind-expiry.service <<'STOP'
+[Unit]
+Description=Stop approved PokerMind compute window
+[Service]
+Type=oneshot
+ExecStart=/sbin/shutdown -h now
+STOP
+cat >/etc/systemd/system/pokermind-expiry.timer <<'TIMER'
+[Unit]
+Description=Bound every boot to the approved duration
+[Timer]
+OnBootSec=${minutes}min
+AccuracySec=1s
+Unit=pokermind-expiry.service
+[Install]
+WantedBy=timers.target
+TIMER
+systemctl daemon-reload
+systemctl enable --now pokermind-expiry.timer
+dnf install -y docker
+systemctl enable --now docker
+install -d -o 10001 -g 10001 -m 0700 /var/lib/pokermind
+aws ecr get-login-password --region '${region}' | docker login --username AWS --password-stdin '${registry}'
+docker pull '${image}'
+# Fetch only a content-addressed publication; verification/restore has no network.
+install -d -m 0755 /var/lib/pokermind-bootstrap
+aws s3api get-object --region '${region}' --bucket '${published_bucket}' --key 'snapshots/pokermind/${snapshot_sha256}/publication.json' --range 'bytes=0-1048576' /var/lib/pokermind-bootstrap/publication.json >/dev/null
+aws s3api get-object --region '${region}' --bucket '${published_bucket}' --key 'snapshots/pokermind/${snapshot_sha256}/snapshot.zip' --range 'bytes=0-1073741824' /var/lib/pokermind-bootstrap/snapshot.zip >/dev/null
+chmod 0644 /var/lib/pokermind-bootstrap/publication.json /var/lib/pokermind-bootstrap/snapshot.zip
+docker run --rm --network none --read-only --tmpfs /tmp:size=128m --cap-drop ALL --security-opt no-new-privileges --user 10001:10001 -v /var/lib/pokermind:/app/.data -v /var/lib/pokermind-bootstrap:/snapshot:ro '${image}' python -m services.api.snapshots --publication /snapshot/publication.json --archive /snapshot/snapshot.zip --publication-sha256 '${publication_sha256}' --destination /app/.data/workspace --if-installed
+cat >/etc/systemd/system/pokermind.service <<'UNIT'
+[Unit]
+Description=PokerMind private offline study
+After=docker.service network-online.target
+Requires=docker.service
+[Service]
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/docker run --rm --name pokermind --network host --read-only --tmpfs /tmp:size=128m --cap-drop ALL --security-opt no-new-privileges --user 10001:10001 -v /var/lib/pokermind:/app/.data -e POKERMIND_DATA=/app/.data/workspace --log-driver awslogs --log-opt awslogs-region=${region} --log-opt awslogs-group=${log_group} --log-opt awslogs-stream=app '${image}'
+ExecStop=/usr/bin/docker stop -t 20 pokermind
+TimeoutStopSec=30
+[Install]
+WantedBy=multi-user.target
+UNIT
+systemctl daemon-reload
+systemctl enable --now pokermind

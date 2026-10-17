@@ -1,0 +1,2066 @@
+{
+  "status": "measured",
+  "scope": "Local synthetic river drills with a passive uniform opponent; exploratory diagnostic, not strategy validation.",
+  "count": 256,
+  "seed": 1760000,
+  "bundle_sha256": "cba5339f209bb1702c8ff7660ccd2d5c67391a9e9d9af2c6f0b5b3c4389a9b92",
+  "equity_mae": 0.0330163340802333,
+  "ranking_agreement_fraction": 0.94921875,
+  "mean_gap_bb": 0.08611505681818175,
+  "max_gap_bb": 6.129292929292927,
+  "seed_disagreements": 16,
+  "sensitive_rankings": 37,
+  "seconds": 3.7224400830000377,
+  "records_sha256": "a7d9cd9fdab6c711707b198736214916924f4acd599bfd688e2f64ef24ceee10",
+  "cloud_enabled": false,
+  "records": [
+    {
+      "observation_hash": "cc894333528d90ed5b4c410d4fe343a5822e8c11e24dcfa5f24808a34d866b62",
+      "absolute_equity_error": 0.0002499919949155993,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3e6b782c5181f14d2d1641054e21755f8e04ab17cea578ecd80c25d44da839e3",
+      "absolute_equity_error": 0.017817031975948416,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7a233668719f9be89ed5689cc104bf446cfdffbe53f23b68894bbcb05f747a90",
+      "absolute_equity_error": 0.03807055793627345,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "438d6e127f1f72d3c9f81dd16fd19d6d6b78e3cf07ee0c3b81726ac6826c9263",
+      "absolute_equity_error": 0.03380320252794211,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "09d5f21bc6e4b4f26499a3207fa1daa5cd72e130e633a3c3e6c9dace56f50b5b",
+      "absolute_equity_error": 0.02557523491406677,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1612b5b89466dac8f4f7d6e2bb11a674438fe1d97485fdd90c1eaee68a2265fb",
+      "absolute_equity_error": 0.025529182077658308,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0cb2befb9e5bfcc83b879b8641288bbdffce5ab2137d92cd1950e03b80a6199b",
+      "absolute_equity_error": 0.05881801476382245,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9c432aaf84919cfcf8c427801400d17a18ccca3f896c181c99d68bf11a3be8aa",
+      "absolute_equity_error": 0.006421445596097697,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "82bcee319899a1b79b9fcead561c0fe2b11fd347cfec39ab30e1499058cb254d",
+      "absolute_equity_error": 0.1821339654200005,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "e4e3fffc21256fa52ec362c762a12755d90919cdd569d1cfcbc8f569c7017b55",
+      "absolute_equity_error": 0.007089305465871665,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a9731db410ab4fde6e05710a96d8c9f176b9be7b5943f4ec5ebecbfd11b02175",
+      "absolute_equity_error": 0.024214637520337368,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "8245079c241a8e585c27f477af1fa00b6753b4a5418b44ac8ba4b97a915b0266",
+      "absolute_equity_error": 0.04784120321273799,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 3.133333333333331,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "7b29ac359a2724aedcb642903975b4c396e676cc8a66f8bd63866bf2ef3f765c",
+      "absolute_equity_error": 0.0366536749733819,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d7a35a65c6617814fa83080d49eb384da8508101b59241b29e4f71628c6fbaab",
+      "absolute_equity_error": 0.004350673971754149,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4601fe3deaa77dba9e2b9dff056b7dbff24d8a3253249d699c2b96f99f666afa",
+      "absolute_equity_error": 0.023239504357781077,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "85b0ace5f4284fcd4a2caae6d69cef644660e004c6f2dc7d2194c1ce1c1a5e8f",
+      "absolute_equity_error": 0.006795461164467564,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0f318ac562f42a3ebac7287fc50286dd5938f8ee1b348f25748e56e3a69af610",
+      "absolute_equity_error": 0.00992506886973521,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ac89aa64dba222c6ee13f45e0054f678e2e782be3604cfdada7c12f7c3778f8e",
+      "absolute_equity_error": 0.0047822877614185355,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "adb971bd0e22d51e51ee83f0b4b032225b07bdeadd533a1a8edc0f3ac1af7acf",
+      "absolute_equity_error": 0.024335166781839696,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.020202020202020065,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "96a2b419bb741a3838329df8eae742e3ca5089378de194d5336ca2bd496fcdcf",
+      "absolute_equity_error": 0.062490798743686286,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "774e3e7143eeed49ae20857271ec53ac942d3e1d8cf86cdfd5fdc2ae4b8fd1cf",
+      "absolute_equity_error": 0.0018616370480469824,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "70c8a3944782ce2a954aa414f6938822324f441966c0ed6c85ed304a163aff22",
+      "absolute_equity_error": 0.002980356746249746,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3976437b32ab39bd5c449b1e298560656e9f3f92ab3ad6c5e6b745b1224eb31c",
+      "absolute_equity_error": 0.011937002100125715,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "068101f45dfc4e1c3e19501fa35b4b47e2de03ce0bc542eb25fd0da8fcefa5a2",
+      "absolute_equity_error": 0.013556339885249291,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "db4f8d9584ac5ee33790930c595daeb6f8f12276fb1b93bd402e8c7ade9c03fa",
+      "absolute_equity_error": 0.0054353479183081865,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "77d7588f9cfe2552f9d688840564fe177fde8e0d927a93c274ff12fe6194b5dd",
+      "absolute_equity_error": 0.039571371825054436,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "11d01e3988cad5125ecc8ca03742ee40a4b12c73980e1485c3adb53883285757",
+      "absolute_equity_error": 0.019852864742279097,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "8a63b45610990206bb33e38b3481ca15fc433cfa0fb10a9fc433b7a796ea8ec7",
+      "absolute_equity_error": 0.12934954876851557,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f778ffe1b69ac271246f5a1f0881707af03df805e712b198faaa4503da75b55e",
+      "absolute_equity_error": 0.06356597091212413,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0a60fc340d8291acc5c2bbab68864f9d0e2937bf620e29acf165b4edd28de6c2",
+      "absolute_equity_error": 0.008083034780892465,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b4f631ce03453e054299710d4b0f1aa70354191c2a298c7e5f4f830e35047ac3",
+      "absolute_equity_error": 0.041085464665383986,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "8221b3c890f4ce8abc99b974851476d7a31a7f39f2eb29670043d36b412f1cdc",
+      "absolute_equity_error": 0.04609292113419733,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ff5bd8aa81934054998e5d16858c93a919628c0d024641a233e4b65cf6a42ece",
+      "absolute_equity_error": 0.003782381222705647,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "81c26e91f50c38ad4865311933e1d9adf064ebac15934a1e664a2e7f274506ed",
+      "absolute_equity_error": 0.02339391876952812,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "fa0a44b5ae6ce453aa4da645218a15ed4be0d6f564252bad0bd47af6e39106af",
+      "absolute_equity_error": 0.04864854818642744,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "10c0969a02898bfc0ae99f402cfe962bfca6784eafc69053b443efa1646281d7",
+      "absolute_equity_error": 0.05762963608057803,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ccff15cda5379b66f7ffc87908a10f0b99797a3682d7e2a112c4666ff29ccc8d",
+      "absolute_equity_error": 0.031447604930762096,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "719f6bb31612caf5cf0ead0c33cc908f5c2188dba50380112eb223a47ba95487",
+      "absolute_equity_error": 0.08786690644543582,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "452ade21e57e8b2a0bb39e8e70a9a58fbd65d927ee8790c88ece8dfeda5ff7d5",
+      "absolute_equity_error": 0.0071537059421340615,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "968a84e20d3cd9009fcb0d824c1dd0273a9ba73682d5ff4b74ab4705bd3d8906",
+      "absolute_equity_error": 0.011308527053004558,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "abf8f4ffdf43ad9e04cfef4df0e313fdc03c09e9f2a1b123d94854b310de22aa",
+      "absolute_equity_error": 0.041663197676340746,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7eb3f87055fbeb6b9f7047f3caffcd178d621d42650bef19fcc2049c7096a90d",
+      "absolute_equity_error": 0.004470494705619249,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9b889109d0bf840cdcc1cf358120a254a46e4f3de8f9085d78c27b11a369f8fc",
+      "absolute_equity_error": 0.06454252775269331,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "2e292081f0458d750d6894e883fe6afbe5bb45ced17d8458115049d05ea4c21c",
+      "absolute_equity_error": 0.04873812704375291,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3e38aba063387e34768adfb70497ba351f50ff16a2975591a87a23d3f532d721",
+      "absolute_equity_error": 0.011926572130183999,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3987c1311fdbf7148af1ece0e4424b17b039b27a50d1121c46633c19bf586d6d",
+      "absolute_equity_error": 0.04741766224003807,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "fbb2c524aae998cfd82695e60539c68ceffc4b4957f95bd6b8a4bb10034ce3f1",
+      "absolute_equity_error": 0.03614683187369139,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f65c5f9ba5477c69fd648fad641f8b66cc40053ae4fe71c0299a12d2e3db6be4",
+      "absolute_equity_error": 0.07883844098659476,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a38af59e644ef393d369b16ea2e15d17748a34cd743cd7ce719237938a2ebb43",
+      "absolute_equity_error": 0.004296396778087436,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "e3b64c82b1fa0dbbbe83a04e0b1df0228e62bf3924b6c4565ca9c0433af4ccbd",
+      "absolute_equity_error": 0.010681702271856441,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d7eb7e0b0496ef90b752b7c1be24c663bb7fa3235cacbac51e792deb544fc1e9",
+      "absolute_equity_error": 0.004279104988984428,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "e3d73e9e58093d7e4ed02a36f687b5345c270c94319e216bd43fdf2a0a472450",
+      "absolute_equity_error": 0.15260877952431184,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.7272727272727249,
+      "seed_disagreement": true,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "251f85014d2a5cbdcb20d573022d7d32601002aa741de4a6b875e3573313bec8",
+      "absolute_equity_error": 0.03312484423319495,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d0367cb9f74fcdfdbe12c1216f03e48b6397a8bb4cac0a19010151907d3e5b64",
+      "absolute_equity_error": 0.001465491092566329,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "84a4d3a12434035ad0ebdd04c7f9e0d8c0fdcbf1b4aacef7fc7eaa88481a718e",
+      "absolute_equity_error": 0.021848326740842874,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "c3663cdf69905b2514dafe1c7c40f7fb40cf85798b8bc0a48b7a80fa71c43c9d",
+      "absolute_equity_error": 0.02468408273928102,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "8b2106d017a984ec61738a0af597f9dde7c36e5393d3a6c38fa11c48899aca77",
+      "absolute_equity_error": 0.018659812693644084,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ca9832694ca3c8379b8a3d5e76ca97830fbb405f0c8aa291d7915156032e1ed3",
+      "absolute_equity_error": 0.03477271747107458,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "bc11644168349046350eebdc806b88b5985c6c07383d45c467850e807a32d210",
+      "absolute_equity_error": 0.0033411699507122083,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "52f8c6d1d53d4826fd4f78f0cf72b22224deb6dc7fdb13de4a8a293c8cb524f4",
+      "absolute_equity_error": 0.015869888151534894,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0af82e8d7cda19e4f5294bfe025db2dd84f3fabec7ac2ace736412d6476f4344",
+      "absolute_equity_error": 0.010391320363439704,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "96ba91be8e4ba7ec069fe9c2232483e2812a9204398b1ff0063445175250a8d4",
+      "absolute_equity_error": 0.03805120171922624,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "13caad33903c82c6156cdded72cbdb16ffe5371e66e76fb6a2aa2e90d92f6ee2",
+      "absolute_equity_error": 0.02258044216367938,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "bdc4b30a92f3eb89fecc3a4174ce69cbca739159eef3918dda284ef542dcd132",
+      "absolute_equity_error": 0.11341335472434455,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a0676a8b9e492918538142594f43f5335727eb05457d2108b2dc79666212c12d",
+      "absolute_equity_error": 0.0076038969285560365,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b814c04028bf98c4b4af0657209d13bebfc5b9d50a326cf3e6151cbc5746be15",
+      "absolute_equity_error": 0.00342281855868571,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1807ce67de512bc85fc80151c7451c33ff18836618a61717b254e4dee8c2fe2b",
+      "absolute_equity_error": 0.0160082528085419,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "102c35e0423b29cc62567932d6058c0c023c00eb9af5d62c07417676a3251649",
+      "absolute_equity_error": 0.13743092772936583,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ad867804942613cdb350ee1a37da1e1f407ebdf36de7d4301da4da8dcc23184b",
+      "absolute_equity_error": 0.06276076074802514,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9a4a004292fb54adac838b61798537ba9c43bf345aab6eae8fb9c907b8459b15",
+      "absolute_equity_error": 0.03793200820383397,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.3030303030303017,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "206cb9ad556f9ea21d97b985331a29e37f86239cd86511e59d9ad6d6889f7272",
+      "absolute_equity_error": 0.027533897245773153,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "e3112dda62800af47fe0b2cb947fee8549b5cc85555cb6eb695891606cc35dd4",
+      "absolute_equity_error": 0.041946698920895364,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.9494949494949498,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "daa217c7f5ed2104e06a35044ed50ca01f68c87370504c716c4e290f1cb48032",
+      "absolute_equity_error": 0.04345292093777897,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "707d7ca419c3744c49b7409c9b84b41e054369d0105041e0c62a7a9f708b50e0",
+      "absolute_equity_error": 0.0010126858046559661,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f182e768b089e015143b3ae1ef62bb3cdd5d64778d99f305b3d299be1574c098",
+      "absolute_equity_error": 0.026198879847622897,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.020202020202020065,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "a9418466e1b4321b043d0a05d8f33769dc598f40090cd9ee5b777be4ef135996",
+      "absolute_equity_error": 0.008938561184237637,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b6560e4ce0515097857430625d26728358de29e2342fe97130c1f2700b4bd58c",
+      "absolute_equity_error": 0.030050890915321593,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "53d9caa7ab7aa6d026cb1136d0194cc9b19a2fa3e71351f338c5fddca621fb4c",
+      "absolute_equity_error": 0.041268637204411096,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "29de1fcd8d0c2835b858369b4bb951e388129ecab480cda40544ee831c5a23b2",
+      "absolute_equity_error": 0.02948513687259019,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "658b932bbaa2c8ee126f29de36377a72da3597ec4963db6c1a2d92b41caa5716",
+      "absolute_equity_error": 0.023995905813544716,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "156c44a8ebf95fa3a13c4a63cab67e97c5d010d4c64324bbb48d5672eae42b68",
+      "absolute_equity_error": 0.022750315371185853,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1ca5c7c9e41dd6769447a8e2b274447a5a87f42dc75b4b3d0dcfddbfc49842c9",
+      "absolute_equity_error": 0.011148297305058952,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b2bedddf6df41025214bd87e9277fce838acc59b8f4df4278e10eb8764d6004c",
+      "absolute_equity_error": 0.034298395749294386,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "90fa28401512afa70cdc13e54c04854137ce666d8120683100f88cd0d9788dcc",
+      "absolute_equity_error": 0.010930424153503746,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1a4e3470b10e71872b802546d37e46d5b10efd3919e3ad0f469edbea4f440be0",
+      "absolute_equity_error": 0.02586492227785514,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.4363636363636367,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "bb6158be4513cced410753900222279085aab56059d07cd9cb0d795167e651cd",
+      "absolute_equity_error": 0.024030542253243747,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "73f6278e0f39f8dc950a136cd9954ae6b99be439c8e80ad9623e1acca17d2e6e",
+      "absolute_equity_error": 0.0021876270120794183,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b4a8c3b3eecbc5dae1c7c4ef37d12446a281370c24681b6db100f1afbce858bf",
+      "absolute_equity_error": 0.014163973837187704,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a5456dc2a16b3eac6c42b677a622fa7de2ea5e7800f0adcba38b8cc136f91369",
+      "absolute_equity_error": 0.00605058682085291,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1b7e03992c64d6bbf9a889714c337aa129de476b3edc1b2a9bf962708d2971ab",
+      "absolute_equity_error": 0.016923008264616284,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4c6e8e8d39db6ba6cfce732dea3a03a824be9318cdf4bd5cc69b1f7e992fa1bc",
+      "absolute_equity_error": 0.008071960222841512,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "3c13cc61e5b769f1f704d1deb72a55a991a929eb5916073af6ee67e05636b50d",
+      "absolute_equity_error": 0.037593953537218505,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0c8ff88f812340733289d0e8d9d078c0a4a5d4ffb241ac28fe0281d2c4de0c3e",
+      "absolute_equity_error": 0.013548888792895286,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "770ddd1773926892bbcf9c6eb469ebfc69f836c0e5deb131b150448afb4ef165",
+      "absolute_equity_error": 0.03979666233062751,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b21d80b350c8aa792c2cd3a675741454af1bc89ac25993ed5f6538fb8e53d3ea",
+      "absolute_equity_error": 0.06740467825321228,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "52cb3ae40dcf1de0db2253bb76eb11c5780a11c48a00207051965e389f70e8fe",
+      "absolute_equity_error": 0.0027727544909775803,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "27b25b993e69dfbf589284d5d56022f54bd73b13b15b5871e06e0d8df98aa922",
+      "absolute_equity_error": 0.0022092915544605907,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7a24c9685b08ecb28d3d8a47d9d36d0ff1eb3eb4facc1fc2d33b72da9580f5f3",
+      "absolute_equity_error": 0.023139531082577214,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "08d842cbf507f48e526e354b50cacea3b4f0cd924e40f5e44189ab4a7744dd7e",
+      "absolute_equity_error": 0.061075426833798185,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7105f3cc63ff5129d4f060aeca315ce4b0dff6d114db2fea5d543ea6f64d74ee",
+      "absolute_equity_error": 0.005624901917245656,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ac4e059f2c34d2ff9de34a837049b5ed6318f117e0bb8a7da74bc0905fde6dca",
+      "absolute_equity_error": 0.028321176857659308,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "fcddb0ebd0266a9363d36c1200031877b7d1315ad1980e63e8e762842c737a28",
+      "absolute_equity_error": 0.035233811176184515,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "09b68ff14625c3930fe95931e69f2b3598c7b101f6506b793bbbf4e4cf69bfbe",
+      "absolute_equity_error": 0.044085304664843006,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9ce0a02a269c1204fd496736ba2ab4bcce15c2dcd9542906d208a81fa17af5d3",
+      "absolute_equity_error": 0.10664859435172996,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3a543ee8ee4760a3184d1949158ba8101d126cc1444c990d19abeed386b9a16a",
+      "absolute_equity_error": 0.037950185091808586,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "c104b6287ed6109bc2af7caba51fb3bb5b9369c345d7dd561ee5fa1387289ccf",
+      "absolute_equity_error": 0.039728626518538535,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 3.2000000000000015,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "4f0d9f07b07388ae3f7b22715bc2b31c32249887a1743f0441c195914b2647b3",
+      "absolute_equity_error": 0.05817569470164752,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "875c9c9222fb55f46c5d1b41f52d0dd22cac6ad324838f1d7c0f69cba4397a9f",
+      "absolute_equity_error": 0.03250840986617892,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "a115e4556e0718ea0185384938cb4abd88a0b8cfe6fe81fa812f4c6b1e68d8ce",
+      "absolute_equity_error": 0.014882572552170459,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "de6bb7df908ce8cbac6e548c8bce702068047730ef1ed78d95e1c4bba236162d",
+      "absolute_equity_error": 0.023021319538655882,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "286f5849429cdebc70cd0976fe34524149d3ac21e0e1ecda21b7cbe94b715c28",
+      "absolute_equity_error": 0.01979820948056501,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "cf594b142380cf87388f37d75ab74e2447606ae2ac5ff59dbebd4ebb14ce7be2",
+      "absolute_equity_error": 0.04081895664484814,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "628fc74f28f3aba655fee8a0e8568bdeeb4f57c9c639b2a8c84f13a8924fa36b",
+      "absolute_equity_error": 0.007902042191437975,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "226bec6ac0dc81cabde4927849332853fbb5b0c3e060720bd6c3b0f09186c101",
+      "absolute_equity_error": 0.009433817502224162,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "13b6ae85440bf930dc1712895662de76184960ccddba7c4f9c0050c74822fcf4",
+      "absolute_equity_error": 0.12600233314013243,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ce3ac6191937b9f6e6e52b7fcf55b86d1fcf45ac07fcbf239cd93048da918f53",
+      "absolute_equity_error": 0.043838898340860966,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b9d4f9947f7869cb8a2f083e31ebed24541561e70eb3f742e06becde42ab4ffa",
+      "absolute_equity_error": 0.0005405722242413091,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "954283ccc81c1ef49f46f2aedf1a0cc45fcc6914fc56728d28c8241559769152",
+      "absolute_equity_error": 0.051145257612671524,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "839d37fc0b2f6456d31a600423b877bbe0801820ae48f4dcbf5fa4fdc69e83b0",
+      "absolute_equity_error": 0.0018020179536607506,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1171b9dbc5e72543672a074b8e6a5587d74abeb9dd6c30483be4e78d3e570152",
+      "absolute_equity_error": 0.011268556298631605,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "43d5d1ce79f5ed8584afb20895f3761f8764a4e5f1e315549d766174d4e089b5",
+      "absolute_equity_error": 0.02707900483198844,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "aae00f37a77dd08aa239e034196fba136e4d71b658904d66f1918ac7e3d03636",
+      "absolute_equity_error": 0.013138257614289883,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "bb26235053f197ed5bec1eb9cda09cc430ef4978ae464dd15a08a80b91a760f3",
+      "absolute_equity_error": 0.00561799316695244,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4046b5c1588cbc78071136578d3d2b776061eb7e75164600d9bf886bb8d895fa",
+      "absolute_equity_error": 0.020408255764932326,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b12dd0169c7cd5ce3350756b83933e52f9676a36b83b82f47e0ecd2d7f162625",
+      "absolute_equity_error": 0.05279720232944296,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "c6f4ce026c14df30b87f049423ca155af300e8a7f3af14b29c8e9c658aea368d",
+      "absolute_equity_error": 0.006797210495881334,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "43e47feac40d29a0bc97199f1387e0cbbc0df98f34aab1242354b4917fb35173",
+      "absolute_equity_error": 0.10543532889298712,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "775ebd3c4f74abc5cddb8a1132c6068a0ffd89851f3f79ac4b88ee4c1716ec95",
+      "absolute_equity_error": 0.038243675292140344,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ea270851d41794e2f653e7e495565902d1923a9696de721a56aed7e1810bb1ab",
+      "absolute_equity_error": 0.15894293038531981,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "606c8d3c87ade65ac417afa5f8ca5140b914579c0d1c3113bcca4c44b15e91da",
+      "absolute_equity_error": 0.012375295523441188,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d1647a02169adaea3ee118434e7d7bbae3cab1736f32859444669dfe3755fd1f",
+      "absolute_equity_error": 0.019152120989982535,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "e81207f3db371243a7ca9a5d4da6ee7519af43de6b2320d422e311360bf02f72",
+      "absolute_equity_error": 0.007976318067974497,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3fffda4a7dea34dfe39d814e5e7a19d464ed16d7d34835f9f4d17b2b9022df6f",
+      "absolute_equity_error": 0.008594741544338175,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "decfbafddc60e14b514adfe633bddfe49d682d44373b6bce2bec99837c0a3724",
+      "absolute_equity_error": 0.0327322487277214,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "b2c59420f2c3dc9ad3667759e337983d9fd7233299b73800636cca60ed4e8645",
+      "absolute_equity_error": 0.035153423656116844,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "32e00db67782f1c8f977b5fd8973a53745f8d95d156a2e6fd29275999b5badf6",
+      "absolute_equity_error": 0.07585343832921498,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "65fe570688bb2dcd81b0c131602ce87ca21ff6e7c13e6819dcd93381cd41f56d",
+      "absolute_equity_error": 0.03745186942996398,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 2.4545454545454533,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "58a9b0e46e58f8d983136d039812030c6b032fc53b4e650ad93e9e94fe0540f4",
+      "absolute_equity_error": 0.11293896834055583,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "fe3b690451bb6ea43995eb632c5667e8bc6f97420f4022915cb907bca8bdbf7e",
+      "absolute_equity_error": 0.004260028070873667,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "89bda67204ad3a93698b96f87f4d4d462d37f30d9221bdfc5c6e7a213ab590d7",
+      "absolute_equity_error": 0.08104420840138138,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "c575a4876ff4229f6dfd3ace79a4b995d312ef267953b71564bfc47f1a39d6a1",
+      "absolute_equity_error": 0.021034447833745085,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "87dcf2be504e7191e47174bdd2ce2e4f52e3613b3f762707c9551560c8e1e5ab",
+      "absolute_equity_error": 0.0894279440244039,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "92fff6784b0ece497da0fecaf538f4f15da4820e362b702cacd691fddd5f20ee",
+      "absolute_equity_error": 0.1370315009897406,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0c877d1a285f7538b3b5ec3855d455dbd368937a00247f193dd1b79f39a49367",
+      "absolute_equity_error": 0.0508984811378248,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "477bacc9bad7bd6a3a65fcb4c1ef8cd16a010ad32d543ef704d1caa0c471bbe1",
+      "absolute_equity_error": 0.014831378002359452,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1a510e9a2ca8a74871ff569e8f2ccb3594dacab9a35f57095f86951412aa11ad",
+      "absolute_equity_error": 0.009786716133657114,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "75252c9fc3611b061c310c6b47b7b145e11ca30707c03423903be91b13ea8795",
+      "absolute_equity_error": 0.010430829813986131,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "6705cc5d7d22a6e06e67786d3e90d9693bed69ff7edc258eeb57d77c39a14294",
+      "absolute_equity_error": 0.03829293208892903,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "b281bca322a2840408d2548f0cfc9aa1928c36f4db0e0e7f06d7815d2d4ed5dd",
+      "absolute_equity_error": 0.051047293886993916,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "6cf1d2ccd638784e59454faa5dcdac5c0543f9fa57ed4daa10b10e69f6bc5cac",
+      "absolute_equity_error": 0.06852705683371041,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b353db1462abd893c23df0ff3f9f0ca36336044d830eadea88adc6546cc9cc1f",
+      "absolute_equity_error": 0.015116867031713915,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1b132704b73bd4d72d066a430fb1985375bbae06519e28d5d7a97f5e4e7b4838",
+      "absolute_equity_error": 0.06714380208892046,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9812e964a6b564575751f922c88ca1898a3b1916c3f2536100cd8cd5f5669508",
+      "absolute_equity_error": 0.008964888435421592,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9c35093a1eec1df0e4bcfd1a7a5cc6f7e80260637e28cf55134bc4a1ca45bc88",
+      "absolute_equity_error": 0.0858433854700339,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a3ca5658ac270113fa403cc699591f287c65674ad8d9ebf2779e222538bda489",
+      "absolute_equity_error": 0.0039796761792114665,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7303cbbdeade336f528383171a04531b489a46eadbfa7935d2e4f1fb4b08c553",
+      "absolute_equity_error": 0.01343307236228325,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "85e4b557a16023e0267b1738eaa2167ae7b07a181d5f50fa543538e21bcc8e21",
+      "absolute_equity_error": 0.006294559137989764,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "5f657dd667b9459420e0c9c46f4db322e11562d38a7f40722c11d7a20ce66c27",
+      "absolute_equity_error": 0.009762233676332444,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7b0305ae99be861dc0385342c91e6a1b682d957465b5108fd415a8aebe36ee97",
+      "absolute_equity_error": 0.05633250962604175,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ea6aeda6456fa1ee0635f74612d2e33c5afa882673916b05a906169efd3912e7",
+      "absolute_equity_error": 0.016126219913212947,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d8ea2f3b8b8d47bda9c16614ec56db314bf6282e97956a2bdcd7fddbf9d50d81",
+      "absolute_equity_error": 0.04504187287706318,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "589f196b8b9056792df741216826f6de11a6ac850a97656d0ff525e5bee75714",
+      "absolute_equity_error": 0.02735515832900992,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "566ae4e1e6366d3234c8f435d2d07d8ed0ef34c2548563afca962989b0227281",
+      "absolute_equity_error": 0.007331934962609865,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "3dad0613202719694aca62682202dddf17fea6d62d0fcd6383dcf930f276e274",
+      "absolute_equity_error": 0.01720757034390864,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "062d898ba1bd5ccb875b9a79cd2d3a353dedb3e9fcb68b0c657a29f8ce0b65dd",
+      "absolute_equity_error": 0.07725955368292453,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "940c568f77b2ff99c16af0e91d7823a7eb0547a0f14fd7ce9d39e70736dbc4bb",
+      "absolute_equity_error": 0.0007417709914722855,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4e2acf55e63d933794f6b71ae0c223cac1a5632f88a0d16c45285cf4fd3e90ad",
+      "absolute_equity_error": 0.02104153633117667,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "607304d15f3044a3c76296ff6e1e0056d09353983020d1d4341017ff5d66be1c",
+      "absolute_equity_error": 0.020798595264704622,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "46007b8804719b83da8df96ffdacaeacf1a5dc83a1962cb4bd582ab30b87a56d",
+      "absolute_equity_error": 0.012830160302345184,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "697c1285c10d94fb13309e63eb4e4ae39b0f51fd87de859aecd5e3206fd3dabd",
+      "absolute_equity_error": 0.03014884476709845,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "82b9896d1f782674b1f3a45284bb4b28600fe6982722c67f048adc1cc8e771ca",
+      "absolute_equity_error": 0.00928444657662908,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "00e2e5bf4ca4ebdd87b574f521a0128280726545b1736bd057605654870c4c51",
+      "absolute_equity_error": 0.006392158161510175,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "282b666e0c725e77e74768c75212d06528e46b520ab22bf71a04de66d247c74a",
+      "absolute_equity_error": 0.03795027365588183,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "8c9c41071eae70edf87c3753ee2e131d6291989eb7e83203d580107fb67973f7",
+      "absolute_equity_error": 0.02697790042318471,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "5fe8cbd502753b50185e4dde80347ecefa6bfd5096384c2092a8232429ea571b",
+      "absolute_equity_error": 0.01221182520943459,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9083ae5d31b53c58ea4021f29d058bceb402bc4440c378cb98c32b4c5f347069",
+      "absolute_equity_error": 0.05735457726199222,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "81b816840103415b93964842f814d728605bdac2f98b2e75abfb2ab9f88f17c0",
+      "absolute_equity_error": 0.014543740436284258,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "66737f3bfb96ab5d15dbd41d4e248f9227fa9587742e0ad92472398488806b04",
+      "absolute_equity_error": 0.007138440283862013,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "b50c1fc4c606ab4be19794d9ad4e4a873112c1b7b37df62a30db8f7e73612f95",
+      "absolute_equity_error": 0.020509609670350093,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "89442aee8905257c0a5ee4b0a52a652603013eeb41abf2595973baab2c714283",
+      "absolute_equity_error": 0.0031746625900268555,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "dca2c692d7a2573cfd275e39f19bc05a036e08e872252f3c011586aafb392112",
+      "absolute_equity_error": 0.03203636841340496,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "997c2b3869b53ce30c940b4427ab44a9f0bed2e5d807513801917e67f188cbcc",
+      "absolute_equity_error": 0.024824746690615296,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d3bd326d12909aa7224a9f2871fc53b2aa216b383ea2ea26bbb93dde1a0e42e4",
+      "absolute_equity_error": 0.06466651444483279,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 0.9090909090909047,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4efb84f122686ec983955464117529a80ff38da4b60687e46600a97fde2d1505",
+      "absolute_equity_error": 0.007792375424895637,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "31f32eaa741af17e97d3f5664c999ee3cf21b80cfd71e9823cad6e5bfaad1946",
+      "absolute_equity_error": 0.002199868722395526,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a9c2ce0d88c5d6a15805439b7c2b51d836edb3b0b47f208b0105f685e0197942",
+      "absolute_equity_error": 0.009470278566533846,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "bffe0fb0a187845e0be137b4dcf477fe1540a455f3cf913a5db07e779d9216c7",
+      "absolute_equity_error": 0.027564111863723872,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "67d55d3b2a74eec55a148798a7121d6bf77228ad2bbc18292a451b2c1c7b6adc",
+      "absolute_equity_error": 0.2308067210996994,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "47d4dbba2efd58acd9ee973f6cbe9d83dd659040a207bab2a9512a664f2a3a81",
+      "absolute_equity_error": 0.028703826124017895,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7593d60137bfadf94bd5aeaa6602acd545a7a087a277134ef109b2c9f876c147",
+      "absolute_equity_error": 0.04720354212654959,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 1.1111111111111085,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "8ae64993ebea4a8e5cb5c0144f527f4c957ab93eafd47a01523db6817f27f2b3",
+      "absolute_equity_error": 0.04251010755095819,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "347d243989893e4ee24951541149b44ca68014fffba402b1eda55e3ea02a395f",
+      "absolute_equity_error": 0.013682765792114526,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f9c1bda3b4a77fcd839714fbadbe9d4eea2f752cc1e209b3745fb45d631f351a",
+      "absolute_equity_error": 0.10853014564273328,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 6.129292929292927,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "76f0ccf34d62d90b499434c2825cc0ef757f95442f05d856512ded282911e87f",
+      "absolute_equity_error": 0.05459301363338126,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "2918c8fa5703a95130d3410ee37b55a24c646b6f8dec3563e4cbf072664002c9",
+      "absolute_equity_error": 0.049107919798956984,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "1a55359e4764931e956e52190b5f813605f191ee8940e0cf1a4a6aa9a7a51a48",
+      "absolute_equity_error": 0.02680617223183314,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f205e4cdd95ba99cc475ea92966186ba1eec9400a39b085a0c7856ead8e20030",
+      "absolute_equity_error": 0.05096602668665873,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "261c179f1ac314327b5bc88f3d1205de476a8b52b7265e892b9c2c8b588ba46f",
+      "absolute_equity_error": 0.004459479722109694,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "67eb323d4dc36f818702bb96422f1b085cd07d35aca9f0794047124a2b9afff5",
+      "absolute_equity_error": 0.008306312681448658,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "5335ed1a2232328538da95e5005f12cee9afcb533f6d92a67b647d679c9b8fa3",
+      "absolute_equity_error": 0.012134020737927353,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "3eee8d6b87cdf98d6e17d43f266e589faed0567747ad9f2fba053c1ab7cceb74",
+      "absolute_equity_error": 0.09021460215250654,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "7b6c4b4b3bb41495eaa1c908920046d36632dbe90978ccf8b623b9837d4a2ce2",
+      "absolute_equity_error": 0.0012866046693590372,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "e34521bbde0e52d3f39ecdf580bad4a5c2d8d30ff78f54bd4d59af33d5d7ac0a",
+      "absolute_equity_error": 0.01985135873158772,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "604c67baec67e300e8643194f697a6889d3497957ed4422dd5c574df7a818ed2",
+      "absolute_equity_error": 0.04423863598794653,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a14aa76c720d735c29f805ba6181f676caa5c8ef3f45e01b779a14ab4167bd1e",
+      "absolute_equity_error": 0.027360174993071973,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4e27f522a16766177cdcff5bc2900048c59c0f6c8e9234a1d45c7d3cd6ba4af6",
+      "absolute_equity_error": 0.06708264579676615,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "de7265305222bd62468ff7bde107e9b97e5a0a39b6c194888ef989facd18e6f3",
+      "absolute_equity_error": 0.027184015572673137,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a1a7a39e2d28ab6b5e4118653031acc2d54a9ae7efe1da08cbbf43a430030762",
+      "absolute_equity_error": 0.00038463425154638964,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": true,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "21f863dd49ecf736e6747474d85794b79baa6f25c47d90af1cafef00321d6632",
+      "absolute_equity_error": 0.005930229750546523,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "ce40ae621b918fe8647ee6a8e34efdd9543ad2acdbafb623ca7abd2b0aeaaa1f",
+      "absolute_equity_error": 0.0031284225107442998,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1ad9b360657d839bedd27fee5d83d6d5c0e505e9a584f1ac0013f8c2989fe816",
+      "absolute_equity_error": 0.014002802847611767,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4374203abbdbc22df351bc5e228c5ecb81e663a3dbbb665b5c291a31a87ff530",
+      "absolute_equity_error": 0.00794868682972108,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "84410d3a6a7a45456f6a37a578fd49203aff8d800b82941167117cd25ff6ec79",
+      "absolute_equity_error": 0.00465184763224441,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "9c718dc4618266229151594486054601c9c2886a8f3b59513355722362535e10",
+      "absolute_equity_error": 0.044295685700695975,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "47af57013a214efd0d6c5c0fdf1a49e05517cb07ea8643ec5c5c54399db26a4f",
+      "absolute_equity_error": 0.025662188578133655,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f8f1ccdbcf2f0b486feeadac1e3f28224686721b7fdde7498dc31c01c62d4ab4",
+      "absolute_equity_error": 0.019967651608014392,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "5faae2b137057d197fa046820381c74c029b3baae07172881edfcc7d65ada200",
+      "absolute_equity_error": 0.0023138698905404986,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "41930c47cd72f8f03f5f2c9eb896ec813f692d1c0f46f45217a856f7dc9729be",
+      "absolute_equity_error": 0.11531622771060834,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "c983f7a164a884c1e9218e93fdb4aebccc1158d73049ddbb6169a47aae4f4882",
+      "absolute_equity_error": 0.04173828095498712,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4e120f438728c9c1c411f92243287663707ec81740fc9b23cc0f3f3bddbbf34e",
+      "absolute_equity_error": 0.03392859733465947,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "438d73704bfb1e6629f87ca2c7f124410998510f331533e83c207d27cb9bb37d",
+      "absolute_equity_error": 0.07882472366997689,
+      "ranking_agrees": false,
+      "worst_tied_choice_gap_bb": 2.65151515151515,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "06a1feaf746b56f8ef2b6b76633efd656954d7ee029e600bc9dd30668abb4d53",
+      "absolute_equity_error": 0.019994963299144408,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9a5b03cb7db20f96b672d0f14fc1a515d8116f3beb1e41730401e828a08cf4ee",
+      "absolute_equity_error": 0.08559156102363508,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b9ef941845c03fbcfd1a6de3b2113f4234d4c9f34b05c2a50b60609a93d91e34",
+      "absolute_equity_error": 0.005798107746875614,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "c0662086cbe4b78620d284f55c0782ac8161db48b49c6ed6ede1a0c7b32ea88a",
+      "absolute_equity_error": 0.00766550025554618,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9fe53f77bf4424f766466cceb5820cdce1691fe59315631e853e7e0e0ea01197",
+      "absolute_equity_error": 0.021678286248987377,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b4001d3e46447d6c1fb689bd797127d582438e30778db2fbf651304197282556",
+      "absolute_equity_error": 0.0015569018595146256,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1ad32d5280a61048659eb5da8f457cbd043d97c3e7ccc93131509a8481e7590b",
+      "absolute_equity_error": 0.024455257256825846,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b6ff8bfe0a389c4400130de366447904bba9f2ce126fed77bae60d297e1213b8",
+      "absolute_equity_error": 0.006471014143240583,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "0b948a7a6985053456512728656a0f5aa3a6a3dda7ec45bdd3a4a1feea251253",
+      "absolute_equity_error": 0.03972780379382046,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9e67b8a637925632247c4b2be640b7e9db72eb99f6f3964417426ca483ac0e48",
+      "absolute_equity_error": 0.00882345871491863,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "b2b8a140c1c01e886c937b76c2233b95956a1d4a59ae16646ecb5b037bb04802",
+      "absolute_equity_error": 0.00734364504765983,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "33be0a6a965d5b65b7b4e6a0e48e5faecaabe8da357dba2abd9f67c7085e5935",
+      "absolute_equity_error": 0.02112150818410541,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "6d95ce7411f1e8a8e3808d94d825cb35059fc05eb2c9a615429148a2d9fe59b2",
+      "absolute_equity_error": 0.007507635607863938,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "90184d8628b5ccd85c759c021139fbd2a16297ab9d175bfac903ad9bbc1d5390",
+      "absolute_equity_error": 0.024002702428836953,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "fa5aef617c2a594d43b000f0b35c0c17a8daabc576bab7e9e8a4222c4a8fe19f",
+      "absolute_equity_error": 0.023489687749833787,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "2361ca49ed92e32becfd4575cdf26644e8e7adaff1e6e06682840924886bd2f3",
+      "absolute_equity_error": 0.012672565170008726,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "8bd9d955f35a18d8171227dfda90a4c6c306bdc650e099e7a796094602999c6e",
+      "absolute_equity_error": 0.10926568327528063,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "eaf39dcb17275a1e486ba6517a90cf2e57004e6ec8b78b9141c0956a2f444e9a",
+      "absolute_equity_error": 0.07901812298129307,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "d93ae25709f5d6fccac8ebc61afa0b6602e6f5f30be9dc89a2dcd729fc527ba9",
+      "absolute_equity_error": 0.021138870896715123,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "951875eb71cd5bbdd00ec9f4b039a39087828f249cf017360820cbfa3c168bde",
+      "absolute_equity_error": 0.012851698651458299,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": true
+    },
+    {
+      "observation_hash": "4ca6a383793a101c650bdd39e789ef6971c37a13bd3d0774cf48738fb2eaf590",
+      "absolute_equity_error": 0.019864034472089842,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "397c90e7f451131709663201c700f2fa81cf911e2ab2337c5ce36759fd10e195",
+      "absolute_equity_error": 0.04144771457320512,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "cadcb3f422f802048241398edc61b790859d7dee78486c35c91eebd054a2a7ea",
+      "absolute_equity_error": 0.0049018271041638695,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "2bbfc1d19e5d0d6ab941e43e5169374e4185f0c0c23c7881e4b0299ed190074d",
+      "absolute_equity_error": 0.004564141986345915,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "9d655fc34cb08205b0df404ad24f93613fa99668972538708013d5fe29ecdcdf",
+      "absolute_equity_error": 0.09054928692904385,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "471c316b6b6255c46be7871895fcfdfc6b27dfe745cd4083ccedb1d05acf5e92",
+      "absolute_equity_error": 0.04382770940510905,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "bcd7b1f1a9567857cecf738d43946aed7ae5ef8e6aa0a429d705b0e0531e6558",
+      "absolute_equity_error": 0.004123156148977958,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "a960c24d7cc68a920dc60616bc0d292e24b8f970fe83d53aa1c15b5ecf26a0d7",
+      "absolute_equity_error": 0.010024644389297066,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "91409788c742d12a3b3fbf0bc9d56c7bd938d1cbd94fbe77cfa0e988d9db2189",
+      "absolute_equity_error": 0.03339121570490827,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "4026e01771691f4f1c641576c0ef519ae260497f88d9bdd0436afbc7d5314223",
+      "absolute_equity_error": 0.11305710619146181,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "1ed9c3c521049c53feb229dcd3b77b43902e8bff94b061b0e805e47701d8fc84",
+      "absolute_equity_error": 0.004035876977323216,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "36a737a805ab7134a33b7161ac51fb4832b5880a4c620ee7175091427e83149a",
+      "absolute_equity_error": 0.045338513152767934,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "158736c0d1c276206886d483866b551af15c5a9328245f9df19355b2feb7b3c5",
+      "absolute_equity_error": 0.0016413322602859548,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "f1c1c6ecc210bd275e964d2f662baef80fce63b655d5ca30b5963c6143bc3c9a",
+      "absolute_equity_error": 0.022751139811795162,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    },
+    {
+      "observation_hash": "53c31aa9eb50fb66f00b8ca62989f5e18f3b6ae0f716c23557287d0e5118b9d5",
+      "absolute_equity_error": 0.024932331629473725,
+      "ranking_agrees": true,
+      "worst_tied_choice_gap_bb": 0.0,
+      "seed_disagreement": false,
+      "sensitive": false
+    }
+  ]
+}

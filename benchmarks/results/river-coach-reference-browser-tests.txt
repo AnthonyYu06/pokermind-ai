@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:24710) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › e2e/product.spec.ts:4:1 › practice coach compares generated actions and preserves a drill (801ms)
+(node:24727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › e2e/product.spec.ts:4:1 › practice coach compares generated actions and preserves a drill (761ms)
+
+  2 passed (3.4s)

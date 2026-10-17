@@ -1,0 +1,15 @@
+
+Running 6 tests using 1 worker
+
+(node:24619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › e2e/product.spec.ts:4:1 › practice coach compares generated actions and preserves a drill (1.6s)
+  ✓  2 [desktop] › e2e/product.spec.ts:33:1 › measured neural evidence is visible without horizontal page overflow (457ms)
+  ✓  3 [desktop] › e2e/product.spec.ts:48:1 › static file preview commits and reports real provenance (2.9s)
+(node:24650) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [mobile] › e2e/product.spec.ts:4:1 › practice coach compares generated actions and preserves a drill (940ms)
+  ✓  5 [mobile] › e2e/product.spec.ts:33:1 › measured neural evidence is visible without horizontal page overflow (447ms)
+  ✓  6 [mobile] › e2e/product.spec.ts:48:1 › static file preview commits and reports real provenance (1.8s)
+
+  6 passed (10.2s)

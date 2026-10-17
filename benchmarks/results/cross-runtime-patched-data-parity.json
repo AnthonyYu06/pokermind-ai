@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "runs": [
+    "cloud-portability-v2",
+    "cloud-portability-python312",
+    "cloud-portability-python312-patched"
+  ],
+  "dataset_ids": [
+    "86d3bfb2162435269cfadd21ca1b2fdc9a12b820103899d013eb5ca5f2f621c1",
+    "86d3bfb2162435269cfadd21ca1b2fdc9a12b820103899d013eb5ca5f2f621c1",
+    "86d3bfb2162435269cfadd21ca1b2fdc9a12b820103899d013eb5ca5f2f621c1"
+  ],
+  "output_identity_equal": true
+}

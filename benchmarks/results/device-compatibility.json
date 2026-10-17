@@ -1,0 +1,48 @@
+{
+  "scope": "Forward parity and finite optimizer steps only; quality experiments remain CPU",
+  "cpu": true,
+  "devices": {
+    "mps": {
+      "available": true,
+      "checks": [
+        {
+          "model": "equity_mlp",
+          "status": "passed",
+          "max_abs_difference": 5.960464477539063e-08,
+          "step_losses": [
+            0.2146209478378296,
+            0.20406760275363922,
+            0.19418880343437195,
+            0.18476733565330505
+          ]
+        },
+        {
+          "model": "card_set",
+          "status": "passed",
+          "max_abs_difference": 0.0,
+          "step_losses": [
+            0.22178541123867035,
+            0.2203790843486786,
+            0.21896468102931976,
+            0.21751831471920013
+          ]
+        },
+        {
+          "model": "behavior_gru",
+          "status": "passed",
+          "max_abs_difference": 2.980232238769531e-07,
+          "step_losses": [
+            0.12452368438243866,
+            0.1135479211807251,
+            0.10316646099090576,
+            0.09337927401065826
+          ]
+        }
+      ]
+    },
+    "cuda": {
+      "available": false,
+      "checks": []
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "behavior_source": {
+    "report": ".data/research-local-v2/behavior/behavior/run-28bec1310296/report-e2c46e14b657f882.json",
+    "sha256": "e2c46e14b657f882ef12b1ac4adccac85111025b99b8aa6c467fb70987938e44"
+  },
+  "reported_generated_test_families": 585,
+  "retained_test_families": 453,
+  "audited_gates": {
+    "class_support": true,
+    "independent_support": false,
+    "quality_and_calibration": false,
+    "unseen_policy": false
+  },
+  "promotion_eligible": false,
+  "correction": "Count only families with retained examples; initial report counted generated families with zero retained observations. Raw report is preserved unchanged. No predictions, thresholds or split membership changed."
+}
